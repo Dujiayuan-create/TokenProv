@@ -1,0 +1,62 @@
+{
+  "config": {
+    "audit": {
+      "probability": 1,
+      "prover_command": [],
+      "queue_capacity": 2,
+      "retention_s": 3600,
+      "timeout_s": 30,
+      "verifier_command": [],
+      "workers": 2
+    },
+    "concurrency": [
+      2
+    ],
+    "endpoints": [
+      {
+        "api_key_env": "",
+        "base_url": "http://127.0.0.1:8000",
+        "base_url_env": "",
+        "id": "fixture",
+        "model": "fixture-model",
+        "model_hash": "unregistered",
+        "node_id": "unspecified",
+        "revision": "unregistered",
+        "tee_api_key_env": "",
+        "tee_policy": "",
+        "tee_url": "",
+        "timeout_s": 180,
+        "tokenizer_hash": "unregistered",
+        "tokenizer_path": ""
+      }
+    ],
+    "output_root": "E:\\博士内容\\Paper4token溯源\\tokenprovALL\\opensource\\TokenProv\\results\\server_runs",
+    "repetitions": 1,
+    "requests_per_run": 4,
+    "seed": 42,
+    "source": "E:\\博士内容\\Paper4token溯源\\tokenprovALL\\opensource\\TokenProv\\configs\\smoke.yaml",
+    "systems": [
+      "Vanilla",
+      "SignedLogPlus",
+      "TokenProv-Full"
+    ],
+    "warmups": 1,
+    "workload": {
+      "calls": [
+        2
+      ],
+      "input_tokens": [
+        64
+      ],
+      "max_output_tokens": [
+        8
+      ],
+      "routing": "per_endpoint",
+      "shared_prompt_percent": 0,
+      "trace_file": ""
+    }
+  },
+  "mode": "fixture",
+  "run_id": "20261116T024912Z_9b58b07c62be",
+  "schema_version": 1
+}

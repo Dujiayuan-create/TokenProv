@@ -1,0 +1,293 @@
+{
+  "stages": [
+    {
+      "variant": "Vanilla",
+      "time_ms_rounds": [
+        0.000392551,
+        0.000452601,
+        0.000451021,
+        0.00045088,
+        0.0005888099999999999
+      ],
+      "selected_payload_KiB_rounds": [
+        0.021484375,
+        0.021484375,
+        0.021484375,
+        0.021484375,
+        0.021484375
+      ],
+      "time_ms_mean": 0.0004671726,
+      "time_ms_sd": 7.263383300707733e-05,
+      "time_ms_increment_rounds": [
+        0.000392551,
+        0.000452601,
+        0.000451021,
+        0.00045088,
+        0.0005888099999999999
+      ],
+      "time_ms_increment_mean": 0.0004671726,
+      "time_ms_increment_sd": 7.263383300707733e-05,
+      "selected_payload_KiB_mean": 0.021484375,
+      "selected_payload_KiB_sd": 0.0,
+      "selected_payload_KiB_increment_rounds": [
+        0.021484375,
+        0.021484375,
+        0.021484375,
+        0.021484375,
+        0.021484375
+      ],
+      "selected_payload_KiB_increment_mean": 0.021484375,
+      "selected_payload_KiB_increment_sd": 0.0,
+      "time_ms_increment_share_percent": 0.0027967132679867566,
+      "selected_payload_KiB_increment_share_percent": 0.06668687481054865,
+      "time_ms_cv_percent": 15.547537036007105,
+      "time_ms_absolute_deviation_percent_rounds": [
+        15.973025815298246,
+        3.119104159790192,
+        3.4573089260799947,
+        3.487490490666616,
+        26.036929391835038
+      ],
+      "time_ms_signed_deviation_percent_rounds": [
+        -15.973025815298246,
+        -3.119104159790187,
+        -3.457308926079994,
+        -3.4874904906666115,
+        26.036929391835038
+      ]
+    },
+    {
+      "variant": "Vanilla + Lifecycle",
+      "time_ms_rounds": [
+        6.0270704749999995,
+        5.994246372,
+        6.041731465,
+        6.064249321,
+        6.001635143000001
+      ],
+      "selected_payload_KiB_rounds": [
+        15.369140625,
+        15.369140625,
+        15.369140625,
+        15.369140625,
+        15.369140625
+      ],
+      "time_ms_mean": 6.0257865552,
+      "time_ms_sd": 0.02878083919516793,
+      "time_ms_increment_rounds": [
+        6.0266779239999995,
+        5.993793771,
+        6.041280444,
+        6.063798441,
+        6.001046333000001
+      ],
+      "time_ms_increment_mean": 6.0253193826,
+      "time_ms_increment_sd": 0.02881095353654058,
+      "selected_payload_KiB_mean": 15.369140625,
+      "selected_payload_KiB_sd": 0.0,
+      "selected_payload_KiB_increment_rounds": [
+        15.34765625,
+        15.34765625,
+        15.34765625,
+        15.34765625,
+        15.34765625
+      ],
+      "selected_payload_KiB_increment_mean": 15.34765625,
+      "selected_payload_KiB_increment_sd": 0.0,
+      "time_ms_increment_share_percent": 36.07037454931045,
+      "selected_payload_KiB_increment_share_percent": 47.638678387390115,
+      "time_ms_cv_percent": 0.4776279234506121,
+      "time_ms_absolute_deviation_percent_rounds": [
+        0.021307090588724483,
+        0.5234201860798054,
+        0.2646112611844868,
+        0.6383028248288773,
+        0.4008009905222685
+      ],
+      "time_ms_signed_deviation_percent_rounds": [
+        0.021307090588718047,
+        -0.5234201860798038,
+        0.26461126118448863,
+        0.6383028248288847,
+        -0.40080099052226537
+      ]
+    },
+    {
+      "variant": "+ Bilateral Handoff",
+      "time_ms_rounds": [
+        11.479927945,
+        11.442493323999999,
+        11.472280481,
+        11.391238243,
+        11.473153869
+      ],
+      "selected_payload_KiB_rounds": [
+        22.4677734375,
+        22.4677734375,
+        22.4677734375,
+        22.4677734375,
+        22.4677734375
+      ],
+      "time_ms_mean": 11.4518187724,
+      "time_ms_sd": 0.036813577591238725,
+      "time_ms_increment_rounds": [
+        5.4528574700000005,
+        5.448246951999999,
+        5.4305490160000005,
+        5.326988922,
+        5.471518726
+      ],
+      "time_ms_increment_mean": 5.4260322172,
+      "time_ms_increment_sd": 0.05725401057634469,
+      "selected_payload_KiB_mean": 22.4677734375,
+      "selected_payload_KiB_sd": 0.0,
+      "selected_payload_KiB_increment_rounds": [
+        7.0986328125,
+        7.0986328125,
+        7.0986328125,
+        7.0986328125,
+        7.0986328125
+      ],
+      "selected_payload_KiB_increment_mean": 7.0986328125,
+      "selected_payload_KiB_increment_sd": 0.0,
+      "time_ms_increment_share_percent": 32.48276181943641,
+      "selected_payload_KiB_increment_share_percent": 22.033949681721733,
+      "time_ms_cv_percent": 0.32146489848375037,
+      "time_ms_absolute_deviation_percent_rounds": [
+        0.24545596781313483,
+        0.08143202914174218,
+        0.17867649677897168,
+        0.5290035635737115,
+        0.1863031281233781
+      ],
+      "time_ms_signed_deviation_percent_rounds": [
+        0.24545596781313517,
+        -0.08143202914173697,
+        0.17867649677896225,
+        -0.5290035635737156,
+        0.18630312812337735
+      ]
+    },
+    {
+      "variant": "+ Provider Binding",
+      "time_ms_rounds": [
+        14.318432364,
+        14.259904034,
+        14.378889509,
+        14.334664957000001,
+        14.512497374
+      ],
+      "selected_payload_KiB_rounds": [
+        29.54296875,
+        29.54296875,
+        29.54296875,
+        29.54296875,
+        29.54296875
+      ],
+      "time_ms_mean": 14.3608776476,
+      "time_ms_sd": 0.094864833416448,
+      "time_ms_increment_rounds": [
+        2.8385044189999995,
+        2.8174107100000008,
+        2.906609028,
+        2.943426714000001,
+        3.0393435049999997
+      ],
+      "time_ms_increment_mean": 2.9090588752000004,
+      "time_ms_increment_sd": 0.088795484585948,
+      "selected_payload_KiB_mean": 29.54296875,
+      "selected_payload_KiB_sd": 0.0,
+      "selected_payload_KiB_increment_rounds": [
+        7.0751953125,
+        7.0751953125,
+        7.0751953125,
+        7.0751953125,
+        7.0751953125
+      ],
+      "selected_payload_KiB_increment_mean": 7.0751953125,
+      "selected_payload_KiB_increment_sd": 0.0,
+      "time_ms_increment_share_percent": 17.414984426797442,
+      "selected_payload_KiB_increment_share_percent": 21.96120036374659,
+      "time_ms_cv_percent": 0.6605782442015434,
+      "time_ms_absolute_deviation_percent_rounds": [
+        0.2955619053484143,
+        0.7031158963802994,
+        0.12542312414318166,
+        0.18252847244597348,
+        1.0557831500314931
+      ],
+      "time_ms_signed_deviation_percent_rounds": [
+        -0.2955619053484182,
+        -0.7031158963803019,
+        0.1254231241431869,
+        -0.18252847244597525,
+        1.0557831500314974
+      ]
+    },
+    {
+      "variant": "TokenProv-Full",
+      "time_ms_rounds": [
+        16.720645405,
+        16.864860979,
+        16.61796521,
+        16.729283166,
+        16.58896435
+      ],
+      "selected_payload_KiB_rounds": [
+        32.216796875,
+        32.216796875,
+        32.216796875,
+        32.216796875,
+        32.216796875
+      ],
+      "time_ms_mean": 16.704343822,
+      "time_ms_sd": 0.10888888527859882,
+      "time_ms_increment_rounds": [
+        2.4022130409999995,
+        2.6049569449999996,
+        2.239075701000001,
+        2.394618208999997,
+        2.0764669760000007
+      ],
+      "time_ms_increment_mean": 2.3434661743999996,
+      "time_ms_increment_sd": 0.19788323006948896,
+      "selected_payload_KiB_mean": 32.216796875,
+      "selected_payload_KiB_sd": 0.0,
+      "selected_payload_KiB_increment_rounds": [
+        2.673828125,
+        2.673828125,
+        2.673828125,
+        2.673828125,
+        2.673828125
+      ],
+      "selected_payload_KiB_increment_mean": 2.673828125,
+      "selected_payload_KiB_increment_sd": 0.0,
+      "time_ms_increment_share_percent": 14.02908249118772,
+      "selected_payload_KiB_increment_share_percent": 8.29948469233101,
+      "time_ms_cv_percent": 0.6518596985245819,
+      "time_ms_absolute_deviation_percent_rounds": [
+        0.09758888570367587,
+        0.9609306340342223,
+        0.517102694487374,
+        0.1492985553084353,
+        0.6907153805589169
+      ],
+      "time_ms_signed_deviation_percent_rounds": [
+        0.09758888570368107,
+        0.9609306340342183,
+        -0.5171026944873702,
+        0.14929855530843028,
+        -0.690715380558915
+      ]
+    }
+  ],
+  "calls_per_fixture": 8,
+  "lifecycle_events_per_fixture": 32,
+  "runs": 5,
+  "samples_per_variant_per_run": 1000,
+  "warmups_per_variant_per_run": 100,
+  "formal_validation_count": 25000,
+  "source_sha256": "8b78e24fb4da03cd74479ad2e68590b4f667b0752f12e7a8dbd9d2787be8fe5b",
+  "time_scope": "cumulative validation on prebuilt fixtures; serialization measured for size after timer",
+  "size_scope": "selected serialized payload; not the full retained evidence bundle"
+}

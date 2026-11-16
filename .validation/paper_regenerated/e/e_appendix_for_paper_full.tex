@@ -1,0 +1,169 @@
+\section{Additional Security and Accountability Measurements}
+\label{app:e-security-accountability}
+
+\noindent\textbf{Current attack construction and search.}
+The current suite uses the same underlying protocol fixtures for
+\textsc{SignedLog}, \textsc{SignedLog+}, and \textsc{TokenProv}.
+Each episode starts from a fresh request fixture.
+The attacker selects a call and one of six mutation families, repairs the
+affected outer closure and settlement commitments, and signs updated records
+using corrupted roles' keys.
+For cross-call splicing, it replaces selected input/output and handoff hashes
+with another call's fields and re-signs the provider receipt.
+For deployment substitution, it changes the deployment identifier and re-signs
+the receipt.
+Original authorization and retained handoff records are held fixed.
+
+An independent oracle compares candidate evidence with the original call set,
+receipt fields, and integer bill; it does not use the auditor's failure label
+to decide whether an attack was constructed successfully.
+All 3,300 retained attack queries pass both signature-validity and
+oracle-violation checks.
+Queries after a rejection may switch attack family based on the exposed
+first-failed-relation feedback.
+Each scheme has 100 episodes across all six families, with a maximum of 16
+queries per episode and early stopping after acceptance.
+An episode succeeds when at least one violating candidate is accepted.
+One unmodified fixture per episode is also checked, giving 100 benign controls
+per scheme.
+
+Table~\ref{tab:e-attack-families} gives accepted queries divided by actual
+queries within each family.
+The schemes share starting fixtures, but feedback and early stopping produce
+different search trajectories and family counts.
+\textsc{SignedLog+} performs an independent disclosed-record audit of signatures,
+context and call links, receipt coverage, and integer accounting.
+Its zero-success result is retained alongside \textsc{TokenProv}'s result.
+These are CPU protocol microbenchmarks and do not evaluate attacks on live
+model execution or establish a distribution-free attack success bound.
+
+\begin{table*}[!t]
+\centering
+\caption{Current valid-signature adaptive attacks by family (accepted attack queries / actual queries). Family query counts differ because search adapts to feedback and stops at the first success.}
+\label{tab:e-attack-families}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular*}{\textwidth}{@{\hspace{4pt}}l@{\extracolsep{\fill}}cccc@{\hspace{4pt}}}
+\toprule
+\textbf{Attack family} & \textbf{SignedLog} & \textbf{SignedLog+} & \textbf{TokenProv} & \shortstack{\textbf{TokenProv first}\\\textbf{failed relation}} \\
+\midrule
+Aggregate bill manipulation & 18/18 & 0/264 & 0/232 & $R_{\mathrm{set}}$ \\
+Receipt duplication & 13/13 & 0/267 & 0/223 & $R_{\mathrm{prov}}$ \\
+Receipt omission & 22/22 & 0/278 & 0/256 & $R_{\mathrm{set}}$ \\
+Observable accepted-call omission & 12/12 & 0/265 & 0/283 & $R_{\mathrm{hand}}$ \\
+Cross-call evidence splicing & 14/14 & 0/251 & 0/309 & $R_{\mathrm{prov}}$ \\
+Unauthorized deployment substitution & 21/21 & 0/275 & 0/297 & $R_{\mathrm{prov}}$ \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+
+\noindent\textbf{Historical injection coverage.}
+Table~\ref{tab:e-historical-attack-coverage} reports fourteen predefined
+injection classes, measured separately from the current valid-signature suite.
+Each attack--scheme pair has five seed fixtures and 100 repetitions per seed,
+giving 500 trials per pair and 7,000 per scheme.
+\textsc{TokenProv} rejects all fourteen classes; the individual-record
+\textsc{SignedLog} fixtures reject nine.
+The historical suite includes mutations that leave original signatures stale.
+Its \textsc{SignedLog} cases use individual signed-record fixtures, while
+\textsc{TokenProv} audits complete protocol fixtures.
+These counts characterize coverage of the specified templates and are not
+pooled with the current common-fixture adaptive comparison.
+
+\begin{table*}[!t]
+\centering
+\caption{Historical protocol attack microbenchmark (detected / 500 trials for each attack and scheme). These fixtures are separate from the current valid-signature adaptive suite.}
+\label{tab:e-historical-attack-coverage}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular*}{\textwidth}{@{\hspace{4pt}}l@{\extracolsep{\fill}}lccc@{\hspace{4pt}}}
+\toprule
+\textbf{Attack} & \textbf{Expected relation} & \textbf{Vanilla} & \textbf{SignedLog} & \textbf{TokenProv} \\
+\midrule
+A1: Unauthorized call & $R_{\mathrm{auth}}$ & 0/500 & 500/500 & 500/500 \\
+A2: Call insertion & $R_{\mathrm{life}}$ & 0/500 & 0/500 & 500/500 \\
+A3: Observable-call omission & $R_{\mathrm{hand}}$ & 0/500 & 0/500 & 500/500 \\
+A4: Call replay & $R_{\mathrm{prov}}$ & 0/500 & 0/500 & 500/500 \\
+A5: Call relabeling & $R_{\mathrm{prov}}$ & 0/500 & 500/500 & 500/500 \\
+A6: $H\!\rightarrow\!B$ boundary tampering & $R_{\mathrm{hand}}$ & 0/500 & 500/500 & 500/500 \\
+A7: $B\!\rightarrow\!P$ boundary tampering & $R_{\mathrm{hand}}$ & 0/500 & 500/500 & 500/500 \\
+A8: Model/deployment substitution & $R_{\mathrm{prov}}$ & 0/500 & 500/500 & 500/500 \\
+A9: Tokenizer/input-semantics substitution & $R_{\mathrm{prov}}$ & 0/500 & 500/500 & 500/500 \\
+A10: Cache or usage inflation & $R_{\mathrm{prov}}$ & 0/500 & 500/500 & 500/500 \\
+A11: Wrong price version & $R_{\mathrm{prov}}$ & 0/500 & 500/500 & 500/500 \\
+A12: Cross-call evidence splicing & $R_{\mathrm{prov}}$ & 0/500 & 0/500 & 500/500 \\
+A13: Receipt omission or duplication & $R_{\mathrm{set}}$ & 0/500 & 0/500 & 500/500 \\
+A14: Aggregate bill manipulation & $R_{\mathrm{set}}$ & 0/500 & 500/500 & 500/500 \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+
+\noindent\textbf{Cross-request transplant procedure.}
+The historical binding experiment constructs separate source and target
+requests and inserts the source's first call/receipt/artifact tuple into the
+target's first provider-call slot.
+Both call labels are \texttt{c-0}, but the request identifiers differ.
+The source and target also use independently generated keys.
+Source-local verification checks the receipt under the original source key
+and registration; complete auditing checks it against the target authorization
+and transcript.
+All full-audit trials fail at the request-ID comparison in $R_{\mathrm{prov}}$,
+before subsequent provider checks.
+Thus, these measurements test request-context binding, rather than independently
+isolating every component of $\mathcal{R}_{\mathsf{link}}$.
+Each of the three source--target configurations has 500 repetitions per variant.
+The archived \texttt{w/o-R\_link} path executes the same receipt-only branch as
+the source-local checker and is treated as a local-check surrogate.
+
+\noindent\textbf{Localization procedure.}
+The five stage-specific mutations are authorization-context modification,
+lifecycle-root modification, handoff-boundary tampering, usage modification,
+and aggregate-bill modification.
+The auditor evaluates $R_{\mathrm{auth}}$, $R_{\mathrm{life}}$,
+$R_{\mathrm{hand}}$, $R_{\mathrm{prov}}$, and $R_{\mathrm{set}}$ in order,
+returning the first failure.
+Relation agreement compares this output with the predefined injection stage.
+Returned intervals are fixed by the failed relation:
+$U$--$H$, $H$--$H$, $H$--$P$, $B$--$P$, and $H$--$B$, respectively.
+Widths count edges along $U\!\rightarrow\!H\!\rightarrow\!B\!\rightarrow\!P$;
+zero width denotes one role.
+The interval is a diagnostic output, rather than an independently measured
+guarantee of unique culprit identification.
+Each stage has five seed fixtures with 100 repetitions per fixture.
+Reported audit time covers the executed checks up to the first failure and
+excludes model inference.
+
+\noindent\textbf{Collusion controls.}
+Table~\ref{tab:e-historical-collusion} reports three predefined controls,
+with 500 repetitions each.
+The $B+P$ control supplies conflicting provider-linked evidence while retaining
+the original signed boundary records.
+The $H+B$ control supplies an internally consistent seven-call transcript,
+with no independent receipt recording the additional hidden execution.
+The $H+B+P$ control supplies an internally consistent service-side transcript
+without a conflicting external anchor.
+The latter two controls are accepted and are not counted as blocked attacks.
+These controls examine predefined evidence configurations rather than searching
+all joint strategies available to colluding parties.
+Witness expiry, late submission, and non-submission enforcement are outside
+these measurements.
+
+\begin{table*}[!t]
+\centering
+\caption{Historical collusion and observable-evidence controls. Acceptance in the last two rows is an evidence-boundary control, not a failed rejection of an observably inconsistent transcript.}
+\label{tab:e-historical-collusion}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular*}{\textwidth}{@{\hspace{4pt}}l@{\extracolsep{\fill}}p{.20\textwidth}p{.25\textwidth}p{.14\textwidth}p{.12\textwidth}@{\hspace{4pt}}}
+\toprule
+\textbf{Corrupt roles} & \textbf{Scenario} & \textbf{Independent evidence} & \textbf{Outcome} & \shortstack{\textbf{Responsibility}\\\textbf{interval}} \\
+\midrule
+$B+P$ & Cross-call provider-evidence splicing & Retained signed $H\!\rightarrow\!B$ boundary conflicts with provider-linked evidence & 500/500 rejected & $B$--$P$ \\
+$H+B$ & One hidden execution omitted from an otherwise consistent transcript & No independent receipt for the hidden execution & 500/500 accepted & Unavailable \\
+$H+B+P$ & Internally consistent service-side transcript & No conflicting external evidence anchor & 500/500 accepted & Unavailable \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+

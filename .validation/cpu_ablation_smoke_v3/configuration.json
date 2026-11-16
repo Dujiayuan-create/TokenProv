@@ -1,0 +1,20 @@
+{
+  "experiment": "ablation",
+  "seeds": [
+    42
+  ],
+  "calls": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "trials": 100,
+  "samples": 2,
+  "warmups": 0,
+  "measurement_type": "PROTOCOL_MICROBENCHMARK",
+  "historical_numeric_reproduction": false
+}

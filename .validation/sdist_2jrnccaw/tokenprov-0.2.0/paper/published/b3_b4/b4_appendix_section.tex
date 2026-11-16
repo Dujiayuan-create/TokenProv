@@ -1,0 +1,27 @@
+\section{Additional Cross-Model Measurements}
+\label{app:b4-cross-model}
+Table~\ref{tab:b4-cross-model} summarizes five models and four schemes at
+concurrency eight. Each model--scheme pair has three rounds of 128 measured
+requests, giving 384 requests per pair and 7,680 requests with 61,440 model calls
+overall; no measured requests failed. Warmups are excluded.
+Each metric is first computed within a round. Entries are arithmetic means and
+sample standard deviations of the three round-level observations, rather than
+pooled per-request deviations or confidence intervals.
+The online non-LLM column uses the same definition as above.
+
+For model $m$, scheme $s$, and round $r$, the latency change is
+\[
+\delta_{m,s,r}=100\left(
+\frac{\overline{T}_{m,s,r}}{\overline{T}_{m,\mathrm{Vanilla},r}}-1\right),
+\]
+where $\overline{T}$ is mean complete request processing time.
+The table aggregates these three within-round changes; positive values indicate
+longer processing time. The ranges in the main figure span the minimum and maximum
+of the three observations. Online non-LLM time is an internal component, rather
+than incremental latency relative to Vanilla.
+
+Across the five models, \textsc{TokenProv}'s mean online non-LLM time is
+53.98--65.98\,ms/request. Request-latency changes vary across rounds, as do shared
+GPU load, placement, and actual generated lengths. All rounds are retained,
+including the DeepSeek third-round latency change of $+42.71\%$.
+\input{b4_appendix_cross_model_table.tex}

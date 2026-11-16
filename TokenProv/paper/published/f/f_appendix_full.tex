@@ -1,0 +1,93 @@
+\section{Additional Acceptance-Rule and Validation Measurements}
+\label{app:f-ablation}
+
+\noindent\textbf{Post-audit rule-gating controls.}
+Table~\ref{tab:f-rule-gating} uses four historical attack templates: call
+insertion (A2), handoff tampering (A6), cross-call evidence splicing (A12),
+and aggregate bill manipulation (A14).
+Each attack--decision configuration has five seed fixtures and 100 repetitions
+per seed, yielding 500 observations per configuration and 4,000 records overall.
+All 4,000 candidates first undergo the complete protocol audit.
+For each relaxed decision, rejection is overridden when the first failed
+relation matches the selected gate; all other decisions are unchanged.
+The four controls relax $R_{\mathrm{life}}$, $R_{\mathrm{hand}}$,
+$R_{\mathrm{prov}}$, and $R_{\mathrm{set}}$, respectively.
+The archived variant named \texttt{w/o-R\_link} relaxes the entire
+$R_{\mathrm{prov}}$ rejection gate, rather than removing only the linking check.
+These controls measure acceptance-rule sensitivity and do not measure a
+reimplemented protocol with a component removed.
+Only the four matched attack--rule combinations were measured.
+
+\noindent\textbf{Cumulative validation configurations.}
+Table~\ref{tab:f-cumulative-cost} uses eight calls and 32 lifecycle events per
+request. Five seed runs each execute the five cumulative configurations, with
+100 warmups and 1,000 measured validations per configuration.
+There are 25,000 measured validations in total.
+Evidence is constructed before timing.
+The empty baseline creates a request-ID payload; later configurations validate
+lifecycle records, bilateral handoffs, provider receipts, and settlement in
+that order, while selecting the corresponding payload fields.
+Timing ends before canonical serialization of the selected payload.
+Authorization verification is not included in these four validation stages.
+Model inference, evidence generation and signing, serialization, persistence,
+ledger operations, and proof generation are outside this timing boundary.
+Selected payload size is the subsequent canonical encoding of those fields,
+not the full persisted evidence bundle or a wire-protocol footprint.
+
+\begin{table}[!t]
+\centering
+\caption{Historical cumulative validation configurations (mean $\pm$ sample SD of five run means; 1,000 measurements per configuration per run).}
+\label{tab:f-cumulative-cost}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}ccc@{\hspace{3pt}}}
+\toprule
+\shortstack{\textbf{Cumulative}\\\textbf{checks}} & \shortstack{\textbf{Wall time}\\\textbf{(ms)}} & \shortstack{\textbf{CPU time}\\\textbf{(ms)}} & \shortstack{\textbf{Selected payload}\\\textbf{(KiB)}} \\
+\midrule
+Baseline & 0.00047 $\pm$ 0.00007 & 0.00129 $\pm$ 0.00022 & 0.0215 $\pm$ 0.0000 \\
++ Lifecycle & 6.026 $\pm$ 0.029 & 6.020 $\pm$ 0.031 & 15.369 $\pm$ 0.000 \\
++ Handoff & 11.452 $\pm$ 0.037 & 11.432 $\pm$ 0.030 & 22.468 $\pm$ 0.000 \\
++ Provider & 14.361 $\pm$ 0.095 & 14.342 $\pm$ 0.092 & 29.543 $\pm$ 0.000 \\
++ Settlement & 16.704 $\pm$ 0.109 & 16.673 $\pm$ 0.103 & 32.217 $\pm$ 0.000 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+\noindent\textbf{Matched increments and aggregation.}
+For stage $j$ and seed run $r$, we compute the wall-time increment
+$\Delta T_{j,r}=T_{j,r}-T_{j-1,r}$ and the corresponding byte difference
+before taking their means and sample standard deviations across the five runs.
+The empty baseline is measured relative to zero.
+These differences characterize the specified activation order and are not
+independent measurements of isolated components.
+The total is aggregated directly from the final cumulative configuration;
+its standard deviation is not the sum of stage standard deviations.
+All reported deviations describe variation of five run means, rather than
+the pooled variation of 25,000 individual validations.
+Payload sizes are identical across the five runs of each configuration.
+The archived RSS values come from a shared, continuously running process and
+are omitted because they do not isolate configuration-specific memory costs.
+
+\begin{table}[!t]
+\centering
+\caption{Marginal costs along the cumulative validation sequence. Stage differences are computed within matched runs before aggregation; the empty baseline is measured relative to zero.}
+\label{tab:f-paired-increments}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cc@{\hspace{3pt}}}
+\toprule
+\textbf{Added checks} & \shortstack{\textbf{Wall increment}\\\textbf{(ms)}} & \shortstack{\textbf{Payload increment}\\\textbf{(KiB)}} \\
+\midrule
+Empty baseline & 0.00047 $\pm$ 0.00007 & 0.0215 $\pm$ 0.0000 \\
++ Lifecycle & 6.025 $\pm$ 0.029 & 15.348 $\pm$ 0.000 \\
++ Handoff & 5.426 $\pm$ 0.057 & 7.099 $\pm$ 0.000 \\
++ Provider & 2.909 $\pm$ 0.089 & 7.075 $\pm$ 0.000 \\
++ Settlement & 2.343 $\pm$ 0.198 & 2.674 $\pm$ 0.000 \\
+\textbf{Total} & 16.704 $\pm$ 0.109 & 32.217 $\pm$ 0.000 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+

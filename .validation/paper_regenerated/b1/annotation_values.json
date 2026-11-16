@@ -1,0 +1,47 @@
+[
+  {
+    "model": "qwen3-1.7b",
+    "top_box": "all third-round TP and Vanilla request latencies",
+    "round_3_mean_latency_delta_vs_vanilla_percent": -9.390209343100064,
+    "latency_callout_displayed": true,
+    "bottom_box": "TokenProv mean throughput bar",
+    "ratio_of_three_round_mean_throughput_tp_to_vanilla": 1.0153633339291348,
+    "throughput_callout_displayed": true
+  },
+  {
+    "model": "qwen3-4b",
+    "top_box": "all third-round TP and Vanilla request latencies",
+    "round_3_mean_latency_delta_vs_vanilla_percent": -3.368616936276325,
+    "latency_callout_displayed": true,
+    "bottom_box": "TokenProv mean throughput bar",
+    "ratio_of_three_round_mean_throughput_tp_to_vanilla": 1.0222970282359103,
+    "throughput_callout_displayed": true
+  },
+  {
+    "model": "phi-3-mini-4k-instruct",
+    "top_box": "all third-round TP and Vanilla request latencies",
+    "round_3_mean_latency_delta_vs_vanilla_percent": 0.6590723105514895,
+    "latency_callout_displayed": false,
+    "bottom_box": "TokenProv mean throughput bar",
+    "ratio_of_three_round_mean_throughput_tp_to_vanilla": 1.074316436715698,
+    "throughput_callout_displayed": true
+  },
+  {
+    "model": "deepseek-r1-distill-llama-8b",
+    "top_box": "all third-round TP and Vanilla request latencies",
+    "round_3_mean_latency_delta_vs_vanilla_percent": 42.70742282153135,
+    "latency_callout_displayed": false,
+    "bottom_box": "TokenProv mean throughput bar",
+    "ratio_of_three_round_mean_throughput_tp_to_vanilla": 0.9439301304576808,
+    "throughput_callout_displayed": false
+  },
+  {
+    "model": "qwen3-14b",
+    "top_box": "all third-round TP and Vanilla request latencies",
+    "round_3_mean_latency_delta_vs_vanilla_percent": -1.4339863825132304,
+    "latency_callout_displayed": true,
+    "bottom_box": "TokenProv mean throughput bar",
+    "ratio_of_three_round_mean_throughput_tp_to_vanilla": 0.9913750860049405,
+    "throughput_callout_displayed": false
+  }
+]

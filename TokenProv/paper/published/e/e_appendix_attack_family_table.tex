@@ -1,0 +1,19 @@
+\begin{table*}[!t]
+\centering
+\caption{Current valid-signature adaptive attacks by family (accepted attack queries / actual queries). Family query counts differ because search adapts to feedback and stops at the first success.}
+\label{tab:e-attack-families}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular*}{\textwidth}{@{\hspace{4pt}}l@{\extracolsep{\fill}}cccc@{\hspace{4pt}}}
+\toprule
+\textbf{Attack family} & \textbf{SignedLog} & \textbf{SignedLog+} & \textbf{TokenProv} & \shortstack{\textbf{TokenProv first}\\\textbf{failed relation}} \\
+\midrule
+Aggregate bill manipulation & 18/18 & 0/264 & 0/232 & $R_{\mathrm{set}}$ \\
+Receipt duplication & 13/13 & 0/267 & 0/223 & $R_{\mathrm{prov}}$ \\
+Receipt omission & 22/22 & 0/278 & 0/256 & $R_{\mathrm{set}}$ \\
+Observable accepted-call omission & 12/12 & 0/265 & 0/283 & $R_{\mathrm{hand}}$ \\
+Cross-call evidence splicing & 14/14 & 0/251 & 0/309 & $R_{\mathrm{prov}}$ \\
+Unauthorized deployment substitution & 21/21 & 0/275 & 0/297 & $R_{\mathrm{prov}}$ \\
+\bottomrule
+\end{tabular*}
+\end{table*}

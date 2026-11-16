@@ -1,0 +1,143 @@
+\subsection{Security Effectiveness and Accountability}
+\label{sec:evaluation-security}
+
+We evaluate whether authenticated protocol violations are rejected and whether
+audit failures yield interpretable responsibility intervals.
+Table~\ref{tab:e-security-accountability} summarizes the current valid-signature
+attack suite and separate historical binding and localization microbenchmarks.
+These CPU experiments exercise transcript auditing independently of model inference.
+Every attack query is audited; detection results therefore describe audited
+requests, rather than the fraction discovered under request sampling.
+
+\begin{table}[!t]
+\centering
+\caption{Security and accountability results: current valid-signature attacks
+(a) and historical protocol microbenchmarks (b)--(c).}
+\label{tab:e-security-accountability}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}ccc@{\hspace{3pt}}}
+\toprule
+\rowcolor{gray!12}
+\multicolumn{4}{l}{\textbf{(a) Valid-signature adaptive attacks}} \\
+\textbf{Scheme}
+& \shortstack{\textbf{Successful}\\\textbf{episodes}}
+& \shortstack{\textbf{Attack}\\\textbf{queries}}
+& \shortstack{\textbf{Benign false}\\\textbf{rejections}} \\
+\midrule
+SignedLog & 100/100 & 100 & 0/100 \\
+SignedLog+ & 0/100 & 1,600 & 0/100 \\
+\textbf{\textsc{TokenProv}} & 0/100 & 1,600 & 0/100 \\
+\bottomrule
+\end{tabular*}
+
+\vspace{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cc@{\hspace{3pt}}}
+\toprule
+\rowcolor{gray!12}
+\multicolumn{3}{l}{\textbf{(b) Cross-request splicing: accepted / tested}} \\
+\textbf{Source--target pair}
+& \shortstack{\textbf{Source-local}\\\textbf{checks}}
+& \textbf{\textsc{TokenProv}} \\
+\midrule
+Same model and deployment & 500/500 & 0/500 \\
+Same model, different deployment & 500/500 & 0/500 \\
+Different model and deployment & 500/500 & 0/500 \\
+\bottomrule
+\end{tabular*}
+
+\vspace{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cccc@{\hspace{3pt}}}
+\toprule
+\rowcolor{gray!12}
+\multicolumn{5}{l}{\textbf{(c) First-failure localization and responsibility}} \\
+\textbf{Injected stage}
+& \shortstack{\textbf{First}\\\textbf{failure}}
+& \shortstack{\textbf{Relation}\\\textbf{matches}}
+& \shortstack{\textbf{Interval}\\\textbf{(hops)}}
+& \shortstack{\textbf{Mean audit}\\\textbf{(ms)}} \\
+\midrule
+Authorization & $R_{\mathrm{auth}}$ & 500/500 & $U$--$H$ (1) & 0.168 \\
+Lifecycle & $R_{\mathrm{life}}$ & 500/500 & $H$--$H$ (0) & 3.476 \\
+Handoff & $R_{\mathrm{hand}}$ & 500/500 & $H$--$P$ (2) & 3.430 \\
+Provider & $R_{\mathrm{prov}}$ & 500/500 & $B$--$P$ (1) & 9.165 \\
+Settlement & $R_{\mathrm{set}}$ & 500/500 & $H$--$B$ (1) & 14.350 \\
+\bottomrule
+\end{tabular*}
+
+\vspace{2pt}
+\parbox{\columnwidth}{\scriptsize
+In (a), each episode permits at most 16 queries and stops at the first success.
+Source-local checks in (b) use the original source context.
+Each configuration in (b)--(c) uses five fixtures with 100 repetitions each.
+Interval widths count hops along $U\!\rightarrow\!H\!\rightarrow\!B\!\rightarrow\!P$.}
+\end{table}
+
+
+\noindent\textbf{Valid-signature adaptive attacks.}
+The current suite covers aggregate-bill manipulation, receipt duplication,
+receipt omission, observable accepted-call omission, cross-call evidence
+splicing, and unauthorized deployment substitution.
+The attacker controls $H$ and $B$, and additionally controls the provider for
+the splicing and deployment-substitution attacks.
+It can regenerate closure and settlement records and signatures using corrupted
+roles' keys; the original user authorization and retained handoff evidence
+remain fixed.
+Provider receipts are re-signed when the corresponding provider is corrupted.
+Before each query, we check signature validity and confirm a violation against
+an independent reference consisting of the original accepted calls, receipt
+fields, and integer bill.
+Each scheme has 100 attack episodes, with at most 16 queries per episode.
+The search uses exposed first-failure feedback to select subsequent attack
+families and stops at the first accepted violation.
+
+Table~\ref{tab:e-security-accountability}(a) shows successful attacks in
+100/100 episodes against \textsc{SignedLog}, which checks individual receipt
+signatures. \textsc{SignedLog+} and \textsc{TokenProv} each reject all 1,600
+attack queries, with no successful episode observed.
+All three schemes accept their 100 benign controls.
+Thus, both complete consistency checkers detect the tested violations even
+when corrupted parties repair their signatures; the suite establishes no
+detection-rate advantage of \textsc{TokenProv} over \textsc{SignedLog+}.
+Appendix~\ref{app:e-security-accountability} provides the per-family counts
+and historical fourteen-class injection results.
+
+\noindent\textbf{Cross-request evidence binding.}
+Table~\ref{tab:e-security-accountability}(b) reports a separate historical
+experiment that transplants a genuine source call/receipt/artifact tuple into
+a target request.
+The source--target pairs use the same deployment, different deployments of
+the same model, or different models and deployments.
+Source-context receipt checks accept all 1,500 transplanted tuples, whereas
+\textsc{TokenProv} rejects all 1,500 at the request-binding check in
+$R_{\mathrm{prov}}$.
+The request identifiers differ while the fixture call labels both remain
+\texttt{c-0}; the result demonstrates rejection of evidence valid in its source
+context but inconsistent with the audited request.
+Each scenario uses five seed fixtures with 100 repetitions per fixture.
+
+\noindent\textbf{First-failure localization.}
+Table~\ref{tab:e-security-accountability}(c) covers predefined mutations in
+authorization, lifecycle, handoff, provider, and settlement records.
+The first failed relation matches the injected stage in 500/500 repetitions
+per stage, or 2,500/2,500 overall.
+The auditor maps these relations to responsibility intervals of zero to two
+role-boundary hops.
+Mean time to return the audit result ranges from 0.168 to 14.350\,ms across
+the five stages.
+These results measure stage agreement and the reported interval granularity;
+an interval spanning multiple roles does not identify a unique malicious party.
+
+\noindent\textbf{Collusion and observable evidence.}
+Separate historical controls examine the effect of retaining independently
+observable contradictions.
+The $B+P$ splicing control, which conflicts with retained signed boundary
+records, is rejected in 500/500 repetitions and returns the $B$--$P$ interval.
+The $H+B$ hidden-execution control and the internally consistent $H+B+P$
+control are each accepted in 500/500 repetitions when no conflicting
+independent evidence is supplied.
+These accepted controls identify the observability boundary and are kept
+separate from the within-scope attack-success counts.
+Table~\ref{tab:e-historical-collusion} describes their construction and outcomes.

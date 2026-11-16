@@ -1,0 +1,3 @@
+[console_scripts]
+tokenprov-eval = tokenprov.server_eval.__main__:main
+tokenprov-tee-runtime = tokenprov.assurance.tee_runtime:main

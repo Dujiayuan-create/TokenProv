@@ -1,0 +1,18 @@
+\begin{table*}[!t]
+\centering
+\caption{Historical five-stage fault-localization microbenchmark. Matching means the returned first failed relation equals the predefined injected-stage relation; the returned responsibility interval is fixed by that relation, and its width counts role-boundary hops.}
+\label{tab:e-historical-localization}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular*}{\textwidth}{@{\hspace{4pt}}l@{\extracolsep{\fill}}lcccc@{\hspace{4pt}}}
+\toprule
+\textbf{Injected stage} & \shortstack{\textbf{First failed}\\\textbf{relation}} & \shortstack{\textbf{Relation}\\\textbf{matches}} & \shortstack{\textbf{Returned}\\\textbf{interval}} & \shortstack{\textbf{Mean interval}\\\textbf{width (hops)}} & \shortstack{\textbf{Mean audit}\\\textbf{time (ms)}} \\
+\midrule
+Authorization & $R_{\mathrm{auth}}$ & 500/500 & $U$--$H$ & 1 & 0.168 \\
+Lifecycle & $R_{\mathrm{life}}$ & 500/500 & $H$--$H$ & 0 & 3.476 \\
+Handoff & $R_{\mathrm{hand}}$ & 500/500 & $H$--$P$ & 2 & 3.430 \\
+Provider & $R_{\mathrm{prov}}$ & 500/500 & $B$--$P$ & 1 & 9.165 \\
+Settlement & $R_{\mathrm{set}}$ & 500/500 & $H$--$B$ & 1 & 14.350 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

@@ -1,0 +1,23 @@
+# Execute inside the approved confidential VM with GPU CC enabled.
+# Existing ordinary vLLM endpoints are not turned into a TEE by this YAML.
+provider_id: model_a
+model: CHANGE_TO_SERVED_MODEL_NAME
+model_path: /srv/models/CHANGE_TO_LOCAL_MODEL_DIR
+revision: CHANGE_TO_MODEL_REVISION
+model_hash: REPLACE_WITH_APPROVED_MODEL_MANIFEST_HASH
+tokenizer_hash: REPLACE_WITH_APPROVED_TOKENIZER_MANIFEST_HASH
+backend: vllm
+max_model_len: 4096
+max_output_tokens: 2048
+gpu_memory_percent: 80
+session_ttl_s: 3600
+max_sessions: 128
+nvattest_command: [nvattest]
+nvidia_policy_file: nvidia.rego
+nras_url: https://nras.attestation.nvidia.com
+attestation_timeout_s: 120
+# Must obtain evidence from a protected measured launcher/deployment service,
+# including immutable model loading and attested GPU -> CUDA device binding.
+workload_evidence_command: [/opt/attestation/tokenprov-workload-evidence]
+# api_key_env: TOKENPROV_TEE_API_KEY
+# cpu_attester_command: [/opt/attestation/tokenprov-snp-attester]

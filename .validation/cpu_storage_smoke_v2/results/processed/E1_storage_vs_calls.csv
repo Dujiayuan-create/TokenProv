@@ -1,0 +1,4 @@
+system,calls_per_request,run,seed,bytes_per_call,bytes_per_request,ledger_bytes,repository_bytes,total_bytes,write_latency_ms,serialization_latency_ms,storage_reduction_vs_fulltrace_pct,measurement_type
+SignedLog,1,1,42,1058.0,1058,0,1058,1058,32.0885,,91.43250465624747,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,1,1,42,10253.0,10253,0,10253,10253,146.4221,,16.97303425378573,PROTOCOL_MICROBENCHMARK
+FullTrace,1,1,42,12349.0,12349,0,12349,12349,154.1015,,0.0,PROTOCOL_MICROBENCHMARK

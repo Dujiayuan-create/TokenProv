@@ -1,0 +1,81 @@
+{
+  "font": "C:\\Windows\\Fonts\\times.ttf",
+  "figure_size_inches": [
+    3.5,
+    3.95
+  ],
+  "png_dpi": 1200,
+  "png_size_pixels": [
+    4174,
+    4514
+  ],
+  "saved_strip_height_pt_before": 23.780445851107757,
+  "saved_strip_height_pt_after": 11.580445851107736,
+  "calls_and_model_row_alignment_error_pt": 2.0463630789890885e-14,
+  "upper_subtitle_y_aligned": true,
+  "c_subtitle_export_center_error_pt": 1.5987211554602254e-14,
+  "grayscale_channels_equal": true,
+  "upper_caption_to_lower_group_gap_pt": 4.039567307692337,
+  "layout": "single column: a and b side by side above full-width c; each group has two tiers",
+  "nominal_data_font_pt": 7.995,
+  "compact_upper_matrix_font_pt": 6.3345,
+  "labels_outside_figure": [],
+  "fulltrace_reduction_at_64_calls_percent": 29.00557101734319,
+  "storage_repetition_sd_KiB_max": 0.0,
+  "current_intervals": "min to max of three observed round means; markers identify rounds",
+  "settlement_intervals": "range of per-round sums of four non-overlapping stages",
+  "heatmap_stage_means_ms": [
+    [
+      1.7807579427083333,
+      1.6628594739583333,
+      1.5336754505208332,
+      1.900864953125,
+      1.8400514375
+    ],
+    [
+      0.7014686614583333,
+      0.6629927213541666,
+      0.6956322395833333,
+      0.6677180364583334,
+      0.67655496875
+    ],
+    [
+      3.7607105286458333,
+      3.268090763020833,
+      2.977561346354167,
+      3.20354040625,
+      3.2633204739583332
+    ],
+    [
+      8.011059809895833,
+      6.8804580338541665,
+      7.601401166666667,
+      6.937961088541667,
+      6.889574947916667
+    ]
+  ],
+  "relative_storage_savings_percent": [
+    22.69442347103873,
+    25.35077137959495,
+    27.06628121625858,
+    28.052418690630887,
+    28.58695448498135,
+    28.865549009003878,
+    29.00557101734319
+  ],
+  "ledger_fraction_of_retained_bytes_percent": [
+    0.937369116730613,
+    0.9380293839077231,
+    0.9363629596622755,
+    0.9285670289179456,
+    0.9375741500460636
+  ],
+  "current_TokenProv_requests": 1920,
+  "historical_and_current_sizes_pooled": false,
+  "new_experiments_executed": false,
+  "input_sha256": {
+    "data/d/E1_storage_vs_calls.csv": "d3e4d489c876d954dedb318f3f80cb720b8a2f67409d95fd315c1598daf00e75",
+    "data/d/current_round_data.csv": "81e40029c4c06dd63e2f2d6719a16482119239d3ec34bb3bb0d821166a3b9723",
+    "data/d/current_model_summary.csv": "ed3c4e813f1cc81eb4a5fae1559246a198c1089b250e001239a00b427beb2b85"
+  }
+}

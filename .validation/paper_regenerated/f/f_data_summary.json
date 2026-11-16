@@ -1,0 +1,201 @@
+{
+  "sources": {
+    "rule_gating": {
+      "path": "data\\f\\G1_security_ablation.csv",
+      "bytes": 417584,
+      "sha256": "b5cde1d2f28ad638821dc6d20b9e97bcb070a3f855253f11f62608feb9cb6568"
+    },
+    "cumulative_cost": {
+      "path": "data\\f\\G2_performance_ablation.csv",
+      "bytes": 2984,
+      "sha256": "8b78e24fb4da03cd74479ad2e68590b4f667b0752f12e7a8dbd9d2787be8fe5b"
+    }
+  },
+  "rules": [
+    {
+      "relation": "R_life",
+      "attack_id": "A2",
+      "attack": "Call insertion",
+      "source_variant": "TokenProv-w/o-Life",
+      "full_accepted": 0,
+      "full_tested": 500,
+      "relaxed_accepted": 500,
+      "relaxed_tested": 500
+    },
+    {
+      "relation": "R_hand",
+      "attack_id": "A6",
+      "attack": "Handoff tampering",
+      "source_variant": "TokenProv-w/o-Handoff",
+      "full_accepted": 0,
+      "full_tested": 500,
+      "relaxed_accepted": 500,
+      "relaxed_tested": 500
+    },
+    {
+      "relation": "R_prov",
+      "attack_id": "A12",
+      "attack": "Evidence splicing",
+      "source_variant": "TokenProv-w/o-R_link",
+      "full_accepted": 0,
+      "full_tested": 500,
+      "relaxed_accepted": 500,
+      "relaxed_tested": 500
+    },
+    {
+      "relation": "R_set",
+      "attack_id": "A14",
+      "attack": "Bill manipulation",
+      "source_variant": "TokenProv-w/o-ExactSettlement",
+      "full_accepted": 0,
+      "full_tested": 500,
+      "relaxed_accepted": 500,
+      "relaxed_tested": 500
+    }
+  ],
+  "costs": [
+    {
+      "index": 0,
+      "source_variant": "Vanilla",
+      "label": "Empty baseline",
+      "rounds": 5,
+      "measured_samples": 5000,
+      "wall_mean_ms": 0.0004671726,
+      "wall_sd_ms": 7.263383300707733e-05,
+      "cpu_mean_ms": 0.0012888888,
+      "cpu_sd_ms": 0.00022483984810237712,
+      "bytes_mean": 22.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 0.021484375,
+      "payload_sd_kib": 0.0
+    },
+    {
+      "index": 1,
+      "source_variant": "Vanilla + Lifecycle",
+      "label": "+ Lifecycle",
+      "rounds": 5,
+      "measured_samples": 5000,
+      "wall_mean_ms": 6.0257865552,
+      "wall_sd_ms": 0.02878083919516793,
+      "cpu_mean_ms": 6.0196420458,
+      "cpu_sd_ms": 0.030752812879520215,
+      "bytes_mean": 15738.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 15.369140625,
+      "payload_sd_kib": 0.0
+    },
+    {
+      "index": 2,
+      "source_variant": "+ Bilateral Handoff",
+      "label": "+ Handoff",
+      "rounds": 5,
+      "measured_samples": 5000,
+      "wall_mean_ms": 11.4518187724,
+      "wall_sd_ms": 0.036813577591238725,
+      "cpu_mean_ms": 11.4318667968,
+      "cpu_sd_ms": 0.030285958786438395,
+      "bytes_mean": 23007.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 22.4677734375,
+      "payload_sd_kib": 0.0
+    },
+    {
+      "index": 3,
+      "source_variant": "+ Provider Binding",
+      "label": "+ Provider",
+      "rounds": 5,
+      "measured_samples": 5000,
+      "wall_mean_ms": 14.3608776476,
+      "wall_sd_ms": 0.094864833416448,
+      "cpu_mean_ms": 14.3416034498,
+      "cpu_sd_ms": 0.09239674422469213,
+      "bytes_mean": 30252.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 29.54296875,
+      "payload_sd_kib": 0.0
+    },
+    {
+      "index": 4,
+      "source_variant": "TokenProv-Full",
+      "label": "+ Settlement",
+      "rounds": 5,
+      "measured_samples": 5000,
+      "wall_mean_ms": 16.704343822,
+      "wall_sd_ms": 0.10888888527859882,
+      "cpu_mean_ms": 16.6725734096,
+      "cpu_sd_ms": 0.10253062102380048,
+      "bytes_mean": 32990.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 32.216796875,
+      "payload_sd_kib": 0.0
+    }
+  ],
+  "increments": [
+    {
+      "index": 0,
+      "label": "Empty baseline",
+      "wall_mean_ms": 0.0004671726,
+      "wall_sd_ms": 7.263383300707733e-05,
+      "bytes_mean": 22.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 0.021484375,
+      "payload_sd_kib": 0.0
+    },
+    {
+      "index": 1,
+      "label": "+ Lifecycle",
+      "wall_mean_ms": 6.0253193826,
+      "wall_sd_ms": 0.02881095353654058,
+      "bytes_mean": 15716.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 15.34765625,
+      "payload_sd_kib": 0.0
+    },
+    {
+      "index": 2,
+      "label": "+ Handoff",
+      "wall_mean_ms": 5.4260322172,
+      "wall_sd_ms": 0.05725401057634469,
+      "bytes_mean": 7269.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 7.0986328125,
+      "payload_sd_kib": 0.0
+    },
+    {
+      "index": 3,
+      "label": "+ Provider",
+      "wall_mean_ms": 2.9090588752000004,
+      "wall_sd_ms": 0.088795484585948,
+      "bytes_mean": 7245.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 7.0751953125,
+      "payload_sd_kib": 0.0
+    },
+    {
+      "index": 4,
+      "label": "+ Settlement",
+      "wall_mean_ms": 2.3434661743999996,
+      "wall_sd_ms": 0.19788323006948896,
+      "bytes_mean": 2738.0,
+      "bytes_sd": 0.0,
+      "payload_mean_kib": 2.673828125,
+      "payload_sd_kib": 0.0
+    }
+  ],
+  "counts": {
+    "rule_control_rows": 4000,
+    "cost_run_means": 25,
+    "validations": 25000,
+    "runs": 5,
+    "warmups_per_configuration": 100,
+    "samples_per_configuration": 1000
+  },
+  "scope": {
+    "measurement_type": "Historical protocol microbenchmark",
+    "rule_gating": "Complete audit followed by first-failure acceptance override",
+    "performance": "In-process cumulative validation; serialization excluded",
+    "payload": "Selected fields only; not current full bundle",
+    "deviations": "Sample SD across five run means",
+    "memory": "RSS omitted: not configuration-isolated"
+  }
+}

@@ -1,0 +1,20 @@
+% Copy the figure into the paper's graphics directory and adapt this path.
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{d_evidence_settlement.pdf}
+  \caption{Evidence storage and processing costs.
+  (a) Historical protocol microbenchmark comparing retained storage with FullTrace
+  under the same earlier serialization; five measurements per configuration have
+  identical sizes; the shaded gap indicates storage saved and the lower strip
+  gives relative savings.
+  (b)--(c) Current TokenProv measurements with eight sequential calls per request
+  and concurrency eight. Circles, squares and triangles identify the three
+  round means (128 measured requests per round), black ticks show their means,
+  and shaded intervals span their minimum and maximum. The storage matrix in
+  (b) gives three-round mean serialized sizes. Stage cells in (c) give mean
+  ms/request; total costs are summed within each round before aggregation.
+  The round-marker legend in (c) also applies to (b). In (b), Q1.7/Q4/Q14 denote
+  Qwen3-1.7B/4B/14B, Phi denotes Phi-3-mini, and DS8 denotes the DeepSeek
+  Llama-8B distillation.}
+  \label{fig:d-evidence-settlement}
+\end{figure}

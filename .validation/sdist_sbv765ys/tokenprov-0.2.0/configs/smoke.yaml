@@ -1,0 +1,24 @@
+# Offline fixture execution: no model service, tokenizer, GPU, or proof toolchain.
+schema_version: 1
+output_root: ../results/server_runs
+endpoints:
+  - id: fixture
+    model: fixture-model
+    base_url: http://127.0.0.1:8000
+systems: [Vanilla, SignedLogPlus, TokenProv-Full]
+execution:
+  concurrency: [2]
+  repetitions: 1
+  requests_per_run: 4
+  warmups: 1
+  seed: 42
+workload:
+  calls: [2]
+  input_tokens: [64]
+  max_output_tokens: [8]
+audit:
+  probability: 1.0
+  workers: 2
+  queue_capacity: 8
+  timeout_s: 30
+  retention_s: 3600

@@ -1,0 +1,10 @@
+scenario,scenario_name,variant,trials,accepted,rejected,mean_verification_latency_ms,failed_relations,dataset
+S1,Same model and deployment; different request,IndependentLocalChecks,500,500,0,0.000304278,,historical_protocol_microbenchmark
+S1,Same model and deployment; different request,TokenProv-w/o-R_link,500,500,0,0.00018285800000000002,,historical_protocol_microbenchmark
+S1,Same model and deployment; different request,TokenProv-Full,500,0,500,4.779522226,R_prov,historical_protocol_microbenchmark
+S2,Same model; different deployment and request,IndependentLocalChecks,500,500,0,0.000289198,,historical_protocol_microbenchmark
+S2,Same model; different deployment and request,TokenProv-w/o-R_link,500,500,0,0.00017248000000000003,,historical_protocol_microbenchmark
+S2,Same model; different deployment and request,TokenProv-Full,500,0,500,4.683053708,R_prov,historical_protocol_microbenchmark
+S3,"Different model, deployment, and request",IndependentLocalChecks,500,500,0,0.00029806,,historical_protocol_microbenchmark
+S3,"Different model, deployment, and request",TokenProv-w/o-R_link,500,500,0,0.000185838,,historical_protocol_microbenchmark
+S3,"Different model, deployment, and request",TokenProv-Full,500,0,500,4.755288616,R_prov,historical_protocol_microbenchmark

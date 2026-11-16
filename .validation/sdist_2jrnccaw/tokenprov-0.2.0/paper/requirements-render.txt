@@ -1,0 +1,4 @@
+# Versions used to validate the retained final figures; fonts are installed separately.
+matplotlib==3.10.0
+numpy==2.5.4
+Pillow==13.0.0

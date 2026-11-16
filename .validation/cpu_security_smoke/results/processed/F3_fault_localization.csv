@@ -1,0 +1,6 @@
+ground_truth_stage,injection_stage,seed,trial,observed_failed_relation,exact_localization,responsibility_interval_width,ground_truth_contained,audit_latency_ms,measurement_type
+R_auth,auth,42,0,R_auth,True,1,True,0.4127,PROTOCOL_MICROBENCHMARK
+R_life,life,42,0,R_life,True,0,True,5.3679,PROTOCOL_MICROBENCHMARK
+R_hand,hand,42,0,R_hand,True,2,True,5.3631,PROTOCOL_MICROBENCHMARK
+R_prov,prov,42,0,R_prov,True,1,True,14.4129,PROTOCOL_MICROBENCHMARK
+R_set,set,42,0,R_set,True,1,True,22.0027,PROTOCOL_MICROBENCHMARK

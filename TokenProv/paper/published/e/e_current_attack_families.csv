@@ -1,0 +1,19 @@
+system,attack,attack_name,queries,accepted_queries,rejected_queries,failed_relation_counts,mean_audit_latency_ms,measurement_type
+SignedLog,bill_delta,Aggregate bill manipulation,18,18,0,{},0.8952833333333333,PROTOCOL_MICROBENCHMARK
+SignedLog,duplicate_receipt,Receipt duplication,13,13,0,{},0.9992718461538461,PROTOCOL_MICROBENCHMARK
+SignedLog,omit_receipt,Receipt omission,22,22,0,{},0.7806091818181817,PROTOCOL_MICROBENCHMARK
+SignedLog,omit_acceptance,Observable accepted-call omission,12,12,0,{},0.7856118333333334,PROTOCOL_MICROBENCHMARK
+SignedLog,cross_call_splice,Cross-call evidence splicing,14,14,0,{},0.8904497142857143,PROTOCOL_MICROBENCHMARK
+SignedLog,wrong_deployment,Unauthorized deployment substitution,21,21,0,{},0.9028679523809524,PROTOCOL_MICROBENCHMARK
+SignedLogPlus,bill_delta,Aggregate bill manipulation,264,0,264,"{""SignedLogPlus"": 264}",7.592957704545454,PROTOCOL_MICROBENCHMARK
+SignedLogPlus,duplicate_receipt,Receipt duplication,267,0,267,"{""SignedLogPlus"": 267}",7.60502261423221,PROTOCOL_MICROBENCHMARK
+SignedLogPlus,omit_receipt,Receipt omission,278,0,278,"{""SignedLogPlus"": 278}",7.317667276978417,PROTOCOL_MICROBENCHMARK
+SignedLogPlus,omit_acceptance,Observable accepted-call omission,265,0,265,"{""SignedLogPlus"": 265}",5.563809943396227,PROTOCOL_MICROBENCHMARK
+SignedLogPlus,cross_call_splice,Cross-call evidence splicing,251,0,251,"{""SignedLogPlus"": 251}",6.7575508725099604,PROTOCOL_MICROBENCHMARK
+SignedLogPlus,wrong_deployment,Unauthorized deployment substitution,275,0,275,"{""SignedLogPlus"": 275}",6.563065549090909,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,bill_delta,Aggregate bill manipulation,232,0,232,"{""R_set"": 232}",8.431906573275862,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,duplicate_receipt,Receipt duplication,223,0,223,"{""R_prov"": 223}",7.489213520179372,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,omit_receipt,Receipt omission,256,0,256,"{""R_set"": 256}",7.36794683203125,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,omit_acceptance,Observable accepted-call omission,283,0,283,"{""R_hand"": 283}",5.477196978798587,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,cross_call_splice,Cross-call evidence splicing,309,0,309,"{""R_prov"": 309}",6.435971990291262,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,wrong_deployment,Unauthorized deployment substitution,297,0,297,"{""R_prov"": 297}",6.403049101010101,PROTOCOL_MICROBENCHMARK

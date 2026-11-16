@@ -1,0 +1,186 @@
+% Insert after the paper's existing \appendices command.
+\section{Additional Provider-Assurance Measurements}
+\label{app:c-assurance}
+
+\noindent\textbf{Inputs, platform, and statistical method.}
+Proof experiments use retained witnesses from the original 128 Qwen3-1.7B
+requests and 1,024 calls. Before replay, we validate all 128 source-bundle
+hashes and 1,024 per-call witness commitments and check that source files
+remain unchanged. Measurements run on the B300 server's Intel Xeon 6747P
+CPU using Node.js 22.14.0 and snarkjs 0.7.5. No GPU is allocated.
+We use two persistent proof processes, with at most two curve worker
+threads per process, and three rounds with seeds 42--44.
+Each statistic is first computed within a round; tables then report the
+arithmetic mean and sample standard deviation of three round-level values.
+Warmups and preflight measurements are excluded, and all formal observations
+are retained. These are replay measurements with no new model inference.
+
+\noindent\textbf{Proof statement and execution boundaries.}
+The Groth16 circuit checks a Poseidon accounting commitment, integer token
+charges, and a scoped request-hash equality. Receipt-bound SHA-256 witness
+validation and shared-field linkage checks execute on the host.
+The measured circuit does not prove full LLM inference or the complete
+host-side validation procedure.
+Table~\ref{tab:c1-assurance-cost} separates circuit input preparation,
+witness calculation, proving, verification, and complete warm RPC time.
+Each round measures 32 warm calls and eight original process-per-call
+commands. C2 and C3 use the persistent benchmark adapter; the original
+deployed adapter is measured independently in C1. The persistent adapter
+also verifies proofs produced by the original adapter. Original command
+timings include process startup and command-level overhead, so the rows
+describe implementation costs at their stated boundaries.
+
+\begin{table}[!t]
+\centering
+\caption{Scoped proof costs on the B300 server CPU (ms/call; mean $\pm$ sample SD across three rounds).}
+\label{tab:c1-assurance-cost}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}c@{\hspace{3pt}}}
+\toprule
+\textbf{Component} & \textbf{Cost} \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{2}{l}{\textbf{Persistent workers}} \\
+Host witness/link checks & 0.168 $\pm$ 0.018 \\
+Circuit input preparation & 0.234 $\pm$ 0.016 \\
+Circuit witness calculation & 35.542 $\pm$ 3.477 \\
+Groth16 proving & 112.872 $\pm$ 4.549 \\
+Witness calculation + proving & 148.445 $\pm$ 7.644 \\
+Proof verification & 15.101 $\pm$ 1.550 \\
+Complete warm RPC & 164.525 $\pm$ 9.185 \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{2}{l}{\textbf{Original process-per-call adapter}} \\
+Complete prover command & 922.275 $\pm$ 32.204 \\
+Complete verifier command & 721.366 $\pm$ 2.495 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\noindent\textbf{Proof scheduling.}
+For each call count and mode, each round replays four source-request groups,
+using the first one, two, four, or eight calls of each request.
+Both modes revalidate and prepare inputs, then serialize and synchronize
+a fresh witness copy before ending the foreground timer.
+Immediate generates proofs in the foreground and verifies them during audit;
+Deferred generates and verifies proofs during audit.
+Table~\ref{tab:c2-deferred-cost} reports foreground time, its proving
+component, audit proving, elapsed audit time, and total processing.
+For each round, total time is the sum of foreground and subsequent audit
+time; the total's SD is calculated from these round-level sums.
+The 99.28\% foreground reduction is calculated within each paired round
+before aggregation. These measurements do not include LLM service time
+or characterize interference with concurrent inference.
+
+\begin{table*}[!t]
+\centering
+\caption{Immediate and deferred proving on retained request witnesses (ms/request; mean $\pm$ sample SD across three rounds). Online and audit proving are components of their respective enclosing phases.}
+\label{tab:c2-deferred-cost}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\hspace{3pt}}c@{\extracolsep{\fill}}lccccc@{\hspace{3pt}}}
+\toprule
+\shortstack{\textbf{Calls/}\\\textbf{request}} & \textbf{Mode} & \textbf{Foreground} & \shortstack{\textbf{Online}\\\textbf{proving}} & \shortstack{\textbf{Audit}\\\textbf{proving}} & \shortstack{\textbf{Audit}\\\textbf{time}} & \textbf{Total} \\
+\midrule
+1 & Immediate & 151.59 $\pm$ 6.78 & 148.07 $\pm$ 6.44 & 0.00 $\pm$ 0.00 & 14.98 $\pm$ 0.73 & 166.57 $\pm$ 7.30 \\
+1 & Deferred & 2.57 $\pm$ 0.23 & 0.00 $\pm$ 0.00 & 141.01 $\pm$ 8.48 & 156.17 $\pm$ 9.73 & 158.73 $\pm$ 9.88 \\
+2 & Immediate & 287.55 $\pm$ 12.77 & 282.06 $\pm$ 13.71 & 0.00 $\pm$ 0.00 & 29.21 $\pm$ 2.11 & 316.76 $\pm$ 13.79 \\
+2 & Deferred & 3.03 $\pm$ 0.17 & 0.00 $\pm$ 0.00 & 290.83 $\pm$ 18.07 & 322.12 $\pm$ 21.22 & 325.15 $\pm$ 21.22 \\
+4 & Immediate & 593.34 $\pm$ 18.34 & 587.42 $\pm$ 18.30 & 0.00 $\pm$ 0.00 & 59.29 $\pm$ 4.47 & 652.63 $\pm$ 19.54 \\
+4 & Deferred & 4.92 $\pm$ 1.05 & 0.00 $\pm$ 0.00 & 576.59 $\pm$ 20.04 & 639.04 $\pm$ 20.78 & 643.96 $\pm$ 21.72 \\
+\rowcolor{gray!12}
+8 & Immediate & 1200.07 $\pm$ 60.99 & 1188.31 $\pm$ 60.47 & 0.00 $\pm$ 0.00 & 117.47 $\pm$ 13.03 & 1317.54 $\pm$ 74.00 \\
+\rowcolor{gray!12}
+8 & Deferred & 8.65 $\pm$ 2.48 & 0.00 $\pm$ 0.00 & 1201.46 $\pm$ 35.33 & 1332.92 $\pm$ 39.68 & 1341.56 $\pm$ 42.14 \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+\noindent\textbf{Audit-rate scan.}
+Each round uses 100 retained requests and eight calls per request. Audit
+rates of 1\%, 5\%, 10\%, 25\%, 50\%, and 100\% select exactly
+one, five, ten, 25, 50, and 100 requests, producing eight, 40, 80, 200,
+400, and 800 proofs. Rate order is randomized, and nested challenged sets
+are reproducible. Each rate executes its own proofs.
+For rate $\alpha$, let $\mathcal{J}_{r,\alpha}$ contain the challenged
+calls in round $r$. The amortized combined cost is
+\[
+ C_r(\alpha)=\frac{1}{100}
+ \sum_{j\in\mathcal{J}_{r,\alpha}}
+ \bigl(t^{\mathrm{witness+prove}}_{r,j}
+       +t^{\mathrm{verify}}_{r,j}\bigr).
+\]
+This sum uses individual operation wall durations; it is not measured CPU
+time. Elapsed audit time is the actual time to drain the two-worker batch,
+including result I/O. Verification-component SDs are computed directly
+from their three round-level observations.
+The separate preparation baseline writes one retained 100-request file
+and performs one synchronization per round; its persistence timing is a
+cohort-level observation. Deferred proof generation occurs after the
+foreground phase, while preparation and persistence remain nonzero.
+Table~\ref{tab:c3-audit-rate} reports all six configurations.
+
+\begin{table*}[!t]
+\centering
+\caption{Audit-rate measurements with 100 requests per batch, eight calls per request, and two proof workers (mean $\pm$ sample SD across three rounds). The 10\% default is shaded.}
+\label{tab:c3-audit-rate}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\hspace{3pt}}c@{\extracolsep{\fill}}ccccc@{\hspace{3pt}}}
+\toprule
+\shortstack{\textbf{Audit rate}\\\textbf{(\%)}} & \shortstack{\textbf{Proofs/}\\\textbf{batch}} & \shortstack{\textbf{Proving cost}\\\textbf{(ms/request)}} & \shortstack{\textbf{Verification cost}\\\textbf{(ms/request)}} & \shortstack{\textbf{Combined cost}\\\textbf{(ms/request)}} & \shortstack{\textbf{Audit time}\\\textbf{(s/batch)}} \\
+\midrule
+1 & 8 & 11.44 $\pm$ 0.38 & 1.13 $\pm$ 0.09 & 12.57 $\pm$ 0.47 & 0.67 $\pm$ 0.05 \\
+5 & 40 & 57.25 $\pm$ 0.63 & 5.64 $\pm$ 0.23 & 62.89 $\pm$ 0.53 & 3.19 $\pm$ 0.04 \\
+\rowcolor{gray!12}
+10 & 80 & 112.55 $\pm$ 1.20 & 10.98 $\pm$ 0.24 & 123.53 $\pm$ 1.42 & 6.27 $\pm$ 0.08 \\
+25 & 200 & 286.97 $\pm$ 10.79 & 29.15 $\pm$ 2.23 & 316.11 $\pm$ 12.93 & 15.95 $\pm$ 0.64 \\
+50 & 400 & 565.33 $\pm$ 16.99 & 55.68 $\pm$ 2.98 & 621.01 $\pm$ 19.94 & 31.29 $\pm$ 1.02 \\
+100 & 800 & 1135.00 $\pm$ 33.13 & 113.94 $\pm$ 8.11 & 1248.94 $\pm$ 41.00 & 62.88 $\pm$ 2.03 \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+\noindent\textbf{TEE-based signing control.}
+Table~\ref{tab:c4-tee-signing} compares software-key and TEE-based isolated-key
+ECDSA-P256 signing through the same API. Each mode processes 1,024 receipts
+per session in three paired sessions, giving 3,072 measurements per mode.
+The private-key isolation property is checked in each session; private
+key operations are isolated in the TEE-based mode. Accounting and receipt
+hashing execute on the host, and public-key verification is external.
+The hashing-plus-signing row includes signing and is not added to the
+signing-only row. Key setup is measured per session and excluded from
+per-receipt signing time. Paired-change SDs use the three within-session
+differences, rather than differences of marginal SDs.
+
+\begin{table*}[!t]
+\centering
+\caption{Local receipt-signing comparison using the same ECDSA-P256 API (mean $\pm$ sample SD across three paired sessions). Paired changes are TEE-based minus software-key costs within each session.}
+\label{tab:c4-tee-signing}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cccc@{\hspace{3pt}}}
+\toprule
+\textbf{Operation} & \textbf{Unit} & \textbf{Software key} & \textbf{TEE-based key} & \textbf{Paired change} \\
+\midrule
+Signing API & ms/receipt & 0.534 $\pm$ 0.028 & 0.763 $\pm$ 0.085 & 0.229 $\pm$ 0.108 \\
+Hashing + signing & ms/receipt & 0.673 $\pm$ 0.038 & 0.887 $\pm$ 0.095 & 0.213 $\pm$ 0.127 \\
+External verification & ms/receipt & 0.298 $\pm$ 0.021 & 0.271 $\pm$ 0.025 & -0.026 $\pm$ 0.025 \\
+Session key setup & ms/session & 2.135 $\pm$ 0.421 & 7.070 $\pm$ 6.996 & 4.934 $\pm$ 6.969 \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+\noindent\textbf{Validation and scope controls.}
+All 5,064 formal proofs verify. Eighteen warmup proofs and three additional
+honest-control proofs are recorded separately, and all 12 negative proof
+controls are rejected. For receipt signing, all 6,144 measured signatures
+verify. Across both signing modes, 48 receipt/signature tampering cases
+are rejected and six private-key export attempts are denied. Six additional
+scope controls modify a charge on the host and request a fresh signature;
+the resulting signatures remain verifiable, as expected. These controls
+confirm that isolated signing authenticates the signed bytes while
+accounting enforcement remains a host-side responsibility in this component
+experiment. The measurements cover scoped proofs and isolated receipt
+signing; full inference attestation and remote attestation are not measured.

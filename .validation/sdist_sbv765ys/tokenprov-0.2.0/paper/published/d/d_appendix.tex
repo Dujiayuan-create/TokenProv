@@ -1,0 +1,22 @@
+\section{Additional Evidence and Settlement Measurements}
+\label{app:d-evidence-settlement}
+Table~\ref{tab:d-current-evidence-settlement} reports current measurements for
+\textsc{TokenProv}: three rounds of 128 measured requests per model, with eight
+sequential calls per request and concurrency eight. Warmups are excluded.
+Each entry is the mean and sample standard deviation of three round means.
+Serialized sizes exclude filesystem block allocation and shared deployment setup.
+Evidence persistence includes serialization, hashing, writing, flushing and syncing.
+Protocol audit checks an in-memory transcript; it does not measure cold repository
+retrieval. Settlement construction is the sum of request closure, Merkle
+construction and local settlement. The final total additionally includes ledger
+append, and is calculated within each round before aggregation.
+The local ledger appends three signed records in one batch; these measurements
+do not include distributed consensus.
+\input{d_appendix_current_table.tex}
+
+Table~\ref{tab:d-fulltrace-storage} gives the historical FullTrace comparison
+under an earlier serialization. Both schemes use the same authenticated protocol;
+FullTrace additionally retains the available raw messages and responses.
+These are protocol microbenchmarks, rather than retained GPU inference states.
+Their absolute sizes are not pooled with current evidence-bundle measurements.
+\input{d_appendix_storage_table.tex}

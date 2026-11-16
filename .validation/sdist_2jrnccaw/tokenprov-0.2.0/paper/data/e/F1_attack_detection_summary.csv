@@ -1,0 +1,43 @@
+attack_id,attack_name,system,trials,detected,detection_rate_pct,false_accept_rate_pct,mean_audit_latency_ms,expected_relation,most_common_observed_failed_relation,measurement_type
+A1,Unauthorized call,Vanilla,500,0,0.0,100.0,0.000172658,R_auth,,PROTOCOL_MICROBENCHMARK
+A1,Unauthorized call,SignedLog,500,500,100.0,0.0,0.155614604,R_auth,SignedRecord,PROTOCOL_MICROBENCHMARK
+A1,Unauthorized call,TokenProv-Full,500,500,100.0,0.0,0.18359510599999998,R_auth,R_auth,PROTOCOL_MICROBENCHMARK
+A2,Call insertion,Vanilla,500,0,0.0,100.0,0.000167238,R_life,,PROTOCOL_MICROBENCHMARK
+A2,Call insertion,SignedLog,500,0,0.0,100.0,0.600789926,R_life,,PROTOCOL_MICROBENCHMARK
+A2,Call insertion,TokenProv-Full,500,500,100.0,0.0,3.6585701079999997,R_life,R_life,PROTOCOL_MICROBENCHMARK
+A3,Observable-call omission,Vanilla,500,0,0.0,100.0,0.0001583,R_hand,,PROTOCOL_MICROBENCHMARK
+A3,Observable-call omission,SignedLog,500,0,0.0,100.0,0.312745108,R_hand,,PROTOCOL_MICROBENCHMARK
+A3,Observable-call omission,TokenProv-Full,500,500,100.0,0.0,8.300952656,R_hand,R_hand,PROTOCOL_MICROBENCHMARK
+A4,Call replay,Vanilla,500,0,0.0,100.0,0.000159536,R_prov,,PROTOCOL_MICROBENCHMARK
+A4,Call replay,SignedLog,500,0,0.0,100.0,0.6302652759999999,R_prov,,PROTOCOL_MICROBENCHMARK
+A4,Call replay,TokenProv-Full,500,500,100.0,0.0,12.364893466,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A5,Call relabeling,Vanilla,500,0,0.0,100.0,0.000160416,R_prov,,PROTOCOL_MICROBENCHMARK
+A5,Call relabeling,SignedLog,500,500,100.0,0.0,0.455736132,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A5,Call relabeling,TokenProv-Full,500,500,100.0,0.0,9.199019422,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A6,H->B boundary tampering,Vanilla,500,0,0.0,100.0,0.000164518,R_hand,,PROTOCOL_MICROBENCHMARK
+A6,H->B boundary tampering,SignedLog,500,500,100.0,0.0,0.306914498,R_hand,SignedRecord,PROTOCOL_MICROBENCHMARK
+A6,H->B boundary tampering,TokenProv-Full,500,500,100.0,0.0,3.514056212,R_hand,R_hand,PROTOCOL_MICROBENCHMARK
+A7,B->P boundary tampering,Vanilla,500,0,0.0,100.0,0.0001595,R_hand,,PROTOCOL_MICROBENCHMARK
+A7,B->P boundary tampering,SignedLog,500,500,100.0,0.0,0.310102336,R_hand,SignedRecord,PROTOCOL_MICROBENCHMARK
+A7,B->P boundary tampering,TokenProv-Full,500,500,100.0,0.0,3.9127774079999997,R_hand,R_hand,PROTOCOL_MICROBENCHMARK
+A8,Model/deployment substitution,Vanilla,500,0,0.0,100.0,0.00015915799999999998,R_prov,,PROTOCOL_MICROBENCHMARK
+A8,Model/deployment substitution,SignedLog,500,500,100.0,0.0,0.45521532200000003,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A8,Model/deployment substitution,TokenProv-Full,500,500,100.0,0.0,9.025138160000001,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A9,Tokenizer/input-semantics substitution,Vanilla,500,0,0.0,100.0,0.000161198,R_prov,,PROTOCOL_MICROBENCHMARK
+A9,Tokenizer/input-semantics substitution,SignedLog,500,500,100.0,0.0,0.473061102,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A9,Tokenizer/input-semantics substitution,TokenProv-Full,500,500,100.0,0.0,9.171652975999999,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A10,Cache or usage inflation,Vanilla,500,0,0.0,100.0,0.000158778,R_prov,,PROTOCOL_MICROBENCHMARK
+A10,Cache or usage inflation,SignedLog,500,500,100.0,0.0,0.45557933,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A10,Cache or usage inflation,TokenProv-Full,500,500,100.0,0.0,9.10610839,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A11,Wrong price version,Vanilla,500,0,0.0,100.0,0.00015994,R_prov,,PROTOCOL_MICROBENCHMARK
+A11,Wrong price version,SignedLog,500,500,100.0,0.0,0.47784858,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A11,Wrong price version,TokenProv-Full,500,500,100.0,0.0,9.08783642,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A12,Cross-call evidence splicing,Vanilla,500,0,0.0,100.0,0.00017102,R_prov,,PROTOCOL_MICROBENCHMARK
+A12,Cross-call evidence splicing,SignedLog,500,0,0.0,100.0,0.599649994,R_prov,,PROTOCOL_MICROBENCHMARK
+A12,Cross-call evidence splicing,TokenProv-Full,500,500,100.0,0.0,9.055146164,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A13,Receipt omission or duplication,Vanilla,500,0,0.0,100.0,0.00018646000000000003,R_set,,PROTOCOL_MICROBENCHMARK
+A13,Receipt omission or duplication,SignedLog,500,0,0.0,100.0,0.3081873,R_set,,PROTOCOL_MICROBENCHMARK
+A13,Receipt omission or duplication,TokenProv-Full,500,500,100.0,0.0,12.148487326,R_set,R_set,PROTOCOL_MICROBENCHMARK
+A14,Aggregate bill manipulation,Vanilla,500,0,0.0,100.0,0.00020328000000000002,R_set,,PROTOCOL_MICROBENCHMARK
+A14,Aggregate bill manipulation,SignedLog,500,500,100.0,0.0,0.497526996,R_set,SignedRecord,PROTOCOL_MICROBENCHMARK
+A14,Aggregate bill manipulation,TokenProv-Full,500,500,100.0,0.0,14.554215083999999,R_set,R_set,PROTOCOL_MICROBENCHMARK

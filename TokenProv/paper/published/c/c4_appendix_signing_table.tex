@@ -1,0 +1,17 @@
+\begin{table*}[!t]
+\centering
+\caption{Local receipt-signing comparison using the same ECDSA-P256 API (mean $\pm$ sample SD across three paired sessions). Paired changes are TEE-based minus software-key costs within each session.}
+\label{tab:c4-tee-signing}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cccc@{\hspace{3pt}}}
+\toprule
+\textbf{Operation} & \textbf{Unit} & \textbf{Software key} & \textbf{TEE-based key} & \textbf{Paired change} \\
+\midrule
+Signing API & ms/receipt & 0.534 $\pm$ 0.028 & 0.763 $\pm$ 0.085 & 0.229 $\pm$ 0.108 \\
+Hashing + signing & ms/receipt & 0.673 $\pm$ 0.038 & 0.887 $\pm$ 0.095 & 0.213 $\pm$ 0.127 \\
+External verification & ms/receipt & 0.298 $\pm$ 0.021 & 0.271 $\pm$ 0.025 & -0.026 $\pm$ 0.025 \\
+Session key setup & ms/session & 2.135 $\pm$ 0.421 & 7.070 $\pm$ 6.996 & 4.934 $\pm$ 6.969 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

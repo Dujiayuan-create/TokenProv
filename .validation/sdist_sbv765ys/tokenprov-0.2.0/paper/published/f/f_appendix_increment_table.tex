@@ -1,0 +1,20 @@
+\begin{table}[!t]
+\centering
+\caption{Marginal costs along the cumulative validation sequence. Stage differences are computed within matched runs before aggregation; the empty baseline is measured relative to zero.}
+\label{tab:f-paired-increments}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cc@{\hspace{3pt}}}
+\toprule
+\textbf{Added checks} & \shortstack{\textbf{Wall increment}\\\textbf{(ms)}} & \shortstack{\textbf{Payload increment}\\\textbf{(KiB)}} \\
+\midrule
+Empty baseline & 0.00047 $\pm$ 0.00007 & 0.0215 $\pm$ 0.0000 \\
++ Lifecycle & 6.025 $\pm$ 0.029 & 15.348 $\pm$ 0.000 \\
++ Handoff & 5.426 $\pm$ 0.057 & 7.099 $\pm$ 0.000 \\
++ Provider & 2.909 $\pm$ 0.089 & 7.075 $\pm$ 0.000 \\
++ Settlement & 2.343 $\pm$ 0.198 & 2.674 $\pm$ 0.000 \\
+\textbf{Total} & 16.704 $\pm$ 0.109 & 32.217 $\pm$ 0.000 \\
+\bottomrule
+\end{tabular*}
+\end{table}

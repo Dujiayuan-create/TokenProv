@@ -1,0 +1,6 @@
+injection_stage,ground_truth_relation,trials,exact_localization_rate_pct,ground_truth_containment_rate_pct,mean_interval_width,mean_audit_latency_ms,measurement_type
+auth,R_auth,500,100.0,100.0,1.0,0.168047474,PROTOCOL_MICROBENCHMARK
+life,R_life,500,100.0,100.0,0.0,3.475921256,PROTOCOL_MICROBENCHMARK
+hand,R_hand,500,100.0,100.0,2.0,3.429830522,PROTOCOL_MICROBENCHMARK
+prov,R_prov,500,100.0,100.0,1.0,9.164527996,PROTOCOL_MICROBENCHMARK
+set,R_set,500,100.0,100.0,1.0,14.349655894,PROTOCOL_MICROBENCHMARK

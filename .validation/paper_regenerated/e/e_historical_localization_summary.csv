@@ -1,0 +1,6 @@
+injection_stage,stage_name,first_failed_relation,trials,first_relation_matches,reported_ground_truth_containment_proxy_count,responsibility_interval_start,responsibility_interval_end,mean_interval_width,mean_audit_latency_ms,dataset
+auth,Authorization,R_auth,500,500,500,U,H,1.0,0.168047474,historical_protocol_microbenchmark
+life,Lifecycle,R_life,500,500,500,H,H,0.0,3.475921256,historical_protocol_microbenchmark
+hand,Handoff,R_hand,500,500,500,H,P,2.0,3.429830522,historical_protocol_microbenchmark
+prov,Provider,R_prov,500,500,500,B,P,1.0,9.164527996,historical_protocol_microbenchmark
+set,Settlement,R_set,500,500,500,H,B,1.0,14.349655894,historical_protocol_microbenchmark

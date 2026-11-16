@@ -1,0 +1,16 @@
+\begin{table*}[!t]
+\centering
+\caption{Historical cross-call splicing microbenchmark (accepted / 500 trials). The local-check surrogate executes the same receipt-only check as IndependentLocalChecks; it is not a strict one-check removal from the complete auditor.}
+\label{tab:e-historical-splicing}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular*}{\textwidth}{@{\hspace{4pt}}l@{\extracolsep{\fill}}ccc@{\hspace{4pt}}}
+\toprule
+\textbf{Scenario} & \shortstack{\textbf{Independent}\\\textbf{local checks}} & \shortstack{\textbf{Local-check}\\\textbf{surrogate}} & \textbf{TokenProv} \\
+\midrule
+S1: Same model and deployment; different request & 500/500 & 500/500 & 0/500 \\
+S2: Same model; different deployment and request & 500/500 & 500/500 & 0/500 \\
+S3: Different model, deployment, and request & 500/500 & 500/500 & 0/500 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

@@ -1,0 +1,44 @@
+{
+  "figure_size_inches": [
+    17.8,
+    4.25
+  ],
+  "labels_outside_figure": [],
+  "latency_axis_limits": {
+    "qwen3-1.7b": [
+      0.0,
+      38.073749500199995
+    ],
+    "qwen3-4b": [
+      0.0,
+      40.22437599895999
+    ],
+    "phi-3-mini-4k-instruct": [
+      60.0,
+      190.0
+    ],
+    "deepseek-r1-distill-llama-8b": [
+      0.0,
+      130.91249221375998
+    ],
+    "qwen3-14b": [
+      0.0,
+      65.78531791824
+    ]
+  },
+  "bar_axes_start_at_zero": true,
+  "distinct_scheme_hatches": [
+    "..",
+    "///",
+    "\\\\",
+    "xx"
+  ],
+  "distinct_scheme_line_styles": [
+    "--",
+    "-.",
+    ":",
+    "-"
+  ],
+  "grayscale_artist_property_conversions": 1034,
+  "formal_request_count": 7680
+}

@@ -1,0 +1,15 @@
+﻿system,calls_per_request,rounds,mean_KiB,sample_sd_KiB,min_KiB,max_KiB,cohort
+TokenProv-Full,1,5,6.9990234375,0.0,6.9990234375,6.9990234375,historical_protocol_microbenchmark
+TokenProv-Full,2,5,11.482421875,0.0,11.482421875,11.482421875,historical_protocol_microbenchmark
+TokenProv-Full,4,5,20.44921875,0.0,20.44921875,20.44921875,historical_protocol_microbenchmark
+TokenProv-Full,8,5,38.388671875,0.0,38.388671875,38.388671875,historical_protocol_microbenchmark
+TokenProv-Full,16,5,74.435546875,0.0,74.435546875,74.435546875,historical_protocol_microbenchmark
+TokenProv-Full,32,5,146.435546875,0.0,146.435546875,146.435546875,historical_protocol_microbenchmark
+TokenProv-Full,64,5,290.462890625,0.0,290.462890625,290.462890625,historical_protocol_microbenchmark
+FullTrace,1,5,9.0537109375,0.0,9.0537109375,9.0537109375,historical_protocol_microbenchmark
+FullTrace,2,5,15.3818359375,0.0,15.3818359375,15.3818359375,historical_protocol_microbenchmark
+FullTrace,4,5,28.0380859375,0.0,28.0380859375,28.0380859375,historical_protocol_microbenchmark
+FullTrace,8,5,53.3564453125,0.0,53.3564453125,53.3564453125,historical_protocol_microbenchmark
+FullTrace,16,5,104.232421875,0.0,104.232421875,104.232421875,historical_protocol_microbenchmark
+FullTrace,32,5,205.857421875,0.0,205.857421875,205.857421875,historical_protocol_microbenchmark
+FullTrace,64,5,409.134765625,0.0,409.134765625,409.134765625,historical_protocol_microbenchmark

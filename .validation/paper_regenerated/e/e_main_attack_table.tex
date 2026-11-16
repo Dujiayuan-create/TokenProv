@@ -1,0 +1,16 @@
+\begin{table}[!t]
+\centering
+\caption{Valid-signature adaptive protocol attacks (100 episodes per scheme; at most 16 queries per episode, stopping at first success).}
+\label{tab:e-valid-signature-attacks}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular*}{\columnwidth}{@{\hspace{4pt}}l@{\extracolsep{\fill}}ccc@{\hspace{4pt}}}
+\toprule
+\textbf{Scheme} & \shortstack{\textbf{Successful}\\\textbf{episodes}} & \shortstack{\textbf{Attack}\\\textbf{queries}} & \shortstack{\textbf{Benign false}\\\textbf{rejections}} \\
+\midrule
+SignedLog & 100/100 & 100 & 0/100 \\
+SignedLog+ & 0/100 & 1,600 & 0/100 \\
+\textsc{TokenProv} & 0/100 & 1,600 & 0/100 \\
+\bottomrule
+\end{tabular*}
+\end{table}

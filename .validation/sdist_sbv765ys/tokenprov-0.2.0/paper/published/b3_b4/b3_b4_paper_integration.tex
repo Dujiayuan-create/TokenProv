@@ -1,0 +1,26 @@
+% One main-text figure shared by B3 and B4. Requires graphicx.
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{b3_b4_scalability_variability.pdf}
+  \caption{Protocol scalability and cross-model variability.
+  (a) CPU construction (top) and audit (bottom) with four or eight events per call,
+  sharing the call-count axis;
+  shaded envelopes span those two configurations, with one measurement per point.
+  Both axes in (a) are logarithmic;
+  model inference and persistence are excluded.
+  Linear-scale insets show 128--512 calls for construction and 1--8 calls for audit.
+  (b) TokenProv online non-LLM time (top) and request latency change relative to Vanilla
+  within the same round (bottom), sharing the model axis. In (b), shading spans the minimum and maximum of
+  three round observations per model; markers show the individual rounds and
+  dark horizontal bars show their arithmetic mean. Shading is not a confidence interval.
+  Q3 denotes Qwen3; DS denotes DeepSeek-R1-Distill-Llama.}
+  \label{fig:b3-b4-performance}
+  \label{fig:b3-protocol-scalability}
+\end{figure}
+
+% B3: Fig.~\ref{fig:b3-b4-performance}(a).
+% B4: Fig.~\ref{fig:b3-b4-performance}(b).
+% Additional concurrency measurements appear in Appendix~\ref{app:b3-concurrency}.
+
+% In the existing appendix, after \appendices:
+% \input{b3_appendix_section.tex}

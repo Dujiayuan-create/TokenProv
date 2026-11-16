@@ -1,0 +1,43 @@
+attack_id,attack_name,system,trials,detected,detection_rate_pct,false_accept_rate_pct,mean_audit_latency_ms,expected_relation,most_common_observed_failed_relation,measurement_type
+A1,Unauthorized call,Vanilla,1,0,0.0,100.0,0.0013,R_auth,,PROTOCOL_MICROBENCHMARK
+A1,Unauthorized call,SignedLog,1,1,100.0,0.0,0.293,R_auth,SignedRecord,PROTOCOL_MICROBENCHMARK
+A1,Unauthorized call,TokenProv-Full,1,1,100.0,0.0,0.4028,R_auth,R_auth,PROTOCOL_MICROBENCHMARK
+A2,Call insertion,Vanilla,1,0,0.0,100.0,0.0007,R_life,,PROTOCOL_MICROBENCHMARK
+A2,Call insertion,SignedLog,1,0,0.0,100.0,0.9434,R_life,,PROTOCOL_MICROBENCHMARK
+A2,Call insertion,TokenProv-Full,1,1,100.0,0.0,5.7276,R_life,R_life,PROTOCOL_MICROBENCHMARK
+A3,Observable-call omission,Vanilla,1,0,0.0,100.0,0.0007,R_hand,,PROTOCOL_MICROBENCHMARK
+A3,Observable-call omission,SignedLog,1,0,0.0,100.0,0.5434,R_hand,,PROTOCOL_MICROBENCHMARK
+A3,Observable-call omission,TokenProv-Full,1,1,100.0,0.0,14.3727,R_hand,R_hand,PROTOCOL_MICROBENCHMARK
+A4,Call replay,Vanilla,1,0,0.0,100.0,0.0007,R_prov,,PROTOCOL_MICROBENCHMARK
+A4,Call replay,SignedLog,1,0,0.0,100.0,1.0599,R_prov,,PROTOCOL_MICROBENCHMARK
+A4,Call replay,TokenProv-Full,1,1,100.0,0.0,22.0346,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A5,Call relabeling,Vanilla,1,0,0.0,100.0,0.0007,R_prov,,PROTOCOL_MICROBENCHMARK
+A5,Call relabeling,SignedLog,1,1,100.0,0.0,0.7304,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A5,Call relabeling,TokenProv-Full,1,1,100.0,0.0,16.1088,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A6,H->B boundary tampering,Vanilla,1,0,0.0,100.0,0.0006,R_hand,,PROTOCOL_MICROBENCHMARK
+A6,H->B boundary tampering,SignedLog,1,1,100.0,0.0,0.4939,R_hand,SignedRecord,PROTOCOL_MICROBENCHMARK
+A6,H->B boundary tampering,TokenProv-Full,1,1,100.0,0.0,5.7253,R_hand,R_hand,PROTOCOL_MICROBENCHMARK
+A7,B->P boundary tampering,Vanilla,1,0,0.0,100.0,0.0006,R_hand,,PROTOCOL_MICROBENCHMARK
+A7,B->P boundary tampering,SignedLog,1,1,100.0,0.0,0.5214,R_hand,SignedRecord,PROTOCOL_MICROBENCHMARK
+A7,B->P boundary tampering,TokenProv-Full,1,1,100.0,0.0,6.5907,R_hand,R_hand,PROTOCOL_MICROBENCHMARK
+A8,Model/deployment substitution,Vanilla,1,0,0.0,100.0,0.0006,R_prov,,PROTOCOL_MICROBENCHMARK
+A8,Model/deployment substitution,SignedLog,1,1,100.0,0.0,0.7238,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A8,Model/deployment substitution,TokenProv-Full,1,1,100.0,0.0,14.3071,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A9,Tokenizer/input-semantics substitution,Vanilla,1,0,0.0,100.0,0.0006,R_prov,,PROTOCOL_MICROBENCHMARK
+A9,Tokenizer/input-semantics substitution,SignedLog,1,1,100.0,0.0,0.7435,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A9,Tokenizer/input-semantics substitution,TokenProv-Full,1,1,100.0,0.0,14.545,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A10,Cache or usage inflation,Vanilla,1,0,0.0,100.0,0.0006,R_prov,,PROTOCOL_MICROBENCHMARK
+A10,Cache or usage inflation,SignedLog,1,1,100.0,0.0,0.7298,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A10,Cache or usage inflation,TokenProv-Full,1,1,100.0,0.0,14.5075,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A11,Wrong price version,Vanilla,1,0,0.0,100.0,0.0007,R_prov,,PROTOCOL_MICROBENCHMARK
+A11,Wrong price version,SignedLog,1,1,100.0,0.0,0.715,R_prov,SignedRecord,PROTOCOL_MICROBENCHMARK
+A11,Wrong price version,TokenProv-Full,1,1,100.0,0.0,14.6404,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A12,Cross-call evidence splicing,Vanilla,1,0,0.0,100.0,0.0007,R_prov,,PROTOCOL_MICROBENCHMARK
+A12,Cross-call evidence splicing,SignedLog,1,0,0.0,100.0,1.0712,R_prov,,PROTOCOL_MICROBENCHMARK
+A12,Cross-call evidence splicing,TokenProv-Full,1,1,100.0,0.0,14.5145,R_prov,R_prov,PROTOCOL_MICROBENCHMARK
+A13,Receipt omission or duplication,Vanilla,1,0,0.0,100.0,0.0006,R_set,,PROTOCOL_MICROBENCHMARK
+A13,Receipt omission or duplication,SignedLog,1,0,0.0,100.0,0.5112,R_set,,PROTOCOL_MICROBENCHMARK
+A13,Receipt omission or duplication,TokenProv-Full,1,1,100.0,0.0,19.2092,R_set,R_set,PROTOCOL_MICROBENCHMARK
+A14,Aggregate bill manipulation,Vanilla,1,0,0.0,100.0,0.0009,R_set,,PROTOCOL_MICROBENCHMARK
+A14,Aggregate bill manipulation,SignedLog,1,1,100.0,0.0,0.7258,R_set,SignedRecord,PROTOCOL_MICROBENCHMARK
+A14,Aggregate bill manipulation,TokenProv-Full,1,1,100.0,0.0,22.5493,R_set,R_set,PROTOCOL_MICROBENCHMARK

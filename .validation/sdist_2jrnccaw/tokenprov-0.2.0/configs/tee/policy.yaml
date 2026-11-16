@@ -1,0 +1,20 @@
+# This is a template, not an auto-trusting policy. Populate from an approved
+# immutable CVM image/launch policy, NOT from the untrusted runtime response.
+platform: tdx
+allowed_measurements:
+  - REPLACE_WITH_APPROVED_TDX_BODY_SHA256
+allowed_program_hashes:
+  - REPLACE_WITH_REVIEWED_RUNTIME_PROGRAM_SHA256
+nvattest_command: [nvattest]
+nvidia_policy_file: nvidia.rego
+nras_url: https://nras.attestation.nvidia.com
+max_session_s: 3600
+timeout_s: 120
+challenge_ttl_s: 120
+# Mandatory platform-specific verifier, provisioned by the confidential-VM
+# deployment stack. A generic TDX quote cannot authenticate a Python process.
+workload_verifier_command: [/opt/attestation/tokenprov-workload-verifier]
+workload_policy_file: /etc/tokenprov/approved-launch-device-policy.json
+# For SNP or newer quote formats use a trusted local verifier implementing the
+# JSON stdin/stdout contract documented in docs/ASSURANCE.md.
+# cpu_verifier_command: [/opt/attestation/tokenprov-cpu-verifier]

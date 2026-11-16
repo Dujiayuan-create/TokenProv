@@ -1,0 +1,23 @@
+\begin{table*}[!t]
+\centering
+\caption{Immediate and deferred proving on retained request witnesses (ms/request; mean $\pm$ sample SD across three rounds). Online and audit proving are components of their respective enclosing phases.}
+\label{tab:c2-deferred-cost}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\hspace{3pt}}c@{\extracolsep{\fill}}lccccc@{\hspace{3pt}}}
+\toprule
+\shortstack{\textbf{Calls/}\\\textbf{request}} & \textbf{Mode} & \textbf{Foreground} & \shortstack{\textbf{Online}\\\textbf{proving}} & \shortstack{\textbf{Audit}\\\textbf{proving}} & \shortstack{\textbf{Audit}\\\textbf{time}} & \textbf{Total} \\
+\midrule
+1 & Immediate & 151.59 $\pm$ 6.78 & 148.07 $\pm$ 6.44 & 0.00 $\pm$ 0.00 & 14.98 $\pm$ 0.73 & 166.57 $\pm$ 7.30 \\
+1 & Deferred & 2.57 $\pm$ 0.23 & 0.00 $\pm$ 0.00 & 141.01 $\pm$ 8.48 & 156.17 $\pm$ 9.73 & 158.73 $\pm$ 9.88 \\
+2 & Immediate & 287.55 $\pm$ 12.77 & 282.06 $\pm$ 13.71 & 0.00 $\pm$ 0.00 & 29.21 $\pm$ 2.11 & 316.76 $\pm$ 13.79 \\
+2 & Deferred & 3.03 $\pm$ 0.17 & 0.00 $\pm$ 0.00 & 290.83 $\pm$ 18.07 & 322.12 $\pm$ 21.22 & 325.15 $\pm$ 21.22 \\
+4 & Immediate & 593.34 $\pm$ 18.34 & 587.42 $\pm$ 18.30 & 0.00 $\pm$ 0.00 & 59.29 $\pm$ 4.47 & 652.63 $\pm$ 19.54 \\
+4 & Deferred & 4.92 $\pm$ 1.05 & 0.00 $\pm$ 0.00 & 576.59 $\pm$ 20.04 & 639.04 $\pm$ 20.78 & 643.96 $\pm$ 21.72 \\
+\rowcolor{gray!12}
+8 & Immediate & 1200.07 $\pm$ 60.99 & 1188.31 $\pm$ 60.47 & 0.00 $\pm$ 0.00 & 117.47 $\pm$ 13.03 & 1317.54 $\pm$ 74.00 \\
+\rowcolor{gray!12}
+8 & Deferred & 8.65 $\pm$ 2.48 & 0.00 $\pm$ 0.00 & 1201.46 $\pm$ 35.33 & 1332.92 $\pm$ 39.68 & 1341.56 $\pm$ 42.14 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

@@ -1,0 +1,17 @@
+cryptography<51,>=43.0.3
+PyYAML<7,>=6.0.2
+
+[dev]
+pytest==8.3.4
+
+[model-server]
+torch<3,>=2.6
+transformers==4.54.0
+accelerate<2,>=1
+safetensors<1,>=0.4.3
+
+[plots]
+matplotlib<4,>=3.9
+
+[server-client]
+transformers==4.54.0

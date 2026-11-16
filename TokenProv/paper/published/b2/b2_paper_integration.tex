@@ -1,0 +1,23 @@
+% Add to the preamble if not already loaded:
+% \usepackage{booktabs}
+% \usepackage[table]{xcolor}
+
+% Main text, B2:
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{b2_reference_cost_breakdown.pdf}
+  \caption{Cost breakdown for Qwen3-1.7B at concurrency eight with eight sequential
+  calls per request. Stacks show three-round mean component costs; error bars
+  show the sample standard deviation of each total across the three round means.}
+  \label{fig:b2-cost-breakdown}
+\end{figure}
+
+% In the existing appendix, after \appendices:
+\section{Additional Cost Breakdown}
+\label{app:b2-cost}
+Table~\ref{tab:b2-component-breakdown} gives the full breakdown across five models.
+Online non-LLM work is $T_{\mathrm{online}}-T_{\mathrm{llm}}$, and remaining
+processing is $T_{\mathrm{pipeline}}-T_{\mathrm{online}}$.
+The latter includes evidence persistence, audit, settlement, and surrounding
+pipeline work, all included in the complete request latency.
+\input{b2_appendix_component_table.tex}

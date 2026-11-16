@@ -1,0 +1,628 @@
+{
+  "generated_from_existing_measurements_only": true,
+  "sources": {
+    "current_security": {
+      "path": "data/e/security.jsonl",
+      "sha256": "b9944ecc39b846748c79eeab0f1b6f54c89bf855ecbf2da2fcc64091518142f8"
+    },
+    "historical_attacks": {
+      "path": "data/e/F1_attack_detection_summary.csv",
+      "sha256": "454c606ff6658684b15236fbab1b5d5b3dab46f6eccf920a2328dd2b5cee9f96"
+    },
+    "historical_splicing": {
+      "path": "data/e/F2_cross_call_splicing.csv",
+      "sha256": "39cdbbfad4f3a798ed25654bb4fdec03acd0f8cf2a4abffc03143b29814f11d6"
+    },
+    "historical_localization": {
+      "path": "data/e/F3_fault_localization_summary.csv",
+      "sha256": "206502ab8d9c0a2b61b4f84b9d36d4a297e31b409597eba733e143851520d6ab"
+    },
+    "historical_collusion": {
+      "path": "data/e/F4_collusion.csv",
+      "sha256": "8585aa08215e1a3860500bcb68055db32bc2a78cddfaee39fd413772e3f21e53"
+    }
+  },
+  "current_adaptive_summary": [
+    {
+      "system": "SignedLog",
+      "episodes": 100,
+      "successful_episodes": 100,
+      "attack_queries": 100,
+      "accepted_attack_queries": 100,
+      "benign_trials": 100,
+      "benign_false_rejections": 0,
+      "query_budget_per_episode": 16,
+      "valid_signature_queries": 100,
+      "oracle_violation_queries": 100,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLogPlus",
+      "episodes": 100,
+      "successful_episodes": 0,
+      "attack_queries": 1600,
+      "accepted_attack_queries": 0,
+      "benign_trials": 100,
+      "benign_false_rejections": 0,
+      "query_budget_per_episode": 16,
+      "valid_signature_queries": 1600,
+      "oracle_violation_queries": 1600,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "TokenProv-Full",
+      "episodes": 100,
+      "successful_episodes": 0,
+      "attack_queries": 1600,
+      "accepted_attack_queries": 0,
+      "benign_trials": 100,
+      "benign_false_rejections": 0,
+      "query_budget_per_episode": 16,
+      "valid_signature_queries": 1600,
+      "oracle_violation_queries": 1600,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    }
+  ],
+  "current_attack_families": [
+    {
+      "system": "SignedLog",
+      "attack": "bill_delta",
+      "attack_name": "Aggregate bill manipulation",
+      "queries": 18,
+      "accepted_queries": 18,
+      "rejected_queries": 0,
+      "failed_relation_counts": "{}",
+      "mean_audit_latency_ms": 0.8952833333333333,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLog",
+      "attack": "duplicate_receipt",
+      "attack_name": "Receipt duplication",
+      "queries": 13,
+      "accepted_queries": 13,
+      "rejected_queries": 0,
+      "failed_relation_counts": "{}",
+      "mean_audit_latency_ms": 0.9992718461538461,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLog",
+      "attack": "omit_receipt",
+      "attack_name": "Receipt omission",
+      "queries": 22,
+      "accepted_queries": 22,
+      "rejected_queries": 0,
+      "failed_relation_counts": "{}",
+      "mean_audit_latency_ms": 0.7806091818181817,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLog",
+      "attack": "omit_acceptance",
+      "attack_name": "Observable accepted-call omission",
+      "queries": 12,
+      "accepted_queries": 12,
+      "rejected_queries": 0,
+      "failed_relation_counts": "{}",
+      "mean_audit_latency_ms": 0.7856118333333334,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLog",
+      "attack": "cross_call_splice",
+      "attack_name": "Cross-call evidence splicing",
+      "queries": 14,
+      "accepted_queries": 14,
+      "rejected_queries": 0,
+      "failed_relation_counts": "{}",
+      "mean_audit_latency_ms": 0.8904497142857143,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLog",
+      "attack": "wrong_deployment",
+      "attack_name": "Unauthorized deployment substitution",
+      "queries": 21,
+      "accepted_queries": 21,
+      "rejected_queries": 0,
+      "failed_relation_counts": "{}",
+      "mean_audit_latency_ms": 0.9028679523809524,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLogPlus",
+      "attack": "bill_delta",
+      "attack_name": "Aggregate bill manipulation",
+      "queries": 264,
+      "accepted_queries": 0,
+      "rejected_queries": 264,
+      "failed_relation_counts": "{\"SignedLogPlus\": 264}",
+      "mean_audit_latency_ms": 7.592957704545454,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLogPlus",
+      "attack": "duplicate_receipt",
+      "attack_name": "Receipt duplication",
+      "queries": 267,
+      "accepted_queries": 0,
+      "rejected_queries": 267,
+      "failed_relation_counts": "{\"SignedLogPlus\": 267}",
+      "mean_audit_latency_ms": 7.60502261423221,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLogPlus",
+      "attack": "omit_receipt",
+      "attack_name": "Receipt omission",
+      "queries": 278,
+      "accepted_queries": 0,
+      "rejected_queries": 278,
+      "failed_relation_counts": "{\"SignedLogPlus\": 278}",
+      "mean_audit_latency_ms": 7.317667276978417,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLogPlus",
+      "attack": "omit_acceptance",
+      "attack_name": "Observable accepted-call omission",
+      "queries": 265,
+      "accepted_queries": 0,
+      "rejected_queries": 265,
+      "failed_relation_counts": "{\"SignedLogPlus\": 265}",
+      "mean_audit_latency_ms": 5.563809943396227,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLogPlus",
+      "attack": "cross_call_splice",
+      "attack_name": "Cross-call evidence splicing",
+      "queries": 251,
+      "accepted_queries": 0,
+      "rejected_queries": 251,
+      "failed_relation_counts": "{\"SignedLogPlus\": 251}",
+      "mean_audit_latency_ms": 6.7575508725099604,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "SignedLogPlus",
+      "attack": "wrong_deployment",
+      "attack_name": "Unauthorized deployment substitution",
+      "queries": 275,
+      "accepted_queries": 0,
+      "rejected_queries": 275,
+      "failed_relation_counts": "{\"SignedLogPlus\": 275}",
+      "mean_audit_latency_ms": 6.563065549090909,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "TokenProv-Full",
+      "attack": "bill_delta",
+      "attack_name": "Aggregate bill manipulation",
+      "queries": 232,
+      "accepted_queries": 0,
+      "rejected_queries": 232,
+      "failed_relation_counts": "{\"R_set\": 232}",
+      "mean_audit_latency_ms": 8.431906573275862,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "TokenProv-Full",
+      "attack": "duplicate_receipt",
+      "attack_name": "Receipt duplication",
+      "queries": 223,
+      "accepted_queries": 0,
+      "rejected_queries": 223,
+      "failed_relation_counts": "{\"R_prov\": 223}",
+      "mean_audit_latency_ms": 7.489213520179372,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "TokenProv-Full",
+      "attack": "omit_receipt",
+      "attack_name": "Receipt omission",
+      "queries": 256,
+      "accepted_queries": 0,
+      "rejected_queries": 256,
+      "failed_relation_counts": "{\"R_set\": 256}",
+      "mean_audit_latency_ms": 7.36794683203125,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "TokenProv-Full",
+      "attack": "omit_acceptance",
+      "attack_name": "Observable accepted-call omission",
+      "queries": 283,
+      "accepted_queries": 0,
+      "rejected_queries": 283,
+      "failed_relation_counts": "{\"R_hand\": 283}",
+      "mean_audit_latency_ms": 5.477196978798587,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "TokenProv-Full",
+      "attack": "cross_call_splice",
+      "attack_name": "Cross-call evidence splicing",
+      "queries": 309,
+      "accepted_queries": 0,
+      "rejected_queries": 309,
+      "failed_relation_counts": "{\"R_prov\": 309}",
+      "mean_audit_latency_ms": 6.435971990291262,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    },
+    {
+      "system": "TokenProv-Full",
+      "attack": "wrong_deployment",
+      "attack_name": "Unauthorized deployment substitution",
+      "queries": 297,
+      "accepted_queries": 0,
+      "rejected_queries": 297,
+      "failed_relation_counts": "{\"R_prov\": 297}",
+      "mean_audit_latency_ms": 6.403049101010101,
+      "measurement_type": "PROTOCOL_MICROBENCHMARK"
+    }
+  ],
+  "historical_attack_coverage": [
+    {
+      "attack_id": "A1",
+      "attack_name": "Unauthorized call",
+      "expected_relation": "R_auth",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A2",
+      "attack_name": "Call insertion",
+      "expected_relation": "R_life",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 0,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A3",
+      "attack_name": "Observable-call omission",
+      "expected_relation": "R_hand",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 0,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A4",
+      "attack_name": "Call replay",
+      "expected_relation": "R_prov",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 0,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A5",
+      "attack_name": "Call relabeling",
+      "expected_relation": "R_prov",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A6",
+      "attack_name": "H->B boundary tampering",
+      "expected_relation": "R_hand",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A7",
+      "attack_name": "B->P boundary tampering",
+      "expected_relation": "R_hand",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A8",
+      "attack_name": "Model/deployment substitution",
+      "expected_relation": "R_prov",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A9",
+      "attack_name": "Tokenizer/input-semantics substitution",
+      "expected_relation": "R_prov",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A10",
+      "attack_name": "Cache or usage inflation",
+      "expected_relation": "R_prov",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A11",
+      "attack_name": "Wrong price version",
+      "expected_relation": "R_prov",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A12",
+      "attack_name": "Cross-call evidence splicing",
+      "expected_relation": "R_prov",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 0,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A13",
+      "attack_name": "Receipt omission or duplication",
+      "expected_relation": "R_set",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 0,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "attack_id": "A14",
+      "attack_name": "Aggregate bill manipulation",
+      "expected_relation": "R_set",
+      "Vanilla_detected": 0,
+      "SignedLog_detected": 500,
+      "TokenProv_detected": 500,
+      "trials_per_system": 500,
+      "dataset": "historical_protocol_microbenchmark"
+    }
+  ],
+  "historical_splicing": [
+    {
+      "scenario": "S1",
+      "scenario_name": "Same model and deployment; different request",
+      "variant": "IndependentLocalChecks",
+      "trials": 500,
+      "accepted": 500,
+      "rejected": 0,
+      "mean_verification_latency_ms": 0.000304278,
+      "failed_relations": "",
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "scenario": "S1",
+      "scenario_name": "Same model and deployment; different request",
+      "variant": "TokenProv-w/o-R_link",
+      "trials": 500,
+      "accepted": 500,
+      "rejected": 0,
+      "mean_verification_latency_ms": 0.00018285800000000002,
+      "failed_relations": "",
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "scenario": "S1",
+      "scenario_name": "Same model and deployment; different request",
+      "variant": "TokenProv-Full",
+      "trials": 500,
+      "accepted": 0,
+      "rejected": 500,
+      "mean_verification_latency_ms": 4.779522226,
+      "failed_relations": "R_prov",
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "scenario": "S2",
+      "scenario_name": "Same model; different deployment and request",
+      "variant": "IndependentLocalChecks",
+      "trials": 500,
+      "accepted": 500,
+      "rejected": 0,
+      "mean_verification_latency_ms": 0.000289198,
+      "failed_relations": "",
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "scenario": "S2",
+      "scenario_name": "Same model; different deployment and request",
+      "variant": "TokenProv-w/o-R_link",
+      "trials": 500,
+      "accepted": 500,
+      "rejected": 0,
+      "mean_verification_latency_ms": 0.00017248000000000003,
+      "failed_relations": "",
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "scenario": "S2",
+      "scenario_name": "Same model; different deployment and request",
+      "variant": "TokenProv-Full",
+      "trials": 500,
+      "accepted": 0,
+      "rejected": 500,
+      "mean_verification_latency_ms": 4.683053708,
+      "failed_relations": "R_prov",
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "scenario": "S3",
+      "scenario_name": "Different model, deployment, and request",
+      "variant": "IndependentLocalChecks",
+      "trials": 500,
+      "accepted": 500,
+      "rejected": 0,
+      "mean_verification_latency_ms": 0.00029806,
+      "failed_relations": "",
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "scenario": "S3",
+      "scenario_name": "Different model, deployment, and request",
+      "variant": "TokenProv-w/o-R_link",
+      "trials": 500,
+      "accepted": 500,
+      "rejected": 0,
+      "mean_verification_latency_ms": 0.000185838,
+      "failed_relations": "",
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "scenario": "S3",
+      "scenario_name": "Different model, deployment, and request",
+      "variant": "TokenProv-Full",
+      "trials": 500,
+      "accepted": 0,
+      "rejected": 500,
+      "mean_verification_latency_ms": 4.755288616,
+      "failed_relations": "R_prov",
+      "dataset": "historical_protocol_microbenchmark"
+    }
+  ],
+  "historical_localization": [
+    {
+      "injection_stage": "auth",
+      "stage_name": "Authorization",
+      "first_failed_relation": "R_auth",
+      "trials": 500,
+      "first_relation_matches": 500,
+      "reported_ground_truth_containment_proxy_count": 500,
+      "responsibility_interval_start": "U",
+      "responsibility_interval_end": "H",
+      "mean_interval_width": 1.0,
+      "mean_audit_latency_ms": 0.168047474,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "injection_stage": "life",
+      "stage_name": "Lifecycle",
+      "first_failed_relation": "R_life",
+      "trials": 500,
+      "first_relation_matches": 500,
+      "reported_ground_truth_containment_proxy_count": 500,
+      "responsibility_interval_start": "H",
+      "responsibility_interval_end": "H",
+      "mean_interval_width": 0.0,
+      "mean_audit_latency_ms": 3.475921256,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "injection_stage": "hand",
+      "stage_name": "Handoff",
+      "first_failed_relation": "R_hand",
+      "trials": 500,
+      "first_relation_matches": 500,
+      "reported_ground_truth_containment_proxy_count": 500,
+      "responsibility_interval_start": "H",
+      "responsibility_interval_end": "P",
+      "mean_interval_width": 2.0,
+      "mean_audit_latency_ms": 3.429830522,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "injection_stage": "prov",
+      "stage_name": "Provider",
+      "first_failed_relation": "R_prov",
+      "trials": 500,
+      "first_relation_matches": 500,
+      "reported_ground_truth_containment_proxy_count": 500,
+      "responsibility_interval_start": "B",
+      "responsibility_interval_end": "P",
+      "mean_interval_width": 1.0,
+      "mean_audit_latency_ms": 9.164527996,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "injection_stage": "set",
+      "stage_name": "Settlement",
+      "first_failed_relation": "R_set",
+      "trials": 500,
+      "first_relation_matches": 500,
+      "reported_ground_truth_containment_proxy_count": 500,
+      "responsibility_interval_start": "H",
+      "responsibility_interval_end": "B",
+      "mean_interval_width": 1.0,
+      "mean_audit_latency_ms": 14.349655894,
+      "dataset": "historical_protocol_microbenchmark"
+    }
+  ],
+  "historical_collusion": [
+    {
+      "corrupt_roles": "B+P",
+      "scenario": "splice provider evidence across calls",
+      "observable_evidence": "signed H->B boundary conflicts with provider-linked evidence",
+      "trials": 500,
+      "accepted": 0,
+      "rejected": 500,
+      "responsibility_interval": "B-P",
+      "interval_width": "1",
+      "evidence_boundary_control": false,
+      "mean_audit_latency_ms": 9.077129122,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "corrupt_roles": "H+B",
+      "scenario": "omit an execution before provider-visible evidence exists",
+      "observable_evidence": "internally consistent seven-call transcript; omitted eighth call leaves no receipt",
+      "trials": 500,
+      "accepted": 500,
+      "rejected": 0,
+      "responsibility_interval": "evidence boundary",
+      "interval_width": "",
+      "evidence_boundary_control": true,
+      "mean_audit_latency_ms": 12.963757858000001,
+      "dataset": "historical_protocol_microbenchmark"
+    },
+    {
+      "corrupt_roles": "H+B+P",
+      "scenario": "fabricate an internally consistent transcript among all service parties",
+      "observable_evidence": "all service-side records and signatures are internally consistent",
+      "trials": 500,
+      "accepted": 500,
+      "rejected": 0,
+      "responsibility_interval": "evidence boundary",
+      "interval_width": "",
+      "evidence_boundary_control": true,
+      "mean_audit_latency_ms": 14.617671566,
+      "dataset": "historical_protocol_microbenchmark"
+    }
+  ],
+  "scope_notes": [
+    "All input datasets are CPU protocol microbenchmarks, including the current adaptive suite; no security claim is derived from LLM inference execution.",
+    "The current adaptive suite has 100 episodes per scheme in total, not per attack family. Actual family counts vary; every generated query has valid signatures and an independent violation-oracle check.",
+    "SignedLog terminates each episode after its first successful query. The stronger schemes use all 16 queries; this is a bounded search result, not a universal security guarantee.",
+    "SignedLogPlus and TokenProv both reject all tested current attacks. These results do not establish a detection-rate advantage over SignedLogPlus.",
+    "Historical five-seed fixture repetitions are not five independent serving runs or distinct attack constructions per trial.",
+    "The historical TokenProv-w/o-R_link path is the receipt-only local-check surrogate, not a strict isolated ablation of the complete auditor.",
+    "In historical splicing, the local verifier uses the source provider key and registration context; the complete auditor checks transplanted evidence against the target request. Source and target requests differ even when their call label is c-0.",
+    "Historical localization reports agreement of the first failed relation with the predefined stage and the associated fixed responsibility interval, not unique malicious-party identification. The source ground_truth_contained field duplicates failed_relation==expected and is not an independent interval-membership test; its exported count is named reported_ground_truth_containment_proxy_count.",
+    "Accepted H+B and H+B+P collusion cases are explicit controls for evidence observability; they must remain reported and must not count as successfully blocked attacks."
+  ]
+}

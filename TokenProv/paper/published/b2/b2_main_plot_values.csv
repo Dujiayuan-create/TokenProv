@@ -1,0 +1,41 @@
+﻿panel,system,component,mean_ms
+1,Vanilla,Authorization,0.0
+1,SignedLog,Authorization,0.3270200963541667
+1,SignedLogPlus,Authorization,0.9161697604166666
+1,TokenProv-Full,Authorization,0.993553078125
+1,Vanilla,Lifecycle/logs,0.0
+1,SignedLog,Lifecycle/logs,3.9113638776041664
+1,SignedLogPlus,Lifecycle/logs,19.647023888020833
+1,TokenProv-Full,Lifecycle/logs,23.0013599296875
+1,Vanilla,Handoffs,0.0
+1,SignedLog,Handoffs,0.0
+1,SignedLogPlus,Handoffs,26.789605197916664
+1,TokenProv-Full,Handoffs,29.7037271484375
+1,Vanilla,Receipts/evidence,0.0
+1,SignedLog,Receipts/evidence,4.99614528125
+1,SignedLogPlus,Receipts/evidence,8.815355317708335
+1,TokenProv-Full,Receipts/evidence,10.214846416666667
+1,Vanilla,Other,1.29940284375
+1,SignedLog,Other,1.5079258203124999
+1,SignedLogPlus,Other,2.000967125
+1,TokenProv-Full,Other,2.066722080729167
+2,Vanilla,Settlement,0.0
+2,SignedLog,Settlement,0.0
+2,SignedLogPlus,Settlement,5.752109932291667
+2,TokenProv-Full,Settlement,6.2429371328125
+2,Vanilla,Evidence write,0.0
+2,SignedLog,Evidence write,13.310558877604167
+2,SignedLogPlus,Evidence write,25.90083065625
+2,TokenProv-Full,Evidence write,24.107220932291668
+2,Vanilla,Ledger,0.0
+2,SignedLog,Ledger,0.0
+2,SignedLogPlus,Ledger,8.1463735234375
+2,TokenProv-Full,Ledger,8.011059809895833
+2,Vanilla,Audit,0.0
+2,SignedLog,Audit,0.0
+2,SignedLogPlus,Audit,37.082599994791664
+2,TokenProv-Full,Audit,41.79889915104167
+2,Vanilla,Other,2.250885078125
+2,SignedLog,Other,1.2042555911458332
+2,SignedLogPlus,Other,4.736768338541666
+2,TokenProv-Full,Other,5.5410837421875

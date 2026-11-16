@@ -1,0 +1,17 @@
+{
+  "run": "\\\\?\\E:\\博士内容\\Paper4token溯源\\tokenprovALL\\opensource\\TokenProv\\results\\server_runs\\20261116T152512Z_f195a2e44a7a",
+  "counts": {
+    "measured_requests": 12,
+    "warmup_requests": 3,
+    "failed_measured_requests": 0,
+    "proof_jobs": 8,
+    "failed_proof_jobs": 0
+  },
+  "validation": {
+    "passed": true,
+    "issues": []
+  }
+}
+fixture-k2-in64-out8-c2 repetition=1/1 system=SignedLogPlus
+fixture-k2-in64-out8-c2 repetition=1/1 system=Vanilla
+fixture-k2-in64-out8-c2 repetition=1/1 system=TokenProv-Full

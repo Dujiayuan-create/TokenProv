@@ -1,0 +1,6 @@
+variant,mean_online_latency_ms,mean_protocol_overhead_ms,bytes_per_request,mean_cpu_time_ms,memory_mb,sample_count,run,seed,measurement_type
+Vanilla,0.0023,0.0023,22.0,0.0,32.1484375,2,1,42,PROTOCOL_MICROBENCHMARK
+Vanilla + Lifecycle,9.36715,9.36715,15738.0,7.8125,32.20703125,2,1,42,PROTOCOL_MICROBENCHMARK
++ Bilateral Handoff,18.2214,18.2214,23007.0,15.625,32.23046875,2,1,42,PROTOCOL_MICROBENCHMARK
++ Provider Binding,22.00605,22.00605,30252.0,23.4375,32.2578125,2,1,42,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,25.25055,25.25055,32990.0,31.25,32.31640625,2,1,42,PROTOCOL_MICROBENCHMARK

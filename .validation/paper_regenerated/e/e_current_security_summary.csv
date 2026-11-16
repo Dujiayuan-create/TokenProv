@@ -1,0 +1,4 @@
+system,episodes,successful_episodes,attack_queries,accepted_attack_queries,benign_trials,benign_false_rejections,query_budget_per_episode,valid_signature_queries,oracle_violation_queries,measurement_type
+SignedLog,100,100,100,100,100,0,16,100,100,PROTOCOL_MICROBENCHMARK
+SignedLogPlus,100,0,1600,0,100,0,16,1600,1600,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,100,0,1600,0,100,0,16,1600,1600,PROTOCOL_MICROBENCHMARK

@@ -1,0 +1,24 @@
+\begin{table}[!t]
+\centering
+\caption{Assurance component costs (mean $\pm$ sample SD across three proof rounds or signing sessions).}
+\label{tab:c-assurance-components}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cc@{\hspace{3pt}}}
+\toprule
+\textbf{Component} & \textbf{Unit} & \textbf{Mean $\pm$ SD} \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{3}{@{\hspace{3pt}}l@{\hspace{3pt}}}{\textbf{Scoped Groth16 (B300 server CPU)}} \\
+Circuit witness + proving & ms/call & 148.45 $\pm$ 7.64 \\
+Proof verification & ms/call & 15.10 $\pm$ 1.55 \\
+Serialized proof (JSON) & B/call & 722.98 $\pm$ 0.47 \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{3}{@{\hspace{3pt}}l@{\hspace{3pt}}}{\textbf{TEE-based receipt signing (local)}} \\
+Software-key signing & ms/receipt & 0.534 $\pm$ 0.028 \\
+TEE-based signing & ms/receipt & 0.763 $\pm$ 0.085 \\
+\textbf{Paired signing increment} & ms/receipt & \textcolor[HTML]{2E3B97}{\textbf{0.229 $\pm$ 0.108}} \\
+\bottomrule
+\end{tabular*}
+\end{table}

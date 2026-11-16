@@ -1,0 +1,38 @@
+# Local environments, build products, and caches.
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.cache/
+node_modules/
+
+# Generated measurements and model files are distributed separately.
+results/
+artifacts/
+models/
+*.safetensors
+*.pt
+*.pth
+*.wtns
+*.zkey
+*.ptau
+tools/zk/build/
+paper/generated/
+
+# Machine-local configuration and credentials.
+.env
+.env.*
+!.env.example
+configs/*.local.yaml
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+.DS_Store
+Thumbs.db

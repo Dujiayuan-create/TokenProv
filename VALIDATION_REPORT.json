@@ -1,0 +1,178 @@
+{
+  "original_source_files_checked": 112,
+  "original_sources_unchanged": true,
+  "source_files": 237,
+  "source_bytes": 23522831,
+  "archive": "TokenProv-0.2.0-source.zip",
+  "archive_bytes": 7722398,
+  "archive_sha256": "91eb6bc7f12bdec04336559e5cfa62c29a5b20b8055e6fd22fe4831d62f988c3",
+  "license": "MIT",
+  "broken_document_links": [],
+  "machine_specific_identifiers": [],
+  "generated_outputs_moved_to_validation": [
+    "results",
+    "build",
+    "tokenprov.egg-info"
+  ],
+  "cpu_regression_tests_passed": 81,
+  "paper_artifacts": {
+    "retained_files_verified": 122,
+    "regenerated_csvs": {
+      "b1": [
+        "request_latency_data.csv",
+        "throughput_summary.csv"
+      ],
+      "b2": [
+        "b2_component_round_means.csv",
+        "b2_component_summary.csv",
+        "b2_main_plot_values.csv"
+      ],
+      "b3_b4": [
+        "b3_protocol_scaling.csv",
+        "b3_concurrency_original_round.csv",
+        "b4_model_round_values.csv",
+        "b4_model_range_summary.csv"
+      ],
+      "c": [
+        "c2_phase_plot_values.csv",
+        "c3_audit_rate_plot_values.csv",
+        "c_assurance_components.csv"
+      ],
+      "d": [
+        "d_storage_plot_values.csv",
+        "d_current_plot_values.csv"
+      ],
+      "e": [
+        "e_current_security_summary.csv",
+        "e_current_attack_families.csv",
+        "e_historical_attack_matrix.csv",
+        "e_historical_splicing_summary.csv",
+        "e_historical_localization_summary.csv",
+        "e_historical_collusion_summary.csv"
+      ],
+      "f": [
+        "f_rule_gating.csv",
+        "f_cost_rounds.csv",
+        "f_cost_summary.csv",
+        "f_paired_increments.csv",
+        "f_increment_summary.csv"
+      ],
+      "cases": []
+    },
+    "regenerated_csv_count": 25,
+    "key_tex_identical": {
+      "b2/b2_appendix_component_table.tex": true,
+      "b3_b4/b3_b4_appendix.tex": true,
+      "c/c_assurance_components_table.tex": true,
+      "c/c_maintext.tex": true,
+      "c/c_appendix.tex": true,
+      "d/d_appendix_current_table.tex": true,
+      "d/d_appendix_storage_table.tex": true,
+      "e/e_combined_results_table.tex": true,
+      "f/f_main_rule_table.tex": true,
+      "f/f_appendix_cost_table.tex": true,
+      "f/f_appendix_increment_table.tex": true
+    },
+    "png_pixel_comparison": {
+      "b1": {
+        "png_pixels_equal": true,
+        "dimensions": [
+          5206,
+          1218
+        ]
+      },
+      "b2": {
+        "png_pixels_equal": true,
+        "dimensions": [
+          4200,
+          2136
+        ]
+      },
+      "b3_b4": {
+        "png_pixels_equal": true,
+        "dimensions": [
+          4200,
+          2735
+        ]
+      },
+      "c": {
+        "png_pixels_equal": true,
+        "dimensions": [
+          4200,
+          2856
+        ]
+      },
+      "cases": {
+        "png_pixels_equal": true,
+        "dimensions": [
+          4200,
+          6286
+        ]
+      },
+      "d": {
+        "png_pixels_equal": true,
+        "dimensions": [
+          4174,
+          4514
+        ]
+      },
+      "f": {
+        "png_pixels_equal": true,
+        "dimensions": [
+          985,
+          1166
+        ]
+      }
+    },
+    "python_syntax_errors": [],
+    "source_preservation": true,
+    "new_gpu_or_tee_experiments_run": false,
+    "new_cpu_diagnostic_runs": [
+      "storage: 1 seed, call count 1",
+      "security: 1 seed, 1 trial per fixture",
+      "ablation: 1 seed, 2 samples/variant, 0 warmups"
+    ],
+    "retained_signing_examples_verified": 6,
+    "retained_signing_operations_checked": 6144,
+    "render_versions": {
+      "matplotlib": "3.10.0",
+      "numpy": "2.5.4",
+      "pillow": "13.0.0"
+    },
+    "cpu_regression_tests_passed": 81,
+    "tests_executed_from_unpacked_sdist": true,
+    "original_source_files_checked": 112,
+    "retained_original_inputs_checked": 141,
+    "original_sources_unchanged": true
+  },
+  "python_distribution": {
+    "build_dependencies": [
+      {
+        "file": "setuptools-75.8.2-py3-none-any.whl",
+        "sha256": "558e47c15f1811c1fa7adbd0096669bf76c1d3f433f58324df69f3f5ecac4e8f"
+      },
+      {
+        "file": "wheel-0.45.1-py3-none-any.whl",
+        "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"
+      },
+      {
+        "file": "packaging-24.2-py3-none-any.whl",
+        "sha256": "09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759"
+      }
+    ],
+    "wheel": "tokenprov-0.2.0-py3-none-any.whl",
+    "sdist": "tokenprov-0.2.0.tar.gz",
+    "installed_wheel_smoke_passed": true,
+    "wheel_files": 59,
+    "sdist_files": 295
+  },
+  "javascript": {
+    "node": "22.14.0",
+    "node_archive_sha256": "55b639295920b219bb2acbcfa00f90393a2789095b7323f79475c9f34795f217",
+    "syntax_checked": [
+      "tools/zk/c_assurance_worker.mjs",
+      "tools/zk/proof_worker.mjs"
+    ]
+  },
+  "new_gpu_or_tee_experiments_run": false
+}

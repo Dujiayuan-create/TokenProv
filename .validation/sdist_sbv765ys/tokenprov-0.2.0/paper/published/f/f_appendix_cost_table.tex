@@ -1,0 +1,19 @@
+\begin{table}[!t]
+\centering
+\caption{Historical cumulative validation configurations (mean $\pm$ sample SD of five run means; 1,000 measurements per configuration per run).}
+\label{tab:f-cumulative-cost}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}ccc@{\hspace{3pt}}}
+\toprule
+\shortstack{\textbf{Cumulative}\\\textbf{checks}} & \shortstack{\textbf{Wall time}\\\textbf{(ms)}} & \shortstack{\textbf{CPU time}\\\textbf{(ms)}} & \shortstack{\textbf{Selected payload}\\\textbf{(KiB)}} \\
+\midrule
+Baseline & 0.00047 $\pm$ 0.00007 & 0.00129 $\pm$ 0.00022 & 0.0215 $\pm$ 0.0000 \\
++ Lifecycle & 6.026 $\pm$ 0.029 & 6.020 $\pm$ 0.031 & 15.369 $\pm$ 0.000 \\
++ Handoff & 11.452 $\pm$ 0.037 & 11.432 $\pm$ 0.030 & 22.468 $\pm$ 0.000 \\
++ Provider & 14.361 $\pm$ 0.095 & 14.342 $\pm$ 0.092 & 29.543 $\pm$ 0.000 \\
++ Settlement & 16.704 $\pm$ 0.109 & 16.673 $\pm$ 0.103 & 32.217 $\pm$ 0.000 \\
+\bottomrule
+\end{tabular*}
+\end{table}

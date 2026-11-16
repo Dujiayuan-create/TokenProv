@@ -1,0 +1,119 @@
+{
+  "font": "C:\\Windows\\Fonts\\times.ttf",
+  "figure_size_inches": [
+    3.5,
+    3.95
+  ],
+  "labels_outside_figure": [],
+  "palette_fill": {
+    "Lifecycle": "#E2ABA2",
+    "Handoff": "#FDD6AF",
+    "Provider": "#B9D6E9",
+    "Settlement": "#ADAACF",
+    "Total": "#2E3B97"
+  },
+  "palette_outline": {
+    "Lifecycle": "#B76252",
+    "Handoff": "#A66B32",
+    "Provider": "#527F98",
+    "Settlement": "#666095",
+    "Total": "#26317C"
+  },
+  "waterfall_palette_fill": {
+    "Lifecycle": "#D8978E",
+    "Handoff": "#EDBE87",
+    "Provider": "#96BDD4",
+    "Settlement": "#9895BF",
+    "Total": "#2E3B97"
+  },
+  "waterfall_palette_outline": {
+    "Lifecycle": "#8F4F44",
+    "Handoff": "#92602E",
+    "Provider": "#3F6C85",
+    "Settlement": "#57517F",
+    "Total": "#26317C"
+  },
+  "waterfall_hatches": {
+    "Lifecycle": "///",
+    "Handoff": "\\\\\\",
+    "Provider": "...",
+    "Settlement": "xxx",
+    "Total": ""
+  },
+  "waterfall_hatch_linewidth_pt": 0.7,
+  "waterfall_axes_start_at_zero": true,
+  "waterfall_whiskers": [
+    {
+      "stage": "Lifecycle",
+      "cumulative_mean_ms": 6.0257865552,
+      "cumulative_sample_sd_ms": 0.02878083919516793
+    },
+    {
+      "stage": "Handoff",
+      "cumulative_mean_ms": 11.4518187724,
+      "cumulative_sample_sd_ms": 0.036813577591238725
+    },
+    {
+      "stage": "Provider",
+      "cumulative_mean_ms": 14.3608776476,
+      "cumulative_sample_sd_ms": 0.094864833416448
+    },
+    {
+      "stage": "Settlement",
+      "cumulative_mean_ms": 16.704343822,
+      "cumulative_sample_sd_ms": 0.10888888527859882
+    },
+    {
+      "stage": "Total",
+      "cumulative_mean_ms": 16.704343822,
+      "cumulative_sample_sd_ms": 0.10888888527859882
+    }
+  ],
+  "waterfall_errorbar_definition": "sample SD of cumulative configuration run means",
+  "repeatability_points": [
+    [
+      0.021307090588718047,
+      -0.5234201860798038,
+      0.26461126118448863,
+      0.6383028248288847,
+      -0.40080099052226537
+    ],
+    [
+      0.24545596781313517,
+      -0.08143202914173697,
+      0.17867649677896225,
+      -0.5290035635737156,
+      0.18630312812337735
+    ],
+    [
+      -0.2955619053484182,
+      -0.7031158963803019,
+      0.1254231241431869,
+      -0.18252847244597525,
+      1.0557831500314974
+    ],
+    [
+      0.09758888570368107,
+      0.9609306340342183,
+      -0.5171026944873702,
+      0.14929855530843028,
+      -0.690715380558915
+    ]
+  ],
+  "repeatability_interval_definition": "plus/minus cumulative sample SD expressed as percentage of configuration mean",
+  "maximum_absolute_deviation_percent": 1.0557831500314974,
+  "grayscale_max_rgb_channel_difference": 0.0,
+  "cumulative_cv_percent": [
+    0.4776279234506121,
+    0.32146489848375037,
+    0.6605782442015434,
+    0.6518596985245819
+  ],
+  "final_cumulative_time_range_ms": [
+    16.58896435,
+    16.864860979
+  ],
+  "historical_rounds": 5,
+  "formal_validations": 25000,
+  "new_experiments_executed": false
+}

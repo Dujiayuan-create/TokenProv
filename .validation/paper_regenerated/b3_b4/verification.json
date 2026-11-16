@@ -1,0 +1,312 @@
+{
+  "font": "C:\\Windows\\Fonts\\times.ttf",
+  "figure_size_inches": [
+    3.5,
+    2.28
+  ],
+  "labels_outside_figure": [],
+  "png_dpi": 1200,
+  "native_output_width_inches": 3.5,
+  "frame_width_pt": 0.6,
+  "grayscale_channel_error": 0.0,
+  "compact_model_labels": [
+    "Q3\n1.7B",
+    "Q3\n4B",
+    "Phi-3\n3.8B",
+    "DS\n8B",
+    "Q3\n14B"
+  ],
+  "layout": "1x2 groups; each group has two vertically stacked flat axes",
+  "shared_x_axes_per_column": true,
+  "top_x_tick_labels_hidden": true,
+  "column_a_top_bottom": [
+    "construction_ms",
+    "audit_ms"
+  ],
+  "column_b_top_bottom": [
+    "online_non_llm_ms",
+    "latency_change_percent"
+  ],
+  "group_labels_position": "centered below each column",
+  "subplot_spacing": {
+    "wspace": 0.27,
+    "hspace": 0.1
+  },
+  "round_legend_labels": [
+    "Round 1",
+    "Round 2",
+    "Round 3"
+  ],
+  "subtitle_clearances_pt": [
+    2.153099999999991,
+    6.169099999999991
+  ],
+  "column_label_clearances_pt": [
+    2.7871365638766563,
+    2.1121365638766565
+  ],
+  "endpoint_value_callouts": false,
+  "insets": [
+    {
+      "metric": "construction_ms",
+      "calls": [
+        128,
+        512
+      ],
+      "x_limits": [
+        110,
+        550
+      ],
+      "y_limits_ms": [
+        130,
+        820
+      ],
+      "x_scale": "linear",
+      "y_scale": "linear",
+      "raw_values_ms": [
+        160.78719,
+        566.983397,
+        190.252485,
+        764.819513
+      ],
+      "measured_points": 4
+    },
+    {
+      "metric": "audit_ms",
+      "calls": [
+        1,
+        8
+      ],
+      "x_limits": [
+        0.85,
+        8.7
+      ],
+      "y_limits_ms": [
+        1.2,
+        15
+      ],
+      "x_scale": "linear",
+      "y_scale": "linear",
+      "raw_values_ms": [
+        1.819524,
+        10.175037,
+        2.216766,
+        13.76157
+      ],
+      "measured_points": 4
+    }
+  ],
+  "main_protocol_markers_covered_by_insets": [],
+  "inset_tick_clearances_pt": [
+    {
+      "metric": "construction_ms",
+      "bottom": 3.97839999999999,
+      "right": 2.32370044052863
+    },
+    {
+      "metric": "audit_ms",
+      "bottom": 3.9784,
+      "right": 5.20370044052863
+    }
+  ],
+  "inset_tick_font_pt": 6.0,
+  "adjacent_model_tick_overlaps": [],
+  "protocol_points_covered_by_legend": [],
+  "protocol_x_scale": "log base 2",
+  "protocol_y_scale": "log base 10",
+  "protocol_x_ticks": [
+    1,
+    8,
+    32,
+    128,
+    512
+  ],
+  "event_factors": [
+    4,
+    8
+  ],
+  "all_measured_points_retained": true,
+  "measurements_per_configuration": 1,
+  "error_bars": false,
+  "grayscale_artist_property_conversions": 794,
+  "protocol_bands": [
+    {
+      "metric": "construction_ms",
+      "meaning": "range across 4 and 8 events/call",
+      "lower_ms": [
+        2.161707,
+        9.521736,
+        35.939503,
+        160.78719,
+        566.983397
+      ],
+      "upper_ms": [
+        3.482882,
+        12.588477,
+        74.944964,
+        190.252485,
+        764.819513
+      ]
+    },
+    {
+      "metric": "audit_ms",
+      "meaning": "range across 4 and 8 events/call",
+      "lower_ms": [
+        1.819524,
+        10.175037,
+        38.870743,
+        154.495225,
+        620.645735
+      ],
+      "upper_ms": [
+        2.216766,
+        13.76157,
+        71.811316,
+        212.517765,
+        864.690295
+      ]
+    }
+  ],
+  "cross_model_bands": [
+    {
+      "model": "qwen3-1.7b",
+      "metric": "online_non_llm_ms",
+      "round_values": [
+        52.457068109375,
+        67.41198540625,
+        78.0715724453125
+      ],
+      "min": 52.457068109375,
+      "max": 78.0715724453125,
+      "mean": 65.98020865364583
+    },
+    {
+      "model": "qwen3-4b",
+      "metric": "online_non_llm_ms",
+      "round_values": [
+        60.79115659375,
+        50.7948057578125,
+        52.6962487578125
+      ],
+      "min": 50.7948057578125,
+      "max": 60.79115659375,
+      "mean": 54.76073703645833
+    },
+    {
+      "model": "phi-3-mini-4k-instruct",
+      "metric": "online_non_llm_ms",
+      "round_values": [
+        49.4930456953125,
+        61.7975144140625,
+        50.9260203046875
+      ],
+      "min": 49.4930456953125,
+      "max": 61.7975144140625,
+      "mean": 54.07219347135417
+    },
+    {
+      "model": "deepseek-r1-distill-llama-8b",
+      "metric": "online_non_llm_ms",
+      "round_values": [
+        52.9083122890625,
+        61.5248337109375,
+        47.502915453125
+      ],
+      "min": 47.502915453125,
+      "max": 61.5248337109375,
+      "mean": 53.97868715104167
+    },
+    {
+      "model": "qwen3-14b",
+      "metric": "online_non_llm_ms",
+      "round_values": [
+        52.318629828125,
+        52.7152636796875,
+        58.5335899609375
+      ],
+      "min": 52.318629828125,
+      "max": 58.5335899609375,
+      "mean": 54.52249448958333
+    },
+    {
+      "model": "qwen3-1.7b",
+      "metric": "latency_change_percent",
+      "round_values": [
+        0.38020271413161666,
+        3.8804592978562313,
+        -9.390209343100075
+      ],
+      "min": -9.390209343100075,
+      "max": 3.8804592978562313,
+      "mean": -1.7098491103707423
+    },
+    {
+      "model": "qwen3-4b",
+      "metric": "latency_change_percent",
+      "round_values": [
+        -5.199244378547085,
+        0.8485437146672492,
+        -3.368616936276325
+      ],
+      "min": -5.199244378547085,
+      "max": 0.8485437146672492,
+      "mean": -2.5731058667187203
+    },
+    {
+      "model": "phi-3-mini-4k-instruct",
+      "metric": "latency_change_percent",
+      "round_values": [
+        2.2752562797086373,
+        -22.916447481071668,
+        0.6590723105515117
+      ],
+      "min": -22.916447481071668,
+      "max": 2.2752562797086373,
+      "mean": -6.660706296937173
+    },
+    {
+      "model": "deepseek-r1-distill-llama-8b",
+      "metric": "latency_change_percent",
+      "round_values": [
+        0.47405753996594413,
+        -16.844223859185114,
+        42.707422821531374
+      ],
+      "min": -16.844223859185114,
+      "max": 42.707422821531374,
+      "mean": 8.779085500770735
+    },
+    {
+      "model": "qwen3-14b",
+      "metric": "latency_change_percent",
+      "round_values": [
+        1.9965897014982303,
+        1.2855139078015831,
+        -1.4339863825132304
+      ],
+      "min": -1.4339863825132304,
+      "max": 1.9965897014982303,
+      "mean": 0.6160390755955277
+    }
+  ],
+  "cross_model_band_meaning": "min-max of three observed round means, not SD or CI",
+  "cross_model_category_interpolation": false,
+  "cross_model_y_limits": {
+    "online_non_llm_ms": [
+      40,
+      100
+    ],
+    "latency_change_percent": [
+      -30,
+      50
+    ]
+  },
+  "protocol_configurations": 10,
+  "concurrency_scheme_configurations": 12,
+  "concurrency_requests": 1088,
+  "concurrency_model_calls": 8704,
+  "cross_model_rounds": 15,
+  "cross_model_formal_requests": 7680,
+  "archived_concurrency_summary_loaded": true,
+  "no_inference_or_proof_execution": true
+}

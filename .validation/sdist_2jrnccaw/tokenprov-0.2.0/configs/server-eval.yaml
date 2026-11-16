@@ -1,0 +1,43 @@
+# Paths are relative to this config file. Reuse an existing local model service.
+schema_version: 1
+output_root: ../results/server_runs
+endpoints:
+  - id: model_a
+    model: CHANGE_TO_SERVED_MODEL_NAME
+    base_url_env: TOKENPROV_MODEL_A_URL
+    # api_key_env: TOKENPROV_MODEL_A_API_KEY
+    tokenizer_path: /srv/models/CHANGE_TO_LOCAL_MODEL_DIR
+    revision: CHANGE_TO_MODEL_REVISION
+    model_hash: unregistered
+    tokenizer_hash: unregistered
+    node_id: model-host-1
+    timeout_s: 180
+    # Enable only after the confidential runtime and relying-party policy exist.
+    # tee_url: http://127.0.0.1:18443
+    # tee_policy: tee/policy.yaml
+    # tee_api_key_env: TOKENPROV_TEE_API_KEY
+systems: [Vanilla, SignedLog, SignedLogPlus, TokenProv-Full]
+execution:
+  concurrency: [8]
+  repetitions: 3
+  requests_per_run: 128
+  warmups: 4
+  seed: 42
+workload:
+  calls: [8]
+  input_tokens: [2048]
+  max_output_tokens: [256]
+  # Percentage of call positions that reuse identical whole prompts across requests;
+  # this is not a measured cache-hit rate or a token-prefix-length percentage.
+  shared_prompt_percent: 0
+  routing: per_endpoint
+  # trace_file: workloads/agent_traces.jsonl
+audit:
+  probability: 0.10
+  workers: 2
+  queue_capacity: 128
+  retention_s: 3600
+  timeout_s: 300
+  # Use a real compiled circuit/key directory. No backend means no proving claim.
+  # prover_command: [node, '{project_root}/tools/zk/proof_worker.mjs', prove, '{project_root}/tools/zk/build']
+  # verifier_command: [node, '{project_root}/tools/zk/proof_worker.mjs', verify, '{project_root}/tools/zk/build']

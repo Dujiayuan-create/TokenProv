@@ -1,0 +1,12 @@
+{
+  "name": "tokenprov-zk-benchmark",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Pinned Groth16 tooling for scoped TokenProv accounting and request-hash equality",
+  "dependencies": {
+    "circomlib": "2.0.5",
+    "circomlibjs": "0.1.7",
+    "snarkjs": "0.7.5"
+  }
+}

@@ -1,0 +1,7 @@
+﻿group,component,unit,mean,sample_sd,digits
+Scoped Groth16 (B300 server CPU),Circuit witness + proving,ms/call,148.44510942708334,7.644141444631057,2
+Scoped Groth16 (B300 server CPU),Proof verification,ms/call,15.101198177083333,1.5495988828582699,2
+Scoped Groth16 (B300 server CPU),Serialized proof (JSON),B/call,722.9791666666666,0.4732423621500228,2
+TEE-based receipt signing (local),Software-key signing,ms/receipt,0.5343779622395833,0.028454516877945226,3
+TEE-based receipt signing (local),TEE-based signing,ms/receipt,0.7631564127604168,0.08517331753199849,3
+TEE-based receipt signing (local),Paired signing increment,ms/receipt,0.22877845052083334,0.10829064520697715,3

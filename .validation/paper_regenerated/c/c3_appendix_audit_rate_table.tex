@@ -1,0 +1,20 @@
+\begin{table*}[!t]
+\centering
+\caption{Audit-rate measurements with 100 requests per batch, eight calls per request, and two proof workers (mean $\pm$ sample SD across three rounds). The 10\% default is shaded.}
+\label{tab:c3-audit-rate}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\textwidth}{@{\hspace{3pt}}c@{\extracolsep{\fill}}ccccc@{\hspace{3pt}}}
+\toprule
+\shortstack{\textbf{Audit rate}\\\textbf{(\%)}} & \shortstack{\textbf{Proofs/}\\\textbf{batch}} & \shortstack{\textbf{Proving cost}\\\textbf{(ms/request)}} & \shortstack{\textbf{Verification cost}\\\textbf{(ms/request)}} & \shortstack{\textbf{Combined cost}\\\textbf{(ms/request)}} & \shortstack{\textbf{Audit time}\\\textbf{(s/batch)}} \\
+\midrule
+1 & 8 & 11.44 $\pm$ 0.38 & 1.13 $\pm$ 0.09 & 12.57 $\pm$ 0.47 & 0.67 $\pm$ 0.05 \\
+5 & 40 & 57.25 $\pm$ 0.63 & 5.64 $\pm$ 0.23 & 62.89 $\pm$ 0.53 & 3.19 $\pm$ 0.04 \\
+\rowcolor{gray!12}
+10 & 80 & 112.55 $\pm$ 1.20 & 10.98 $\pm$ 0.24 & 123.53 $\pm$ 1.42 & 6.27 $\pm$ 0.08 \\
+25 & 200 & 286.97 $\pm$ 10.79 & 29.15 $\pm$ 2.23 & 316.11 $\pm$ 12.93 & 15.95 $\pm$ 0.64 \\
+50 & 400 & 565.33 $\pm$ 16.99 & 55.68 $\pm$ 2.98 & 621.01 $\pm$ 19.94 & 31.29 $\pm$ 1.02 \\
+100 & 800 & 1135.00 $\pm$ 33.13 & 113.94 $\pm$ 8.11 & 1248.94 $\pm$ 41.00 & 62.88 $\pm$ 2.03 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "rounds": 3,
+  "receipts_per_session": 1024,
+  "measured_operations": 6144,
+  "raw_statistics_recomputed": true,
+  "saved_receipt_examples_verified": [
+    {
+      "file": "example-require_vbs-round1.json",
+      "verified": true,
+      "vbs_isolated": true,
+      "request_id": "r-992250ff17b6b64f1125f73e",
+      "call_id": "c-0"
+    },
+    {
+      "file": "example-require_vbs-round2.json",
+      "verified": true,
+      "vbs_isolated": true,
+      "request_id": "r-07cdc5133acd4f75b811aeed",
+      "call_id": "c-1"
+    },
+    {
+      "file": "example-require_vbs-round3.json",
+      "verified": true,
+      "vbs_isolated": true,
+      "request_id": "r-0ac9ed0ae43bfeb63a00fa2b",
+      "call_id": "c-1"
+    },
+    {
+      "file": "example-software_ksp-round1.json",
+      "verified": true,
+      "vbs_isolated": false,
+      "request_id": "r-992250ff17b6b64f1125f73e",
+      "call_id": "c-0"
+    },
+    {
+      "file": "example-software_ksp-round2.json",
+      "verified": true,
+      "vbs_isolated": false,
+      "request_id": "r-07cdc5133acd4f75b811aeed",
+      "call_id": "c-1"
+    },
+    {
+      "file": "example-software_ksp-round3.json",
+      "verified": true,
+      "vbs_isolated": false,
+      "request_id": "r-0ac9ed0ae43bfeb63a00fa2b",
+      "call_id": "c-1"
+    }
+  ],
+  "tampered_receipt_or_signature_rejections": 48,
+  "private_export_denials": 6,
+  "accepted_scope_controls": 6,
+  "metrics": [
+    {
+      "metric": "Signing API",
+      "unit": "ms/receipt",
+      "software": {
+        "n": 3,
+        "mean": 0.5343779622395833,
+        "sample_sd": 0.028454516877945226
+      },
+      "vbs": {
+        "n": 3,
+        "mean": 0.7631564127604168,
+        "sample_sd": 0.08517331753199849
+      },
+      "paired_increment": {
+        "n": 3,
+        "mean": 0.22877845052083334,
+        "sample_sd": 0.10829064520697715
+      }
+    },
+    {
+      "metric": "Receipt authentication",
+      "unit": "ms/receipt",
+      "software": {
+        "n": 3,
+        "mean": 0.67331650390625,
+        "sample_sd": 0.03819672342086363
+      },
+      "vbs": {
+        "n": 3,
+        "mean": 0.8865624674479168,
+        "sample_sd": 0.09478558084528038
+      },
+      "paired_increment": {
+        "n": 3,
+        "mean": 0.2132459635416667,
+        "sample_sd": 0.12718379348225403
+      }
+    },
+    {
+      "metric": "External verification",
+      "unit": "ms/receipt",
+      "software": {
+        "n": 3,
+        "mean": 0.2976463216145833,
+        "sample_sd": 0.020971051515878875
+      },
+      "vbs": {
+        "n": 3,
+        "mean": 0.2713478515625,
+        "sample_sd": 0.02500679068616059
+      },
+      "paired_increment": {
+        "n": 3,
+        "mean": -0.02629847005208334,
+        "sample_sd": 0.0253113913369731
+      }
+    },
+    {
+      "metric": "Session key setup",
+      "unit": "ms/session",
+      "software": {
+        "n": 3,
+        "mean": 2.1352333333333333,
+        "sample_sd": 0.4212624637127469
+      },
+      "vbs": {
+        "n": 3,
+        "mean": 7.069566666666667,
+        "sample_sd": 6.995947881690753
+      },
+      "paired_increment": {
+        "n": 3,
+        "mean": 4.934333333333334,
+        "sample_sd": 6.969103964164499
+      }
+    }
+  ],
+  "raw_jsonl_sha256": "791758f8016281393636a27a4825b01d4e4a32d106bf8eb6bfca487cca79099e",
+  "scope": "Component key isolation; accounting and receipt preparation remain host-side; no inference or remote attestation"
+}

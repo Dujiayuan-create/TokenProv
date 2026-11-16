@@ -1,0 +1,169 @@
+\section{Additional Ablation Measurements}
+\label{app:f-ablation}
+
+\noindent\textbf{Acceptance-rule controls.}
+The four controls in Table~\ref{tab:f-rule-gating} use call insertion,
+$H\!\rightarrow\!B$ boundary tampering, cross-call evidence splicing,
+and aggregate-bill manipulation.
+For each attack, five fixtures are each evaluated 100 times under the
+unmodified decision and the matching relaxed decision.
+This gives 500 observations per attack--decision configuration and
+4,000 observations overall.
+Repeated evaluations of a fixture are not distinct attack constructions.
+
+Let $a(x)$ be the unmodified auditor's Boolean decision and $f(x)$ its
+first failed relation for candidate $x$.
+The control for relation $R$ computes
+\[
+ a_R(x)=a(x)\lor\bigl[f(x)=R\bigr].
+\]
+The auditor executes its normal first-failure logic before this decision
+override; the control neither removes a component nor continues checking
+later relations after rejection.
+Only the four matched attack--rule combinations were measured.
+The archived variant named \texttt{w/o-R\_link} implements the
+$R_{\mathrm{prov}}$ override and therefore relaxes the entire provider
+rejection gate, rather than isolating $R_{\mathrm{link}}$.
+
+\noindent\textbf{Microbenchmark scope.}
+Each fixture contains eight calls and 32 lifecycle events.
+The five cumulative configurations are the empty request-ID baseline,
+lifecycle validation, added bilateral-handoff validation, added provider
+validation, and added settlement validation.
+For every configuration, each of five runs performs 100 warmups followed
+by 1,000 measured executions: 2,500 warmups and 25,000 measured executions
+overall.
+Evidence and signing keys are prepared before timing.
+The timer covers the selected validation operations and construction of
+the corresponding payload-field selections.
+Authorization verification, evidence generation and signing, model
+inference, canonical serialization, persistence, ledger operations, and
+proof generation are excluded.
+
+Selected payload size is the canonical encoding of the selected fields
+after the timer stops.
+It is not the complete persisted evidence bundle.
+The baseline contains only a request identifier and occupies 22\,B;
+the final selected payload occupies 32,990\,B.
+Table~\ref{tab:f-cumulative-cost} reports cumulative wall time,
+process CPU time, and selected payload size.
+
+\begin{table}[!t]
+\centering
+\caption{Cumulative validation costs. Times are mean $\pm$ sample SD
+across five run means; payload sizes are identical across runs.}
+\label{tab:f-cumulative-cost}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}ccc@{\hspace{3pt}}}
+\toprule
+\shortstack{\textbf{Cumulative}\\\textbf{checks}}
+& \shortstack{\textbf{Wall time}\\\textbf{(ms)}}
+& \shortstack{\textbf{CPU time}\\\textbf{(ms)}}
+& \shortstack{\textbf{Payload}\\\textbf{(KiB)}} \\
+\midrule
+Baseline & 0.00047 $\pm$ 0.00007 & 0.00129 $\pm$ 0.00022 & 0.0215 \\
++ Lifecycle & 6.026 $\pm$ 0.029 & 6.020 $\pm$ 0.031 & 15.369 \\
++ Handoff & 11.452 $\pm$ 0.037 & 11.432 $\pm$ 0.030 & 22.468 \\
++ Provider & 14.361 $\pm$ 0.095 & 14.342 $\pm$ 0.092 & 29.543 \\
++ Settlement & 16.704 $\pm$ 0.109 & 16.673 $\pm$ 0.103 & 32.217 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\noindent\textbf{Matched increments and contributions.}
+Let $T_{j,r}$ denote mean wall time over the 1,000 measured executions
+of cumulative configuration $j$ in run $r$.
+For $j=1,\ldots,4$, the paired increment is
+\[
+ \Delta T_{j,r}=T_{j,r}-T_{j-1,r},
+\]
+where $j=0$ is the baseline.
+Means and sample standard deviations of these differences are computed
+across the five matched runs.
+Payload increments are computed analogously.
+Table~\ref{tab:f-paired-increments} reports the resulting increments;
+they characterize this fixed activation order, rather than isolated
+component executions.
+Stage shares divide mean increments by the final cumulative time or
+payload, including the baseline.
+The reported total SD is computed directly from the final configuration,
+not by adding the stage SDs.
+
+\begin{table}[!t]
+\centering
+\caption{Matched increments along the cumulative validation sequence.
+Times are mean $\pm$ sample SD across five paired run differences;
+Total is aggregated from the final cumulative configuration.}
+\label{tab:f-paired-increments}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cc@{\hspace{3pt}}}
+\toprule
+\textbf{Added checks}
+& \shortstack{\textbf{Wall increment}\\\textbf{(ms)}}
+& \shortstack{\textbf{Payload increment}\\\textbf{(KiB)}} \\
+\midrule
+Baseline & 0.00047 $\pm$ 0.00007 & 0.0215 \\
+Lifecycle & 6.025 $\pm$ 0.029 & 15.348 \\
+Handoff & 5.426 $\pm$ 0.057 & 7.099 \\
+Provider & 2.909 $\pm$ 0.089 & 7.075 \\
+Settlement & 2.343 $\pm$ 0.198 & 2.674 \\
+\midrule
+\textbf{Total} & \textbf{16.704 $\pm$ 0.109} & \textbf{32.217} \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\noindent\textbf{Run-level variation.}
+Table~\ref{tab:f-run-means} provides the run means underlying
+Figure~\ref{fig:f-component-costs}(b).
+For configuration $j$, define
+\[
+ \overline{T}_j=\frac{1}{5}\sum_{r=1}^{5}T_{j,r},
+ \qquad
+ s_j=\sqrt{\frac{1}{4}\sum_{r=1}^{5}
+                 (T_{j,r}-\overline{T}_j)^2}.
+\]
+The plotted signed deviation and CV, expressed as percentages, are
+\[
+ d_{j,r}=100\left(\frac{T_{j,r}}{\overline{T}_j}-1\right),
+ \qquad
+ \mathrm{CV}_j=100\frac{s_j}{\overline{T}_j}.
+\]
+The zero line is each configuration's mean, and its shaded interval is
+$[-\mathrm{CV}_j,+\mathrm{CV}_j]$ on the percentage axis.
+Vertical offsets separate overlapping points and encode no additional
+measurement.
+These intervals describe one sample standard deviation of five run
+means, rather than confidence intervals or per-execution variability.
+Likewise, the time whiskers in Figure~\ref{fig:f-component-costs}(a)
+describe cumulative run means; their SDs differ from those of the paired
+increments in Table~\ref{tab:f-paired-increments}.
+All statistics use unrounded observations.
+
+\begin{table}[!t]
+\centering
+\caption{Run-mean cumulative validation time (ms).
+Each column adds checks to the preceding configuration.}
+\label{tab:f-run-means}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cccc@{\hspace{3pt}}}
+\toprule
+\textbf{Run} & \textbf{Lifecycle} & \textbf{+ Handoff}
+& \textbf{+ Provider} & \textbf{+ Settlement} \\
+\midrule
+1 & 6.027 & 11.480 & 14.318 & 16.721 \\
+2 & 5.994 & 11.442 & 14.260 & 16.865 \\
+3 & 6.042 & 11.472 & 14.379 & 16.618 \\
+4 & 6.064 & 11.391 & 14.335 & 16.729 \\
+5 & 6.002 & 11.473 & 14.512 & 16.589 \\
+\midrule
+CV (\%) & 0.478 & 0.321 & 0.661 & 0.652 \\
+\bottomrule
+\end{tabular*}
+\end{table}

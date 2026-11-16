@@ -1,0 +1,9 @@
+variant,attack_id,attack_name,seed,trial,audit_accepted,attack_detected,failed_relation_before_ablation_gate,audit_latency_ms,measurement_type
+TokenProv-Full,A2,Call insertion,42,0,False,True,R_life,5.4535,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,A6,H->B boundary tampering,42,0,False,True,R_hand,5.5454,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,A12,Cross-call evidence splicing,42,0,False,True,R_prov,13.9992,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,A14,Aggregate bill manipulation,42,0,False,True,R_set,22.3075,PROTOCOL_MICROBENCHMARK
+TokenProv-w/o-Life,A2,Call insertion,42,0,True,False,R_life,5.5401,PROTOCOL_MICROBENCHMARK
+TokenProv-w/o-Handoff,A6,H->B boundary tampering,42,0,True,False,R_hand,5.4065,PROTOCOL_MICROBENCHMARK
+TokenProv-w/o-R_link,A12,Cross-call evidence splicing,42,0,True,False,R_prov,14.3061,PROTOCOL_MICROBENCHMARK
+TokenProv-w/o-ExactSettlement,A14,Aggregate bill manipulation,42,0,True,False,R_set,22.5236,PROTOCOL_MICROBENCHMARK

@@ -1,0 +1,5 @@
+relation,attack_id,attack,source_variant,full_accepted,full_tested,relaxed_accepted,relaxed_tested
+R_life,A2,Call insertion,TokenProv-w/o-Life,0,500,500,500
+R_hand,A6,Handoff tampering,TokenProv-w/o-Handoff,0,500,500,500
+R_prov,A12,Evidence splicing,TokenProv-w/o-R_link,0,500,500,500
+R_set,A14,Bill manipulation,TokenProv-w/o-ExactSettlement,0,500,500,500

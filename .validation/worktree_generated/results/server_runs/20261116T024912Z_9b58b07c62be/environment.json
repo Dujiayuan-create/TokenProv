@@ -1,0 +1,16 @@
+{
+  "cpu_count": 16,
+  "machine": "AMD64",
+  "packages": {
+    "PyYAML": "6.0.2",
+    "cryptography": "43.0.3",
+    "litellm": null,
+    "nvidia-ml-py": null,
+    "tokenprov": null,
+    "torch": null,
+    "transformers": null,
+    "vllm": null
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10"
+}

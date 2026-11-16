@@ -1,0 +1,414 @@
+{
+  "status": "completed",
+  "completed_real_vbs_key_signing": true,
+  "error": null,
+  "round_statistics": [
+    {
+      "mode": "software_ksp",
+      "round": 1,
+      "operations": 1024,
+      "sign_api_ns_ms": {
+        "n": 1024,
+        "mean": 0.52172265625,
+        "sample_sd": 0.10072528842657545,
+        "median": 0.52495,
+        "p95": 0.6389,
+        "min": 0.3794,
+        "max": 1.6609
+      },
+      "receipt_authentication_ns_ms": {
+        "n": 1024,
+        "mean": 0.661269140625,
+        "sample_sd": 0.12595523947329823,
+        "median": 0.6615,
+        "p95": 0.8089749999999999,
+        "min": 0.4629,
+        "max": 1.971
+      },
+      "external_verify_ns_ms": {
+        "n": 1024,
+        "mean": 0.2806220703125,
+        "sample_sd": 0.06112562070490619,
+        "median": 0.266,
+        "p95": 0.36227,
+        "min": 0.212,
+        "max": 0.5858
+      }
+    },
+    {
+      "mode": "require_vbs",
+      "round": 1,
+      "operations": 1024,
+      "sign_api_ns_ms": {
+        "n": 1024,
+        "mean": 0.73233408203125,
+        "sample_sd": 0.148891398029477,
+        "median": 0.691,
+        "p95": 0.9631999999999996,
+        "min": 0.5634,
+        "max": 3.195
+      },
+      "receipt_authentication_ns_ms": {
+        "n": 1024,
+        "mean": 0.8459037109375,
+        "sample_sd": 0.16839495295797585,
+        "median": 0.8003,
+        "p95": 1.1057849999999998,
+        "min": 0.6436,
+        "max": 3.5338
+      },
+      "external_verify_ns_ms": {
+        "n": 1024,
+        "mean": 0.244354296875,
+        "sample_sd": 0.04508334327394491,
+        "median": 0.22394999999999998,
+        "p95": 0.34207,
+        "min": 0.2156,
+        "max": 0.7463
+      }
+    },
+    {
+      "mode": "require_vbs",
+      "round": 2,
+      "operations": 1024,
+      "sign_api_ns_ms": {
+        "n": 1024,
+        "mean": 0.85945009765625,
+        "sample_sd": 0.2071798991597067,
+        "median": 0.8263,
+        "p95": 1.20511,
+        "min": 0.5495,
+        "max": 3.5625
+      },
+      "receipt_authentication_ns_ms": {
+        "n": 1024,
+        "mean": 0.99489443359375,
+        "sample_sd": 0.22619873025761628,
+        "median": 0.97475,
+        "p95": 1.3598999999999999,
+        "min": 0.6267,
+        "max": 3.7491
+      },
+      "external_verify_ns_ms": {
+        "n": 1024,
+        "mean": 0.2937244140625,
+        "sample_sd": 0.0692041230333687,
+        "median": 0.29984999999999995,
+        "p95": 0.378485,
+        "min": 0.2165,
+        "max": 0.9125
+      }
+    },
+    {
+      "mode": "software_ksp",
+      "round": 2,
+      "operations": 1024,
+      "sign_api_ns_ms": {
+        "n": 1024,
+        "mean": 0.514446484375,
+        "sample_sd": 0.09126225038535682,
+        "median": 0.53995,
+        "p95": 0.6298499999999999,
+        "min": 0.3723,
+        "max": 0.9562
+      },
+      "receipt_authentication_ns_ms": {
+        "n": 1024,
+        "mean": 0.64259599609375,
+        "sample_sd": 0.11526958674401863,
+        "median": 0.6687,
+        "p95": 0.7914399999999999,
+        "min": 0.4529,
+        "max": 1.3322
+      },
+      "external_verify_ns_ms": {
+        "n": 1024,
+        "mean": 0.29124482421875,
+        "sample_sd": 0.06749624088999269,
+        "median": 0.3106,
+        "p95": 0.36852499999999994,
+        "min": 0.2095,
+        "max": 0.8759
+      }
+    },
+    {
+      "mode": "software_ksp",
+      "round": 3,
+      "operations": 1024,
+      "sign_api_ns_ms": {
+        "n": 1024,
+        "mean": 0.56696474609375,
+        "sample_sd": 0.07607050414268318,
+        "median": 0.57735,
+        "p95": 0.63947,
+        "min": 0.3838,
+        "max": 1.714
+      },
+      "receipt_authentication_ns_ms": {
+        "n": 1024,
+        "mean": 0.716084375,
+        "sample_sd": 0.08844054389530052,
+        "median": 0.7275,
+        "p95": 0.8067199999999999,
+        "min": 0.4727,
+        "max": 1.8892
+      },
+      "external_verify_ns_ms": {
+        "n": 1024,
+        "mean": 0.3210720703125,
+        "sample_sd": 0.07051725384711013,
+        "median": 0.33555,
+        "p95": 0.366185,
+        "min": 0.2118,
+        "max": 1.4187
+      }
+    },
+    {
+      "mode": "require_vbs",
+      "round": 3,
+      "operations": 1024,
+      "sign_api_ns_ms": {
+        "n": 1024,
+        "mean": 0.69768505859375,
+        "sample_sd": 0.11104451847999541,
+        "median": 0.6903,
+        "p95": 0.8602,
+        "min": 0.5419,
+        "max": 1.3185
+      },
+      "receipt_authentication_ns_ms": {
+        "n": 1024,
+        "mean": 0.8188892578125,
+        "sample_sd": 0.13346580475148978,
+        "median": 0.8136,
+        "p95": 1.01437,
+        "min": 0.6197,
+        "max": 1.447
+      },
+      "external_verify_ns_ms": {
+        "n": 1024,
+        "mean": 0.27596484375,
+        "sample_sd": 0.06717309481506145,
+        "median": 0.2487,
+        "p95": 0.36063999999999996,
+        "min": 0.2127,
+        "max": 0.9755
+      }
+    }
+  ],
+  "across_round_means": [
+    {
+      "mode": "software_ksp",
+      "sign_api_ns_ms": {
+        "n": 3,
+        "mean": 0.5343779622395833,
+        "sample_sd": 0.028454516877945226,
+        "median": 0.52172265625,
+        "p95": 0.562440537109375,
+        "min": 0.514446484375,
+        "max": 0.56696474609375
+      },
+      "receipt_authentication_ns_ms": {
+        "n": 3,
+        "mean": 0.67331650390625,
+        "sample_sd": 0.03819672342086363,
+        "median": 0.661269140625,
+        "p95": 0.7106028515625,
+        "min": 0.64259599609375,
+        "max": 0.716084375
+      },
+      "external_verify_ns_ms": {
+        "n": 3,
+        "mean": 0.2976463216145833,
+        "sample_sd": 0.020971051515878875,
+        "median": 0.29124482421875,
+        "p95": 0.318089345703125,
+        "min": 0.2806220703125,
+        "max": 0.3210720703125
+      },
+      "key_setup_ms": {
+        "n": 3,
+        "mean": 2.1352333333333333,
+        "sample_sd": 0.4212624637127469,
+        "median": 2.1988,
+        "p95": 2.48887,
+        "min": 1.6858,
+        "max": 2.5211
+      }
+    },
+    {
+      "mode": "require_vbs",
+      "sign_api_ns_ms": {
+        "n": 3,
+        "mean": 0.7631564127604168,
+        "sample_sd": 0.08517331753199849,
+        "median": 0.73233408203125,
+        "p95": 0.8467384960937501,
+        "min": 0.69768505859375,
+        "max": 0.85945009765625
+      },
+      "receipt_authentication_ns_ms": {
+        "n": 3,
+        "mean": 0.8865624674479168,
+        "sample_sd": 0.09478558084528038,
+        "median": 0.8459037109375,
+        "p95": 0.9799953613281249,
+        "min": 0.8188892578125,
+        "max": 0.99489443359375
+      },
+      "external_verify_ns_ms": {
+        "n": 3,
+        "mean": 0.2713478515625,
+        "sample_sd": 0.02500679068616059,
+        "median": 0.27596484375,
+        "p95": 0.29194845703125,
+        "min": 0.244354296875,
+        "max": 0.2937244140625
+      },
+      "key_setup_ms": {
+        "n": 3,
+        "mean": 7.069566666666667,
+        "sample_sd": 6.995947881690753,
+        "median": 3.2935,
+        "p95": 13.957329999999999,
+        "min": 2.773,
+        "max": 15.1422
+      }
+    }
+  ],
+  "measured_operations": 6144,
+  "correctness_cases": 60,
+  "correctness_failures": 0,
+  "isolation_evidence": [
+    {
+      "mode": "software_ksp",
+      "round": 1,
+      "properties": {
+        "Virtual Iso": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Export Policy": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Key Usage": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 2
+        }
+      }
+    },
+    {
+      "mode": "require_vbs",
+      "round": 1,
+      "properties": {
+        "Virtual Iso": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 1
+        },
+        "Export Policy": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Key Usage": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 2
+        }
+      }
+    },
+    {
+      "mode": "require_vbs",
+      "round": 2,
+      "properties": {
+        "Virtual Iso": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 1
+        },
+        "Export Policy": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Key Usage": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 2
+        }
+      }
+    },
+    {
+      "mode": "software_ksp",
+      "round": 2,
+      "properties": {
+        "Virtual Iso": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Export Policy": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Key Usage": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 2
+        }
+      }
+    },
+    {
+      "mode": "software_ksp",
+      "round": 3,
+      "properties": {
+        "Virtual Iso": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Export Policy": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Key Usage": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 2
+        }
+      }
+    },
+    {
+      "mode": "require_vbs",
+      "round": 3,
+      "properties": {
+        "Virtual Iso": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 1
+        },
+        "Export Policy": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 0
+        },
+        "Key Usage": {
+          "status": "0x00000000",
+          "bytes": 4,
+          "dword": 2
+        }
+      }
+    }
+  ],
+  "scope": "VBS-isolated ECDSA private-key operations on replayed real TokenProv receipts; host-side accounting; no custom enclave execution, inference attestation, or remote attestation",
+  "source_sha256": "e885a8b626b8fb0ee3f903ed542dbafc15ff82b1e90888771c2ce60059988ebc",
+  "system_configuration_changes": [],
+  "output": "E:\\\u535a\u58eb\u5185\u5bb9\\Paper4token\u6eaf\u6e90\\tokenprovALL\\artifacts\\local_tee_20261114\\vbs_key_signing\\20261114T080139302306Z"
+}

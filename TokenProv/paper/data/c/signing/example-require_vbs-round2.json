@@ -1,0 +1,41 @@
+{
+  "envelope": {
+    "version": 1,
+    "session_challenge": "58fc075dd8a58501eb8d40a5bd94dbae2e7fd6373c11c40e79a54f6a3166dcb9",
+    "sequence": 1,
+    "source_bundle_hash": "6ffd4d2f7aa6a028648dbebf54d35272b2e4f0b8c9a69141fedb535e6e948261",
+    "receipt": {
+      "assurance_anchor": "602839cb967268afabb04bb0f37072cc3ad306684531173967765caaca6e2543",
+      "assurance_mode": "signature",
+      "authorization_digest": "29b0fc745f9f2a85ed4f6c9d84e2920d77f87d98f84925c42b47deeab74f0e9b",
+      "billable": true,
+      "bp_handoff_hash": "ed81a91f13bb0eb9caf0795fc7346aa6a29191bbe5c9d827bba56bd2b91739c3",
+      "cache_post_hash": "4c1e72676c9701d18fdb527e2217f82b92bbc6227458729ef4cde4cf22fe982b",
+      "cache_pre_hash": "df451ae8b597fe7477e400d3eb74b2170ad9b9434ccef2c4bd23e10b04bf3e36",
+      "call_id": "c-1",
+      "call_nullifier": "e56ee6ea1ee968c98f3fe85993b097282ed1c9853fe875cb2ceb7f248fa64e2e",
+      "charge_microunits": 2072,
+      "deployment_id": "dep-qwen17b-e4fdf7501dd30f86",
+      "hb_handoff_hash": "114e4022fe36bb165e88de4d61aab7bdce29ee0f37101968ebd947ea90d5846f",
+      "input_hash": "47287b9f0dcff5b665d83a6adfc0ac182dc2e0ae58be03a08d06e5798c6aceaf",
+      "output_hash": "bc93ad5da4ed55192cbc5999182b00908383b58a65d6e6f50e7bf0797e68d217",
+      "price_version": "local-research-v1",
+      "provider_id": "qwen17b",
+      "request_id": "r-07cdc5133acd4f75b811aeed",
+      "service_config_hash": "ed96b39610204315e0876b8f88a0dcc8c8f9a7a0c51ca45e90471e86c53cc016",
+      "transformation_hash": "6f11c5051a82e4b66960f180070bf2aca15b78a923c3122ba82bbfc8a455a9ca",
+      "usage": {
+        "n_cr": 0,
+        "n_cw": 0,
+        "n_out": 12,
+        "n_pf": 2048,
+        "n_rea": 0
+      },
+      "witness_commitment": "602839cb967268afabb04bb0f37072cc3ad306684531173967765caaca6e2543"
+    }
+  },
+  "digest_hex": "89b422dcd879ce991767a2b2eac973e373e01865d331fbe4f9c93b53f19ea836",
+  "signature_hex": "32d28f6129e0f6e6ada1b369c1e2aba3beb4b3e20723dc7170b2496a8906bb8e9e89d622628c3486d2fae07eac82b46b501ae7350aeec38a23a98ebdf2058a1a",
+  "public_key_hex": "45435331200000004c039186a08fbb37a75b96f9623a4ba5e25a955a2ca3e29b0cdcfed941f4b1183a899a5e9352e3f0b2fb05cf8ddf192ccae807f9623e45aab1f36fb5f315c7d5",
+  "vbs_isolated": true
+}

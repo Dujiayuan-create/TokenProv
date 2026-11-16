@@ -1,0 +1,10 @@
+scenario,variant,mixed_components,seed,trial,audit_accepted,attack_detected,verification_latency_ms,failed_relation,measurement_type
+S1,IndependentLocalChecks,1,42,0,True,False,0.0016,,PROTOCOL_MICROBENCHMARK
+S1,TokenProv-w/o-R_link,1,42,0,True,False,0.0012,,PROTOCOL_MICROBENCHMARK
+S1,TokenProv-Full,1,42,0,False,True,7.6373,R_prov,PROTOCOL_MICROBENCHMARK
+S2,IndependentLocalChecks,1,42,0,True,False,0.0012,,PROTOCOL_MICROBENCHMARK
+S2,TokenProv-w/o-R_link,1,42,0,True,False,0.0006,,PROTOCOL_MICROBENCHMARK
+S2,TokenProv-Full,1,42,0,False,True,7.4454,R_prov,PROTOCOL_MICROBENCHMARK
+S3,IndependentLocalChecks,1,42,0,True,False,0.0013,,PROTOCOL_MICROBENCHMARK
+S3,TokenProv-w/o-R_link,1,42,0,True,False,0.0005,,PROTOCOL_MICROBENCHMARK
+S3,TokenProv-Full,1,42,0,False,True,7.796,R_prov,PROTOCOL_MICROBENCHMARK

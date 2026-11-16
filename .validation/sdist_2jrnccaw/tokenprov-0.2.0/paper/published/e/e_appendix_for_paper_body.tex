@@ -1,0 +1,107 @@
+\section{Additional Security and Accountability Measurements}
+\label{app:e-security-accountability}
+
+\noindent\textbf{Current attack construction and search.}
+The current suite uses the same underlying protocol fixtures for
+\textsc{SignedLog}, \textsc{SignedLog+}, and \textsc{TokenProv}.
+Each episode starts from a fresh request fixture.
+The attacker selects a call and one of six mutation families, repairs the
+affected outer closure and settlement commitments, and signs updated records
+using corrupted roles' keys.
+For cross-call splicing, it replaces selected input/output and handoff hashes
+with another call's fields and re-signs the provider receipt.
+For deployment substitution, it changes the deployment identifier and re-signs
+the receipt.
+Original authorization and retained handoff records are held fixed.
+
+An independent oracle compares candidate evidence with the original call set,
+receipt fields, and integer bill; it does not use the auditor's failure label
+to decide whether an attack was constructed successfully.
+All 3,300 retained attack queries pass both signature-validity and
+oracle-violation checks.
+Queries after a rejection may switch attack family based on the exposed
+first-failed-relation feedback.
+Each scheme has 100 episodes across all six families, with a maximum of 16
+queries per episode and early stopping after acceptance.
+An episode succeeds when at least one violating candidate is accepted.
+One unmodified fixture per episode is also checked, giving 100 benign controls
+per scheme.
+
+Table~\ref{tab:e-attack-families} gives accepted queries divided by actual
+queries within each family.
+The schemes share starting fixtures, but feedback and early stopping produce
+different search trajectories and family counts.
+\textsc{SignedLog+} performs an independent disclosed-record audit of signatures,
+context and call links, receipt coverage, and integer accounting.
+Its zero-success result is retained alongside \textsc{TokenProv}'s result.
+These are CPU protocol microbenchmarks and do not evaluate attacks on live
+model execution or establish a distribution-free attack success bound.
+
+\input{e_appendix_attack_family_table.tex}
+
+\noindent\textbf{Historical injection coverage.}
+Table~\ref{tab:e-historical-attack-coverage} reports fourteen predefined
+injection classes, measured separately from the current valid-signature suite.
+Each attack--scheme pair has five seed fixtures and 100 repetitions per seed,
+giving 500 trials per pair and 7,000 per scheme.
+\textsc{TokenProv} rejects all fourteen classes; the individual-record
+\textsc{SignedLog} fixtures reject nine.
+The historical suite includes mutations that leave original signatures stale.
+Its \textsc{SignedLog} cases use individual signed-record fixtures, while
+\textsc{TokenProv} audits complete protocol fixtures.
+These counts characterize coverage of the specified templates and are not
+pooled with the current common-fixture adaptive comparison.
+
+\input{e_appendix_historical_attack_table.tex}
+
+\noindent\textbf{Cross-request transplant procedure.}
+The historical binding experiment constructs separate source and target
+requests and inserts the source's first call/receipt/artifact tuple into the
+target's first provider-call slot.
+Both call labels are \texttt{c-0}, but the request identifiers differ.
+The source and target also use independently generated keys.
+Source-local verification checks the receipt under the original source key
+and registration; complete auditing checks it against the target authorization
+and transcript.
+All full-audit trials fail at the request-ID comparison in $R_{\mathrm{prov}}$,
+before subsequent provider checks.
+Thus, these measurements test request-context binding, rather than independently
+isolating every component of $\mathcal{R}_{\mathsf{link}}$.
+Each of the three source--target configurations has 500 repetitions per variant.
+The archived \texttt{w/o-R\_link} path executes the same receipt-only branch as
+the source-local checker and is treated as a local-check surrogate.
+
+\noindent\textbf{Localization procedure.}
+The five stage-specific mutations are authorization-context modification,
+lifecycle-root modification, handoff-boundary tampering, usage modification,
+and aggregate-bill modification.
+The auditor evaluates $R_{\mathrm{auth}}$, $R_{\mathrm{life}}$,
+$R_{\mathrm{hand}}$, $R_{\mathrm{prov}}$, and $R_{\mathrm{set}}$ in order,
+returning the first failure.
+Relation agreement compares this output with the predefined injection stage.
+Returned intervals are fixed by the failed relation:
+$U$--$H$, $H$--$H$, $H$--$P$, $B$--$P$, and $H$--$B$, respectively.
+Widths count edges along $U\!\rightarrow\!H\!\rightarrow\!B\!\rightarrow\!P$;
+zero width denotes one role.
+The interval is a diagnostic output, rather than an independently measured
+guarantee of unique culprit identification.
+Each stage has five seed fixtures with 100 repetitions per fixture.
+Reported audit time covers the executed checks up to the first failure and
+excludes model inference.
+
+\noindent\textbf{Collusion controls.}
+Table~\ref{tab:e-historical-collusion} reports three predefined controls,
+with 500 repetitions each.
+The $B+P$ control supplies conflicting provider-linked evidence while retaining
+the original signed boundary records.
+The $H+B$ control supplies an internally consistent seven-call transcript,
+with no independent receipt recording the additional hidden execution.
+The $H+B+P$ control supplies an internally consistent service-side transcript
+without a conflicting external anchor.
+The latter two controls are accepted and are not counted as blocked attacks.
+These controls examine predefined evidence configurations rather than searching
+all joint strategies available to colluding parties.
+Witness expiry, late submission, and non-submission enforcement are outside
+these measurements.
+
+\input{e_appendix_collusion_table.tex}

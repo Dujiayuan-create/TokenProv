@@ -1,0 +1,39 @@
+{
+  "figure_size_inches": [
+    3.5,
+    5.238888888888889
+  ],
+  "png_dpi": 1200,
+  "png_pixels": [
+    4200,
+    6286
+  ],
+  "latin_font": "C:\\Windows\\Fonts\\times.ttf",
+  "cjk_glyph_font": "C:\\Windows\\Fonts\\msyh.ttc",
+  "labels_outside_boxes": [],
+  "layout": "single-column width; three parallel requests and four boxed evidence layers",
+  "row_heights_pt": [
+    94.2,
+    101,
+    95,
+    66.0
+  ],
+  "translation_source_is_original_chinese": true,
+  "response_insets": true,
+  "response_inset_heights_pt": [
+    11.7,
+    27.1,
+    11.7
+  ],
+  "settlement_statuses_single_line": true,
+  "token_tables_framed": true,
+  "text_overlaps": [],
+  "input_output_explanatory_suffixes": false,
+  "settlement_fields_preserved": true,
+  "source_hashes_matched": true,
+  "token_id_counts_matched": true,
+  "bills_equal_receipt_sum": true,
+  "all_recorded_offline_audits_accepted": true,
+  "no_new_model_execution": true,
+  "no_individual_token_signature_claim": true
+}

@@ -1,0 +1,15 @@
+attack_id,attack_name,expected_relation,Vanilla_detected,SignedLog_detected,TokenProv_detected,trials_per_system,dataset
+A1,Unauthorized call,R_auth,0,500,500,500,historical_protocol_microbenchmark
+A2,Call insertion,R_life,0,0,500,500,historical_protocol_microbenchmark
+A3,Observable-call omission,R_hand,0,0,500,500,historical_protocol_microbenchmark
+A4,Call replay,R_prov,0,0,500,500,historical_protocol_microbenchmark
+A5,Call relabeling,R_prov,0,500,500,500,historical_protocol_microbenchmark
+A6,H->B boundary tampering,R_hand,0,500,500,500,historical_protocol_microbenchmark
+A7,B->P boundary tampering,R_hand,0,500,500,500,historical_protocol_microbenchmark
+A8,Model/deployment substitution,R_prov,0,500,500,500,historical_protocol_microbenchmark
+A9,Tokenizer/input-semantics substitution,R_prov,0,500,500,500,historical_protocol_microbenchmark
+A10,Cache or usage inflation,R_prov,0,500,500,500,historical_protocol_microbenchmark
+A11,Wrong price version,R_prov,0,500,500,500,historical_protocol_microbenchmark
+A12,Cross-call evidence splicing,R_prov,0,0,500,500,historical_protocol_microbenchmark
+A13,Receipt omission or duplication,R_set,0,0,500,500,historical_protocol_microbenchmark
+A14,Aggregate bill manipulation,R_set,0,500,500,500,historical_protocol_microbenchmark

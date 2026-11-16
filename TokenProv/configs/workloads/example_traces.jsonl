@@ -1,0 +1,1 @@
+{"task_id":"example-only-1","source":"HAND_WRITTEN_EXAMPLE_NOT_AGENT_BENCHMARK","calls":[{"messages":[{"role":"user","content":"Summarize the supplied note: the meeting starts at 10:00."}]},{"messages":[{"role":"user","content":"Check this draft against the note: the meeting starts at 10:00."}]}]}

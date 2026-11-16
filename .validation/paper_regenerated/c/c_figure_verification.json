@@ -1,0 +1,83 @@
+{
+  "figure_size_inches": [
+    3.5,
+    2.38
+  ],
+  "png_dpi": 1200,
+  "labels_outside_figure": [],
+  "frame_width_pt": 0.65,
+  "panel_gap_pt": 25.200000000000003,
+  "uncertainty": "sample SD of three round means",
+  "row_xlabel_to_lower_frame_gap_pt": [
+    1.4777599999999813,
+    1.2527599999999814
+  ],
+  "column_ylabel_to_left_frame_gap_pt": 5.054999999999986,
+  "subtitle_to_xlabel_gap_pt": [
+    1.6472749999999965,
+    1.8722749999999966
+  ],
+  "upper_lower_frame_alignment": [
+    [
+      0.09,
+      0.49
+    ],
+    [
+      0.59,
+      0.992
+    ]
+  ],
+  "ylabel_to_tick_gap_pt": [
+    0.5999999999999992,
+    0.5999999999999992,
+    0.6000000000000069,
+    0.6000000000000069
+  ],
+  "ytick_padding_pt": 1.0,
+  "scientific_tick_scale": {
+    "a_upper_y": 1000,
+    "a_lower_x": 1000,
+    "b_upper_y": 1000
+  },
+  "b_yaxis_labels": [
+    "Audit cost (ms/request)",
+    "Audit time (s)"
+  ],
+  "layout": "online paired bars/inset; audit dumbbells; proof/verify stacks; actual drain-time scatter",
+  "online_axis_logarithmic": false,
+  "deferred_inset_linear_ylim": [
+    0,
+    13
+  ],
+  "c2_times_per_request": true,
+  "c3_actual_round_points": 18,
+  "c3_proof_counts": [
+    8,
+    40,
+    80,
+    200,
+    400,
+    800
+  ],
+  "c3_round_display_offsets_pt": [
+    -2.0,
+    0.0,
+    2.0
+  ],
+  "c2_total_sd": "sum phases per round before aggregation",
+  "c3_includes_verification": true,
+  "grayscale_channels_equal": true,
+  "foreground_reduction_percent_mean_sd": [
+    99.28042402406214,
+    0.1946374267228701
+  ],
+  "table_labels_outside": [],
+  "table_text_overlaps": [],
+  "table_width_inches": 3.5,
+  "font": "C:\\Windows\\Fonts\\times.ttf",
+  "source_sha256": {
+    "round_metrics.csv": "e61b4a584d7d503dc0b84c1a3df47d6da155a231d964793d541b35ee25875e0f",
+    "tee_signing_summary.json": "b3e195d773b5d1cac2a2f0ee0707d2f999c332edde8dc7862f096f1f9e3f0da6"
+  },
+  "no_new_experiment_execution": true
+}

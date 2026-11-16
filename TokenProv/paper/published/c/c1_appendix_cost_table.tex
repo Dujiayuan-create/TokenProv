@@ -1,0 +1,27 @@
+\begin{table}[!t]
+\centering
+\caption{Scoped proof costs on the B300 server CPU (ms/call; mean $\pm$ sample SD across three rounds).}
+\label{tab:c1-assurance-cost}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}c@{\hspace{3pt}}}
+\toprule
+\textbf{Component} & \textbf{Cost} \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{2}{l}{\textbf{Persistent workers}} \\
+Host witness/link checks & 0.168 $\pm$ 0.018 \\
+Circuit input preparation & 0.234 $\pm$ 0.016 \\
+Circuit witness calculation & 35.542 $\pm$ 3.477 \\
+Groth16 proving & 112.872 $\pm$ 4.549 \\
+Witness calculation + proving & 148.445 $\pm$ 7.644 \\
+Proof verification & 15.101 $\pm$ 1.550 \\
+Complete warm RPC & 164.525 $\pm$ 9.185 \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{2}{l}{\textbf{Original process-per-call adapter}} \\
+Complete prover command & 922.275 $\pm$ 32.204 \\
+Complete verifier command & 721.366 $\pm$ 2.495 \\
+\bottomrule
+\end{tabular*}
+\end{table}

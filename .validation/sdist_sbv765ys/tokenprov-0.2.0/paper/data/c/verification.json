@@ -1,0 +1,11 @@
+{
+  "source_bundle_hashes_verified": 128,
+  "source_witness_commitments_verified": 1024,
+  "source_files_unchanged": true,
+  "aggregate_rows": 48,
+  "all_configurations_expected_rounds": true,
+  "successful_proofs": 5085,
+  "failed_proofs": 0,
+  "negative_controls": 12,
+  "negative_controls_rejected": 12
+}

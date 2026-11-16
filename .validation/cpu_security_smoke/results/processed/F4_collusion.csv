@@ -1,0 +1,4 @@
+colluding_entities,attack,observable_evidence,audit_outcome,Resp_r,interval_width,ground_truth_earliest_violation,ground_truth_contained,undetectable_due_to_evidence_boundary,audit_latency_ms,seed,trial,measurement_type
+H+B,omit an execution before provider-visible evidence exists,internally consistent seven-call transcript; omitted eighth call leaves no receipt,ACCEPT,evidence boundary,,H,False,True,20.4526,42,0,PROTOCOL_MICROBENCHMARK
+B+P,splice provider evidence across calls,signed H->B boundary conflicts with provider-linked evidence,REJECT,B-P,1,B,True,False,14.4553,42,0,PROTOCOL_MICROBENCHMARK
+H+B+P,fabricate an internally consistent transcript among all service parties,all service-side records and signatures are internally consistent,ACCEPT,evidence boundary,,H,False,True,22.9798,42,0,PROTOCOL_MICROBENCHMARK

@@ -1,0 +1,17 @@
+include README.md LICENSE pyproject.toml
+recursive-include configs *.yaml *.jsonl *.rego
+recursive-include docs *.md
+recursive-include scripts *.py
+recursive-include experiments *.py *.md
+recursive-include tests *.py
+recursive-include paper *.md *.py *.json *.jsonl *.csv *.tex *.pdf *.png *.svg *.txt
+prune paper/generated
+include tools/zk/README.md tools/zk/package.json tools/zk/package-lock.json
+include tools/zk/*.py tools/zk/*.mjs
+recursive-include tools/zk/circuits *.circom
+prune tools/zk/node_modules
+prune tools/zk/build
+prune results
+prune artifacts
+prune models
+global-exclude __pycache__ *.py[cod]

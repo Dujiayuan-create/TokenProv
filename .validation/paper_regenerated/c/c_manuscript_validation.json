@@ -1,0 +1,32 @@
+{
+  "labels": [
+    "sec:evaluation-assurance",
+    "tab:c-assurance-components",
+    "fig:c-deferred-audit",
+    "app:c-assurance",
+    "tab:c1-assurance-cost",
+    "tab:c2-deferred-cost",
+    "tab:c3-audit-rate",
+    "tab:c4-tee-signing"
+  ],
+  "unresolved_references": [],
+  "balanced_environments": true,
+  "latex_compiled": false,
+  "three_round_statistics": true,
+  "main_table_reused": "c_assurance_components_table.tex",
+  "figure_reused": "c_deferred_proving_audit_rate.pdf",
+  "formal_proofs": 5064,
+  "warmup_proofs": 18,
+  "honest_controls": 3,
+  "negative_controls_rejected": 12,
+  "measured_signatures": 6144,
+  "all_observations_retained": true,
+  "new_experiments_run": false,
+  "source_sha256": {
+    "data\\c\\round_metrics.csv": "e61b4a584d7d503dc0b84c1a3df47d6da155a231d964793d541b35ee25875e0f",
+    "data\\c\\verification.json": "f77c0270cf45f3f60c82a708f1453004b05cbe070e720874e529b87c583ce8af",
+    "data\\c\\signing\\verification.json": "ba8607b115b9d3c2b9e1ca7a4d1917b08b56a84c18c53a7ea7a19ec313214d36",
+    "generated/c/c_assurance_components_table.tex": "fc7ef41bbc503ac715f5a8f419eda82d2cf478a082e287c1dd25ef1c7807bd9c",
+    "generated/c/c_deferred_proving_audit_rate.pdf": "e0bc394d0ac76d47c845d5dc13ee3eba5e85d37986f0dae676c0287bb8f733bb"
+  }
+}

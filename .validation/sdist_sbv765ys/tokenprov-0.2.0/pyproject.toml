@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tokenprov"
+version = "0.2.0"
+description = "Token-spending provenance, authenticated evidence, and exact settlement for LLM workflows"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "TokenProv contributors"}]
+requires-python = ">=3.11"
+dependencies = ["cryptography>=43.0.3,<51", "PyYAML>=6.0.2,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4"]
+server-client = ["transformers==4.54.0"]
+model-server = ["torch>=2.6,<3", "transformers==4.54.0", "accelerate>=1,<2", "safetensors>=0.4.3,<1"]
+plots = ["matplotlib>=3.9,<4"]
+benchmarks = ["psutil>=6,<8"]
+
+[project.scripts]
+tokenprov-eval = "tokenprov.server_eval.__main__:main"
+tokenprov-tee-runtime = "tokenprov.assurance.tee_runtime:main"
+
+[tool.setuptools.packages.find]
+include = ["tokenprov*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

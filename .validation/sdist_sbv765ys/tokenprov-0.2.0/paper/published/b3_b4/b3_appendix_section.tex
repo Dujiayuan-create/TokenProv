@@ -1,0 +1,32 @@
+\section{Additional Scalability Measurements}
+\label{app:b3-scalability}
+\label{app:b3-concurrency}
+
+\noindent\textbf{Protocol scaling.}
+Table~\ref{tab:b3-protocol-scaling} reports the ten CPU protocol configurations
+underlying the scalability curves: five call counts and two lifecycle-event
+densities. Construction includes in-memory protocol generation and identity
+initialization; audit checks the resulting signature-profile transcript.
+Model inference, evidence persistence, ledger I/O, and proof generation are excluded.
+Each configuration is measured once. The shaded envelopes in the main figure
+therefore span configurations, rather than repeated-run uncertainty.
+At 512 calls and 4,096 events, construction and audit take 764.82 and 864.69\,ms,
+respectively.
+\input{b3_appendix_protocol_table.tex}
+
+\noindent\textbf{Serving concurrency.}
+Table~\ref{tab:b3-concurrency} reports the original Qwen3-1.7B concurrency
+measurements. Each scheme uses one measured round per configuration, with 16
+requests at concurrency 1 and 128 at concurrency 8 and 32; warmups are excluded.
+The concurrency-8 entries are the original round, rather than the later
+three-round averages; these observations are reused in the cross-model cohort.
+Each request comprises eight sequential calls, with
+2,048 input tokens per call and an output limit of 256 tokens.
+Latency is mean request processing time, excluding waiting for a worker slot.
+Request and output throughput
+are completed requests and generated tokens, respectively, divided by batch wall time.
+Online non-LLM time is $T_{\mathrm{online}}-T_{\mathrm{llm}}$, where
+$T_{\mathrm{llm}}$ accumulates model-service HTTP wall time.
+Actual output length is included because the realized generation workload differs
+across concurrency settings; request throughput alone does not isolate concurrency.
+\input{b3_appendix_concurrency_table.tex}

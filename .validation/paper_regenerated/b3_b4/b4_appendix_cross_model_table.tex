@@ -1,0 +1,47 @@
+\begin{table*}[!t]
+\centering
+\caption{Cross-model performance (mean $\pm$ sample SD across three rounds; 128 measured requests per scheme per round).}
+\label{tab:b4-cross-model}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular*}{\textwidth}{@{\hspace{4pt}}l@{\extracolsep{\fill}}ccccc@{\hspace{4pt}}}
+\toprule
+\textbf{Scheme} & \shortstack{\textbf{Latency}\\\textbf{(s)}} & \shortstack{\textbf{Throughput}\\\textbf{(req/s)}} & \shortstack{\textbf{Online non-LLM}\\\textbf{(ms)}} & \shortstack{\textbf{Latency change}\\\textbf{(\%)}} & \shortstack{\textbf{Output length}\\\textbf{(tokens/call)}} \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{6}{l}{\textbf{Qwen3-1.7B}} \\
+Vanilla & 19.19 $\pm$ 6.77 & 0.465 $\pm$ 0.206 & 1.30 $\pm$ 0.06 & 0.00 $\pm$ 0.00 & 39.97 $\pm$ 5.22 \\
+SignedLog & 19.96 $\pm$ 4.74 & 0.417 $\pm$ 0.111 & 10.74 $\pm$ 0.47 & +8.32 $\pm$ 19.14 & 39.84 $\pm$ 5.37 \\
+SignedLog+ & 20.43 $\pm$ 4.98 & 0.407 $\pm$ 0.109 & 58.17 $\pm$ 3.28 & +10.75 $\pm$ 19.56 & 39.93 $\pm$ 5.23 \\
+\textbf{\textsc{TokenProv}} & 18.78 $\pm$ 6.59 & 0.472 $\pm$ 0.199 & 65.98 $\pm$ 12.87 & -1.71 $\pm$ 6.88 & 40.08 $\pm$ 5.37 \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{6}{l}{\textbf{Qwen3-4B}} \\
+Vanilla & 15.80 $\pm$ 7.78 & 0.577 $\pm$ 0.222 & 1.17 $\pm$ 0.04 & 0.00 $\pm$ 0.00 & 39.06 $\pm$ 10.86 \\
+SignedLog & 15.85 $\pm$ 7.91 & 0.578 $\pm$ 0.224 & 9.96 $\pm$ 0.69 & +0.17 $\pm$ 4.14 & 39.13 $\pm$ 11.04 \\
+SignedLog+ & 15.95 $\pm$ 6.82 & 0.555 $\pm$ 0.194 & 57.63 $\pm$ 6.74 & +2.87 $\pm$ 6.97 & 39.07 $\pm$ 10.91 \\
+\textbf{\textsc{TokenProv}} & 15.28 $\pm$ 7.12 & 0.590 $\pm$ 0.216 & 54.76 $\pm$ 5.31 & -2.57 $\pm$ 3.10 & 39.08 $\pm$ 10.98 \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{6}{l}{\textbf{Phi-3-mini-4k-instruct (3.8B)}} \\
+Vanilla & 105.38 $\pm$ 22.37 & 0.078 $\pm$ 0.016 & 1.25 $\pm$ 0.12 & 0.00 $\pm$ 0.00 & 256.00 $\pm$ 0.00 \\
+SignedLog & 83.28 $\pm$ 1.88 & 0.096 $\pm$ 0.002 & 9.17 $\pm$ 0.29 & -18.82 $\pm$ 15.35 & 256.00 $\pm$ 0.00 \\
+SignedLog+ & 88.53 $\pm$ 5.72 & 0.091 $\pm$ 0.006 & 57.83 $\pm$ 11.79 & -13.74 $\pm$ 17.38 & 256.00 $\pm$ 0.00 \\
+\textbf{\textsc{TokenProv}} & 96.42 $\pm$ 9.28 & 0.083 $\pm$ 0.008 & 54.07 $\pm$ 6.73 & -6.66 $\pm$ 14.10 & 256.00 $\pm$ 0.00 \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{6}{l}{\textbf{DeepSeek-R1-Distill-Llama-8B}} \\
+Vanilla & 72.62 $\pm$ 13.72 & 0.112 $\pm$ 0.019 & 1.22 $\pm$ 0.05 & 0.00 $\pm$ 0.00 & 255.95 $\pm$ 0.08 \\
+SignedLog & 69.23 $\pm$ 7.46 & 0.116 $\pm$ 0.012 & 9.67 $\pm$ 0.43 & -1.80 $\pm$ 25.08 & 255.98 $\pm$ 0.03 \\
+SignedLog+ & 69.38 $\pm$ 6.67 & 0.116 $\pm$ 0.011 & 56.86 $\pm$ 8.80 & -2.23 $\pm$ 20.88 & 255.98 $\pm$ 0.03 \\
+\textbf{\textsc{TokenProv}} & 76.70 $\pm$ 11.52 & 0.106 $\pm$ 0.015 & 53.98 $\pm$ 7.07 & +8.78 $\pm$ 30.63 & 255.98 $\pm$ 0.03 \\
+\midrule
+\rowcolor{gray!12}
+\multicolumn{6}{l}{\textbf{Qwen3-14B}} \\
+Vanilla & 35.77 $\pm$ 9.66 & 0.236 $\pm$ 0.074 & 1.15 $\pm$ 0.03 & 0.00 $\pm$ 0.00 & 68.15 $\pm$ 16.63 \\
+SignedLog & 37.28 $\pm$ 9.37 & 0.225 $\pm$ 0.066 & 9.79 $\pm$ 0.55 & +4.68 $\pm$ 4.72 & 67.84 $\pm$ 16.61 \\
+SignedLog+ & 36.00 $\pm$ 8.18 & 0.230 $\pm$ 0.058 & 64.93 $\pm$ 9.97 & +1.64 $\pm$ 5.97 & 67.76 $\pm$ 16.39 \\
+\textbf{\textsc{TokenProv}} & 35.90 $\pm$ 9.27 & 0.234 $\pm$ 0.071 & 54.52 $\pm$ 3.48 & +0.62 $\pm$ 1.81 & 68.14 $\pm$ 17.02 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

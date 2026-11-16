@@ -1,0 +1,69 @@
+\section{Additional Security and Accountability Measurements}
+\label{app:e-security-accountability}
+
+\noindent\textbf{Current valid-signature adaptive suite.}
+Table~\ref{tab:e-attack-families} expands the current protocol attack results
+by attack family. Each scheme has 100 episodes in total, covering six families;
+there are not 100 episodes per family. Each episode permits at most 16 queries
+and stops at the first accepted violation. The next attack family can depend on
+the first-failed-relation feedback exposed by the auditor. Every retained attack
+query passed both a signature-validity check and an independent protocol-violation
+oracle. Family counts therefore differ across schemes. SignedLog+ and
+\textsc{TokenProv} both reject all tested queries; these observations do not
+establish a detection-rate advantage of \textsc{TokenProv} over SignedLog+.
+These are CPU protocol microbenchmarks, rather than attacks executed against
+live model inference.
+
+\input{e_appendix_attack_family_table.tex}
+
+\noindent\textbf{Historical protocol fixtures.}
+Tables~\ref{tab:e-historical-attack-coverage}--\ref{tab:e-historical-collusion}
+report retained historical microbenchmarks separately from the current suite.
+Each attack, scenario--variant pair, or injected stage has 500 trials across
+five fixture seeds, with 100 repetitions per seed. These repetitions do not
+represent 500 distinct attacks or independent serving deployments.
+Table~\ref{tab:e-historical-attack-coverage} includes attacks that alter signed
+fields without repairing their original signatures; its detection results
+must not be pooled with the current valid-signature adaptive suite.
+
+\input{e_appendix_historical_attack_table.tex}
+
+\noindent\textbf{Cross-call evidence binding.}
+Table~\ref{tab:e-historical-splicing} covers same-deployment, cross-deployment,
+and cross-model source--target pairs. The source and target requests differ,
+while the fixture call label can remain \texttt{c-0}.
+IndependentLocalChecks verifies the original receipt under the source
+provider key and registration context; the full auditor checks the transplanted
+provider evidence against the target request transcript.
+The archived \texttt{TokenProv-w/o-R\_link} variant executes the same receipt-only
+local-validity branch as IndependentLocalChecks. We therefore report it as a
+local-check surrogate, rather than as a strict single-check ablation of the
+complete auditor. Each of the three variants has 1,500 trials in total;
+the archived file contains 4,500 rows across all variants.
+
+\input{e_appendix_splicing_table.tex}
+
+\noindent\textbf{First-failure localization.}
+Table~\ref{tab:e-historical-localization} reports agreement between the first
+failed relation and the predefined injected stage, together with the returned
+responsibility intervals and their widths. The source field named
+\texttt{ground\_truth\_contained} duplicates the first-relation agreement test;
+it is not an independent interval-membership check and is not reported as a
+separate containment result.
+Interval width counts hops along the $U\!\rightarrow\!H\!\rightarrow\!B\!\rightarrow\!P$
+role path; zero width denotes a single role. The five stage-specific mutations
+are predefined protocol fixtures. Agreement in these fixtures does not imply
+unique malicious-party identification for arbitrary or simultaneous faults.
+
+\input{e_appendix_localization_table.tex}
+
+\noindent\textbf{Collusion and evidence observability.}
+Table~\ref{tab:e-historical-collusion} distinguishes detectable contradictions
+from explicit evidence-boundary controls. A retained signed boundary exposes
+the $B+P$ splicing case. In the $H+B$ hidden-execution and internally consistent
+$H+B+P$ controls, no conflicting independent evidence is supplied, and the
+auditor accepts the available transcript. These accepted controls are retained
+and are not counted as blocked attacks. The measurements do not test
+evidence-expiry or non-submission enforcement.
+
+\input{e_appendix_collusion_table.tex}

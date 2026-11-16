@@ -1,0 +1,4 @@
+system,calls_per_request,actual_calls,lifecycle_events,mean_online_ms,mean_protocol_ms,mean_settlement_ms,mean_audit_ms,mean_lifecycle_ms,mean_handoff_ms,mean_receipt_ms,mean_merkle_ms,ledger_bytes_per_request,repository_bytes_per_request,total_evidence_bytes_per_request,run,seed,measurement_type
+Vanilla,1,1,0,0.2181,0.1902,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,1,42,PROTOCOL_MICROBENCHMARK
+SignedLog,1,1,3,1.01,0.987,0.0,0.0,0.2209,0.0,0.2218,0.0,0,1058,1058,1,42,PROTOCOL_MICROBENCHMARK
+TokenProv-Full,1,1,4,4.2892,4.272,1.2114,2.9305,1.3071,1.7544,0.2957,0.2685,0,10253,10253,1,42,PROTOCOL_MICROBENCHMARK

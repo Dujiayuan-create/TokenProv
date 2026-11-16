@@ -1,0 +1,23 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{mathptmx}
+\begin{document}
+\onecolumn
+\appendices
+\section{Additional Cost Breakdown}
+Table~\ref{tab:b2-component-breakdown} reports the complete component breakdown for
+\textsc{TokenProv}, using 128 measured requests per model per round, with eight
+sequential model calls per request and concurrency eight.
+The online non-LLM total is $T_{\mathrm{online}}-T_{\mathrm{llm}}$; the complete
+non-LLM total is $T_{\mathrm{pipeline}}-T_{\mathrm{llm}}$.
+Here $T_{\mathrm{llm}}$ is the cumulative model-service HTTP wall time.
+Remaining processing is $T_{\mathrm{pipeline}}-T_{\mathrm{online}}$, including
+closure, evidence persistence, the local ledger, audit, and surrounding pipeline work.
+All these operations are included in the complete request latency reported in B1.
+Standard deviations describe the three round means; they are not per-request
+standard deviations or confidence intervals. Totals are calculated per round
+before aggregation. These components are internal portions of the measured path,
+rather than incremental latency relative to a baseline.
+\input{b2_appendix_component_table.tex}
+\end{document}

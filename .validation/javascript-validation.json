@@ -1,0 +1,8 @@
+{
+  "node": "22.14.0",
+  "node_archive_sha256": "55b639295920b219bb2acbcfa00f90393a2789095b7323f79475c9f34795f217",
+  "syntax_checked": [
+    "tools/zk/c_assurance_worker.mjs",
+    "tools/zk/proof_worker.mjs"
+  ]
+}

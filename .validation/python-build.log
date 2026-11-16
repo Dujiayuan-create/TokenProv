@@ -1,0 +1,551 @@
+running bdist_wheel
+running build
+running build_py
+creating build\lib\tokenprov
+copying tokenprov\__init__.py -> build\lib\tokenprov
+creating build\lib\tokenprov\workloads
+copying tokenprov\workloads\__init__.py -> build\lib\tokenprov\workloads
+copying tokenprov\workloads\protocol_fixture.py -> build\lib\tokenprov\workloads
+creating build\lib\tokenprov\audit
+copying tokenprov\audit\__init__.py -> build\lib\tokenprov\audit
+copying tokenprov\audit\auditor.py -> build\lib\tokenprov\audit
+copying tokenprov\audit\signedlog.py -> build\lib\tokenprov\audit
+creating build\lib\tokenprov\common
+copying tokenprov\common\__init__.py -> build\lib\tokenprov\common
+copying tokenprov\common\models.py -> build\lib\tokenprov\common
+copying tokenprov\common\serialization.py -> build\lib\tokenprov\common
+copying tokenprov\common\merkle.py -> build\lib\tokenprov\common
+creating build\lib\tokenprov\handoff
+copying tokenprov\handoff\bilateral.py -> build\lib\tokenprov\handoff
+copying tokenprov\handoff\__init__.py -> build\lib\tokenprov\handoff
+creating build\lib\tokenprov\assurance
+copying tokenprov\assurance\deferred.py -> build\lib\tokenprov\assurance
+copying tokenprov\assurance\__init__.py -> build\lib\tokenprov\assurance
+copying tokenprov\assurance\hardware.py -> build\lib\tokenprov\assurance
+copying tokenprov\assurance\tee.py -> build\lib\tokenprov\assurance
+copying tokenprov\assurance\tee_runtime.py -> build\lib\tokenprov\assurance
+creating build\lib\tokenprov\harness
+copying tokenprov\harness\__init__.py -> build\lib\tokenprov\harness
+copying tokenprov\harness\service.py -> build\lib\tokenprov\harness
+copying tokenprov\harness\evaluation.py -> build\lib\tokenprov\harness
+creating build\lib\tokenprov\settlement
+copying tokenprov\settlement\__init__.py -> build\lib\tokenprov\settlement
+copying tokenprov\settlement\core.py -> build\lib\tokenprov\settlement
+creating build\lib\tokenprov\broker
+copying tokenprov\broker\__init__.py -> build\lib\tokenprov\broker
+copying tokenprov\broker\litellm_adapter.py -> build\lib\tokenprov\broker
+copying tokenprov\broker\base.py -> build\lib\tokenprov\broker
+creating build\lib\tokenprov\lifecycle
+copying tokenprov\lifecycle\__init__.py -> build\lib\tokenprov\lifecycle
+copying tokenprov\lifecycle\dag.py -> build\lib\tokenprov\lifecycle
+creating build\lib\tokenprov\user
+copying tokenprov\user\__init__.py -> build\lib\tokenprov\user
+copying tokenprov\user\authorization.py -> build\lib\tokenprov\user
+creating build\lib\tokenprov\attacks
+copying tokenprov\attacks\__init__.py -> build\lib\tokenprov\attacks
+creating build\lib\tokenprov\ledger
+copying tokenprov\ledger\__init__.py -> build\lib\tokenprov\ledger
+copying tokenprov\ledger\local.py -> build\lib\tokenprov\ledger
+creating build\lib\tokenprov\crypto
+copying tokenprov\crypto\__init__.py -> build\lib\tokenprov\crypto
+copying tokenprov\crypto\signing.py -> build\lib\tokenprov\crypto
+creating build\lib\tokenprov\provider
+copying tokenprov\provider\receipts.py -> build\lib\tokenprov\provider
+copying tokenprov\provider\__init__.py -> build\lib\tokenprov\provider
+copying tokenprov\provider\deterministic.py -> build\lib\tokenprov\provider
+copying tokenprov\provider\vllm_adapter.py -> build\lib\tokenprov\provider
+copying tokenprov\provider\base.py -> build\lib\tokenprov\provider
+creating build\lib\tokenprov\evidence
+copying tokenprov\evidence\__init__.py -> build\lib\tokenprov\evidence
+copying tokenprov\evidence\repository.py -> build\lib\tokenprov\evidence
+creating build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\__init__.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\config.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\transport.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\artifacts.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\model_artifacts.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\audit_jobs.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\preflight.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\metrics.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\runner.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\security.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\__main__.py -> build\lib\tokenprov\server_eval
+copying tokenprov\server_eval\protocol.py -> build\lib\tokenprov\server_eval
+running egg_info
+creating tokenprov.egg-info
+writing tokenprov.egg-info\PKG-INFO
+writing dependency_links to tokenprov.egg-info\dependency_links.txt
+writing entry points to tokenprov.egg-info\entry_points.txt
+writing requirements to tokenprov.egg-info\requires.txt
+writing top-level names to tokenprov.egg-info\top_level.txt
+writing manifest file 'tokenprov.egg-info\SOURCES.txt'
+reading manifest file 'tokenprov.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'paper\generated'
+no previously-included directories found matching 'tools\zk\node_modules'
+no previously-included directories found matching 'tools\zk\build'
+no previously-included directories found matching 'results'
+no previously-included directories found matching 'artifacts'
+no previously-included directories found matching 'models'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'tokenprov.egg-info\SOURCES.txt'
+warning: build_py: byte-compiling is disabled, skipping.
+
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\tokenprov
+copying build\lib\tokenprov\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov
+creating build\bdist.win-amd64\wheel\tokenprov\workloads
+copying build\lib\tokenprov\workloads\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\workloads
+copying build\lib\tokenprov\workloads\protocol_fixture.py -> build\bdist.win-amd64\wheel\.\tokenprov\workloads
+creating build\bdist.win-amd64\wheel\tokenprov\audit
+copying build\lib\tokenprov\audit\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\audit
+copying build\lib\tokenprov\audit\auditor.py -> build\bdist.win-amd64\wheel\.\tokenprov\audit
+copying build\lib\tokenprov\audit\signedlog.py -> build\bdist.win-amd64\wheel\.\tokenprov\audit
+creating build\bdist.win-amd64\wheel\tokenprov\common
+copying build\lib\tokenprov\common\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\common
+copying build\lib\tokenprov\common\models.py -> build\bdist.win-amd64\wheel\.\tokenprov\common
+copying build\lib\tokenprov\common\serialization.py -> build\bdist.win-amd64\wheel\.\tokenprov\common
+copying build\lib\tokenprov\common\merkle.py -> build\bdist.win-amd64\wheel\.\tokenprov\common
+creating build\bdist.win-amd64\wheel\tokenprov\handoff
+copying build\lib\tokenprov\handoff\bilateral.py -> build\bdist.win-amd64\wheel\.\tokenprov\handoff
+copying build\lib\tokenprov\handoff\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\handoff
+creating build\bdist.win-amd64\wheel\tokenprov\assurance
+copying build\lib\tokenprov\assurance\deferred.py -> build\bdist.win-amd64\wheel\.\tokenprov\assurance
+copying build\lib\tokenprov\assurance\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\assurance
+copying build\lib\tokenprov\assurance\hardware.py -> build\bdist.win-amd64\wheel\.\tokenprov\assurance
+copying build\lib\tokenprov\assurance\tee.py -> build\bdist.win-amd64\wheel\.\tokenprov\assurance
+copying build\lib\tokenprov\assurance\tee_runtime.py -> build\bdist.win-amd64\wheel\.\tokenprov\assurance
+creating build\bdist.win-amd64\wheel\tokenprov\harness
+copying build\lib\tokenprov\harness\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\harness
+copying build\lib\tokenprov\harness\service.py -> build\bdist.win-amd64\wheel\.\tokenprov\harness
+copying build\lib\tokenprov\harness\evaluation.py -> build\bdist.win-amd64\wheel\.\tokenprov\harness
+creating build\bdist.win-amd64\wheel\tokenprov\settlement
+copying build\lib\tokenprov\settlement\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\settlement
+copying build\lib\tokenprov\settlement\core.py -> build\bdist.win-amd64\wheel\.\tokenprov\settlement
+creating build\bdist.win-amd64\wheel\tokenprov\broker
+copying build\lib\tokenprov\broker\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\broker
+copying build\lib\tokenprov\broker\litellm_adapter.py -> build\bdist.win-amd64\wheel\.\tokenprov\broker
+copying build\lib\tokenprov\broker\base.py -> build\bdist.win-amd64\wheel\.\tokenprov\broker
+creating build\bdist.win-amd64\wheel\tokenprov\lifecycle
+copying build\lib\tokenprov\lifecycle\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\lifecycle
+copying build\lib\tokenprov\lifecycle\dag.py -> build\bdist.win-amd64\wheel\.\tokenprov\lifecycle
+creating build\bdist.win-amd64\wheel\tokenprov\user
+copying build\lib\tokenprov\user\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\user
+copying build\lib\tokenprov\user\authorization.py -> build\bdist.win-amd64\wheel\.\tokenprov\user
+creating build\bdist.win-amd64\wheel\tokenprov\attacks
+copying build\lib\tokenprov\attacks\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\attacks
+creating build\bdist.win-amd64\wheel\tokenprov\ledger
+copying build\lib\tokenprov\ledger\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\ledger
+copying build\lib\tokenprov\ledger\local.py -> build\bdist.win-amd64\wheel\.\tokenprov\ledger
+creating build\bdist.win-amd64\wheel\tokenprov\crypto
+copying build\lib\tokenprov\crypto\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\crypto
+copying build\lib\tokenprov\crypto\signing.py -> build\bdist.win-amd64\wheel\.\tokenprov\crypto
+creating build\bdist.win-amd64\wheel\tokenprov\provider
+copying build\lib\tokenprov\provider\receipts.py -> build\bdist.win-amd64\wheel\.\tokenprov\provider
+copying build\lib\tokenprov\provider\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\provider
+copying build\lib\tokenprov\provider\deterministic.py -> build\bdist.win-amd64\wheel\.\tokenprov\provider
+copying build\lib\tokenprov\provider\vllm_adapter.py -> build\bdist.win-amd64\wheel\.\tokenprov\provider
+copying build\lib\tokenprov\provider\base.py -> build\bdist.win-amd64\wheel\.\tokenprov\provider
+creating build\bdist.win-amd64\wheel\tokenprov\evidence
+copying build\lib\tokenprov\evidence\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\evidence
+copying build\lib\tokenprov\evidence\repository.py -> build\bdist.win-amd64\wheel\.\tokenprov\evidence
+creating build\bdist.win-amd64\wheel\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\__init__.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\config.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\transport.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\artifacts.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\model_artifacts.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\audit_jobs.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\preflight.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\metrics.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\runner.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\security.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\__main__.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+copying build\lib\tokenprov\server_eval\protocol.py -> build\bdist.win-amd64\wheel\.\tokenprov\server_eval
+warning: install_lib: byte-compiling is disabled, skipping.
+
+running install_egg_info
+Copying tokenprov.egg-info to build\bdist.win-amd64\wheel\.\tokenprov-0.2.0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\tokenprov-0.2.0.dist-info\WHEEL
+creating 'E:\博士内容\Paper4token溯源\tokenprovALL\opensource\dist\.tmp-nvqvzfqz\tokenprov-0.2.0-py3-none-any.whl' and adding 'build\bdist.win-amd64\wheel' to it
+adding 'tokenprov/__init__.py'
+adding 'tokenprov/assurance/__init__.py'
+adding 'tokenprov/assurance/deferred.py'
+adding 'tokenprov/assurance/hardware.py'
+adding 'tokenprov/assurance/tee.py'
+adding 'tokenprov/assurance/tee_runtime.py'
+adding 'tokenprov/attacks/__init__.py'
+adding 'tokenprov/audit/__init__.py'
+adding 'tokenprov/audit/auditor.py'
+adding 'tokenprov/audit/signedlog.py'
+adding 'tokenprov/broker/__init__.py'
+adding 'tokenprov/broker/base.py'
+adding 'tokenprov/broker/litellm_adapter.py'
+adding 'tokenprov/common/__init__.py'
+adding 'tokenprov/common/merkle.py'
+adding 'tokenprov/common/models.py'
+adding 'tokenprov/common/serialization.py'
+adding 'tokenprov/crypto/__init__.py'
+adding 'tokenprov/crypto/signing.py'
+adding 'tokenprov/evidence/__init__.py'
+adding 'tokenprov/evidence/repository.py'
+adding 'tokenprov/handoff/__init__.py'
+adding 'tokenprov/handoff/bilateral.py'
+adding 'tokenprov/harness/__init__.py'
+adding 'tokenprov/harness/evaluation.py'
+adding 'tokenprov/harness/service.py'
+adding 'tokenprov/ledger/__init__.py'
+adding 'tokenprov/ledger/local.py'
+adding 'tokenprov/lifecycle/__init__.py'
+adding 'tokenprov/lifecycle/dag.py'
+adding 'tokenprov/provider/__init__.py'
+adding 'tokenprov/provider/base.py'
+adding 'tokenprov/provider/deterministic.py'
+adding 'tokenprov/provider/receipts.py'
+adding 'tokenprov/provider/vllm_adapter.py'
+adding 'tokenprov/server_eval/__init__.py'
+adding 'tokenprov/server_eval/__main__.py'
+adding 'tokenprov/server_eval/artifacts.py'
+adding 'tokenprov/server_eval/audit_jobs.py'
+adding 'tokenprov/server_eval/config.py'
+adding 'tokenprov/server_eval/metrics.py'
+adding 'tokenprov/server_eval/model_artifacts.py'
+adding 'tokenprov/server_eval/preflight.py'
+adding 'tokenprov/server_eval/protocol.py'
+adding 'tokenprov/server_eval/runner.py'
+adding 'tokenprov/server_eval/security.py'
+adding 'tokenprov/server_eval/transport.py'
+adding 'tokenprov/settlement/__init__.py'
+adding 'tokenprov/settlement/core.py'
+adding 'tokenprov/user/__init__.py'
+adding 'tokenprov/user/authorization.py'
+adding 'tokenprov/workloads/__init__.py'
+adding 'tokenprov/workloads/protocol_fixture.py'
+adding 'tokenprov-0.2.0.dist-info/LICENSE'
+adding 'tokenprov-0.2.0.dist-info/METADATA'
+adding 'tokenprov-0.2.0.dist-info/WHEEL'
+adding 'tokenprov-0.2.0.dist-info/entry_points.txt'
+adding 'tokenprov-0.2.0.dist-info/top_level.txt'
+adding 'tokenprov-0.2.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+running sdist
+running egg_info
+writing tokenprov.egg-info\PKG-INFO
+writing dependency_links to tokenprov.egg-info\dependency_links.txt
+writing entry points to tokenprov.egg-info\entry_points.txt
+writing requirements to tokenprov.egg-info\requires.txt
+writing top-level names to tokenprov.egg-info\top_level.txt
+reading manifest file 'tokenprov.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'paper\generated'
+no previously-included directories found matching 'tools\zk\node_modules'
+no previously-included directories found matching 'tools\zk\build'
+no previously-included directories found matching 'results'
+no previously-included directories found matching 'artifacts'
+no previously-included directories found matching 'models'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'tokenprov.egg-info\SOURCES.txt'
+running check
+creating tokenprov-0.2.0
+creating tokenprov-0.2.0\configs
+creating tokenprov-0.2.0\configs\tee
+creating tokenprov-0.2.0\configs\workloads
+creating tokenprov-0.2.0\docs
+creating tokenprov-0.2.0\experiments
+creating tokenprov-0.2.0\experiments\protocol_drivers
+creating tokenprov-0.2.0\experiments\tee_signing
+creating tokenprov-0.2.0\paper
+creating tokenprov-0.2.0\paper\data
+creating tokenprov-0.2.0\paper\data\b1
+creating tokenprov-0.2.0\paper\data\b2
+creating tokenprov-0.2.0\paper\data\b3_b4
+creating tokenprov-0.2.0\paper\data\c
+creating tokenprov-0.2.0\paper\data\c\signing
+creating tokenprov-0.2.0\paper\data\cases
+creating tokenprov-0.2.0\paper\data\d
+creating tokenprov-0.2.0\paper\data\e
+creating tokenprov-0.2.0\paper\data\f
+creating tokenprov-0.2.0\paper\published\b1
+creating tokenprov-0.2.0\paper\published\b2
+creating tokenprov-0.2.0\paper\published\b3_b4
+creating tokenprov-0.2.0\paper\published\c
+creating tokenprov-0.2.0\paper\published\cases
+creating tokenprov-0.2.0\paper\published\d
+creating tokenprov-0.2.0\paper\published\e
+creating tokenprov-0.2.0\paper\published\f
+creating tokenprov-0.2.0\paper\scripts
+creating tokenprov-0.2.0\scripts
+creating tokenprov-0.2.0\tests
+creating tokenprov-0.2.0\tokenprov
+creating tokenprov-0.2.0\tokenprov.egg-info
+creating tokenprov-0.2.0\tokenprov\assurance
+creating tokenprov-0.2.0\tokenprov\attacks
+creating tokenprov-0.2.0\tokenprov\audit
+creating tokenprov-0.2.0\tokenprov\broker
+creating tokenprov-0.2.0\tokenprov\common
+creating tokenprov-0.2.0\tokenprov\crypto
+creating tokenprov-0.2.0\tokenprov\evidence
+creating tokenprov-0.2.0\tokenprov\handoff
+creating tokenprov-0.2.0\tokenprov\harness
+creating tokenprov-0.2.0\tokenprov\ledger
+creating tokenprov-0.2.0\tokenprov\lifecycle
+creating tokenprov-0.2.0\tokenprov\provider
+creating tokenprov-0.2.0\tokenprov\server_eval
+creating tokenprov-0.2.0\tokenprov\settlement
+creating tokenprov-0.2.0\tokenprov\user
+creating tokenprov-0.2.0\tokenprov\workloads
+creating tokenprov-0.2.0\tools\zk
+creating tokenprov-0.2.0\tools\zk\circuits
+copying files to tokenprov-0.2.0...
+copying LICENSE -> tokenprov-0.2.0
+copying MANIFEST.in -> tokenprov-0.2.0
+copying README.md -> tokenprov-0.2.0
+copying pyproject.toml -> tokenprov-0.2.0
+copying configs\server-eval.yaml -> tokenprov-0.2.0\configs
+copying configs\smoke.yaml -> tokenprov-0.2.0\configs
+copying configs\tee\nvidia.rego -> tokenprov-0.2.0\configs\tee
+copying configs\tee\policy.yaml -> tokenprov-0.2.0\configs\tee
+copying configs\tee\runtime.yaml -> tokenprov-0.2.0\configs\tee
+copying configs\workloads\example_traces.jsonl -> tokenprov-0.2.0\configs\workloads
+copying docs\ARCHITECTURE.md -> tokenprov-0.2.0\docs
+copying docs\ASSURANCE.md -> tokenprov-0.2.0\docs
+copying docs\EXPERIMENT_COVERAGE.md -> tokenprov-0.2.0\docs
+copying docs\REPRODUCIBILITY.md -> tokenprov-0.2.0\docs
+copying experiments\README.md -> tokenprov-0.2.0\experiments
+copying experiments\paper_protocol.py -> tokenprov-0.2.0\experiments
+copying experiments\report_c_assurance.py -> tokenprov-0.2.0\experiments
+copying experiments\run_c_assurance_server.py -> tokenprov-0.2.0\experiments
+copying experiments\protocol_drivers\components.py -> tokenprov-0.2.0\experiments\protocol_drivers
+copying experiments\protocol_drivers\security.py -> tokenprov-0.2.0\experiments\protocol_drivers
+copying experiments\protocol_drivers\storage.py -> tokenprov-0.2.0\experiments\protocol_drivers
+copying experiments\tee_signing\README.md -> tokenprov-0.2.0\experiments\tee_signing
+copying experiments\tee_signing\benchmark.py -> tokenprov-0.2.0\experiments\tee_signing
+copying experiments\tee_signing\report.py -> tokenprov-0.2.0\experiments\tee_signing
+copying paper\README.md -> tokenprov-0.2.0\paper
+copying paper\SOURCE_PROVENANCE.json -> tokenprov-0.2.0\paper
+copying paper\manifest.json -> tokenprov-0.2.0\paper
+copying paper\reproduce.py -> tokenprov-0.2.0\paper
+copying paper\requirements-render.txt -> tokenprov-0.2.0\paper
+copying paper\data\five_model_three_round_metrics.csv -> tokenprov-0.2.0\paper\data
+copying paper\data\five_model_three_round_variability.csv -> tokenprov-0.2.0\paper\data
+copying paper\data\b1\request_latency_data.csv -> tokenprov-0.2.0\paper\data\b1
+copying paper\data\b2\component_round_means.csv -> tokenprov-0.2.0\paper\data\b2
+copying paper\data\b2\request_measurements.jsonl -> tokenprov-0.2.0\paper\data\b2
+copying paper\data\b3_b4\concurrency.csv -> tokenprov-0.2.0\paper\data\b3_b4
+copying paper\data\b3_b4\protocol_scaling.csv -> tokenprov-0.2.0\paper\data\b3_b4
+copying paper\data\c\measurements.jsonl -> tokenprov-0.2.0\paper\data\c
+copying paper\data\c\plan.json -> tokenprov-0.2.0\paper\data\c
+copying paper\data\c\round_metrics.csv -> tokenprov-0.2.0\paper\data\c
+copying paper\data\c\verification.json -> tokenprov-0.2.0\paper\data\c
+copying paper\data\c\signing\example-require_vbs-round1.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\example-require_vbs-round2.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\example-require_vbs-round3.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\example-software_ksp-round1.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\example-software_ksp-round2.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\example-software_ksp-round3.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\measurements.jsonl -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\replayed_receipts.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\summary.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\c\signing\verification.json -> tokenprov-0.2.0\paper\data\c\signing
+copying paper\data\cases\case_figure_data.json -> tokenprov-0.2.0\paper\data\cases
+copying paper\data\d\E1_storage_vs_calls.csv -> tokenprov-0.2.0\paper\data\d
+copying paper\data\d\current_model_summary.csv -> tokenprov-0.2.0\paper\data\d
+copying paper\data\d\current_round_data.csv -> tokenprov-0.2.0\paper\data\d
+copying paper\data\e\F1_attack_detection_summary.csv -> tokenprov-0.2.0\paper\data\e
+copying paper\data\e\F2_cross_call_splicing.csv -> tokenprov-0.2.0\paper\data\e
+copying paper\data\e\F3_fault_localization_summary.csv -> tokenprov-0.2.0\paper\data\e
+copying paper\data\e\F4_collusion.csv -> tokenprov-0.2.0\paper\data\e
+copying paper\data\e\security.jsonl -> tokenprov-0.2.0\paper\data\e
+copying paper\data\f\G1_security_ablation.csv -> tokenprov-0.2.0\paper\data\f
+copying paper\data\f\G2_performance_ablation.csv -> tokenprov-0.2.0\paper\data\f
+copying paper\published\b1\b1_five_model_latency_throughput.pdf -> tokenprov-0.2.0\paper\published\b1
+copying paper\published\b1\b1_five_model_latency_throughput.png -> tokenprov-0.2.0\paper\published\b1
+copying paper\published\b1\b1_five_model_latency_throughput.svg -> tokenprov-0.2.0\paper\published\b1
+copying paper\published\b1\request_latency_data.csv -> tokenprov-0.2.0\paper\published\b1
+copying paper\published\b1\throughput_summary.csv -> tokenprov-0.2.0\paper\published\b1
+copying paper\published\b2\b2_appendix_component_table.tex -> tokenprov-0.2.0\paper\published\b2
+copying paper\published\b2\b2_component_round_means.csv -> tokenprov-0.2.0\paper\published\b2
+copying paper\published\b2\b2_component_summary.csv -> tokenprov-0.2.0\paper\published\b2
+copying paper\published\b2\b2_main_plot_values.csv -> tokenprov-0.2.0\paper\published\b2
+copying paper\published\b2\b2_paper_integration.tex -> tokenprov-0.2.0\paper\published\b2
+copying paper\published\b2\b2_reference_cost_breakdown.pdf -> tokenprov-0.2.0\paper\published\b2
+copying paper\published\b2\b2_reference_cost_breakdown.png -> tokenprov-0.2.0\paper\published\b2
+copying paper\published\b2\b2_reference_cost_breakdown.svg -> tokenprov-0.2.0\paper\published\b2
+copying paper\published\b3_b4\b3_appendix_concurrency_table.tex -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_appendix_protocol_table.tex -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_appendix_section.tex -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_b4_appendix.tex -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_b4_paper_integration.tex -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_b4_scalability_variability.pdf -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_b4_scalability_variability.png -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_b4_scalability_variability.svg -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_concurrency_original_round.csv -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_paper_integration.tex -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b3_protocol_scaling.csv -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b4_appendix_cross_model_table.tex -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b4_appendix_section.tex -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b4_model_range_summary.csv -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\b3_b4\b4_model_round_values.csv -> tokenprov-0.2.0\paper\published\b3_b4
+copying paper\published\c\c1_appendix_cost_table.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c2_appendix_phase_table.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c2_phase_plot_values.csv -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c3_appendix_audit_rate_table.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c3_audit_rate_plot_values.csv -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c4_appendix_signing_table.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_appendix.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_assurance_components.csv -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_assurance_components_table.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_complete.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_deferred_proving_audit_rate.pdf -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_deferred_proving_audit_rate.png -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_deferred_proving_audit_rate.svg -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_maintext.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\c\c_paper_integration.tex -> tokenprov-0.2.0\paper\published\c
+copying paper\published\cases\appendix_case_figure.tex -> tokenprov-0.2.0\paper\published\cases
+copying paper\published\cases\token_provenance_case_boxes.pdf -> tokenprov-0.2.0\paper\published\cases
+copying paper\published\cases\token_provenance_case_boxes.png -> tokenprov-0.2.0\paper\published\cases
+copying paper\published\cases\token_provenance_case_boxes.svg -> tokenprov-0.2.0\paper\published\cases
+copying paper\published\d\current_model_summary.csv -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\current_round_data.csv -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_appendix.tex -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_appendix_current_table.tex -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_appendix_storage_table.tex -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_current_plot_values.csv -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_evidence_settlement.pdf -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_evidence_settlement.png -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_evidence_settlement.svg -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_paper_integration.tex -> tokenprov-0.2.0\paper\published\d
+copying paper\published\d\d_storage_plot_values.csv -> tokenprov-0.2.0\paper\published\d
+copying paper\published\e\e_appendix_attack_family_table.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_appendix_collusion_table.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_appendix_for_paper_body.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_appendix_for_paper_full.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_appendix_historical_attack_table.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_appendix_localization_table.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_appendix_splicing_table.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_combined_results_table.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_current_attack_families.csv -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_current_security_summary.csv -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_historical_attack_matrix.csv -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_historical_collusion_summary.csv -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_historical_localization_summary.csv -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_historical_splicing_summary.csv -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_section_body.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\e\e_section_full.tex -> tokenprov-0.2.0\paper\published\e
+copying paper\published\f\f_appendix.tex -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_appendix_cost_table.tex -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_appendix_for_paper_full.tex -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_appendix_full.tex -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_appendix_increment_table.tex -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_component_waterfalls.pdf -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_component_waterfalls.png -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_component_waterfalls.svg -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_cost_rounds.csv -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_cost_summary.csv -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_increment_summary.csv -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_main_rule_table.tex -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_paired_increments.csv -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_paper_integration.tex -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_rule_gating.csv -> tokenprov-0.2.0\paper\published\f
+copying paper\published\f\f_section_full.tex -> tokenprov-0.2.0\paper\published\f
+copying paper\scripts\compose_e.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\paper_paths.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\plot_b1.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\plot_b2.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\plot_b3_b4.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\plot_c.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\plot_cases.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\plot_d.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\plot_f.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\tables_e.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\tables_f.py -> tokenprov-0.2.0\paper\scripts
+copying paper\scripts\write_c.py -> tokenprov-0.2.0\paper\scripts
+copying scripts\serve_transformers.py -> tokenprov-0.2.0\scripts
+copying tests\test_compact_execution.py -> tokenprov-0.2.0\tests
+copying tests\test_evaluation_harness.py -> tokenprov-0.2.0\tests
+copying tests\test_harness_service.py -> tokenprov-0.2.0\tests
+copying tests\test_model_service.py -> tokenprov-0.2.0\tests
+copying tests\test_paper_artifacts.py -> tokenprov-0.2.0\tests
+copying tests\test_phase1.py -> tokenprov-0.2.0\tests
+copying tests\test_phase2_interfaces.py -> tokenprov-0.2.0\tests
+copying tests\test_public_experiments.py -> tokenprov-0.2.0\tests
+copying tests\test_server_eval.py -> tokenprov-0.2.0\tests
+copying tests\test_tee_assurance.py -> tokenprov-0.2.0\tests
+copying tests\test_zk_setup.py -> tokenprov-0.2.0\tests
+copying tokenprov\__init__.py -> tokenprov-0.2.0\tokenprov
+copying tokenprov.egg-info\PKG-INFO -> tokenprov-0.2.0\tokenprov.egg-info
+copying tokenprov.egg-info\SOURCES.txt -> tokenprov-0.2.0\tokenprov.egg-info
+copying tokenprov.egg-info\dependency_links.txt -> tokenprov-0.2.0\tokenprov.egg-info
+copying tokenprov.egg-info\entry_points.txt -> tokenprov-0.2.0\tokenprov.egg-info
+copying tokenprov.egg-info\requires.txt -> tokenprov-0.2.0\tokenprov.egg-info
+copying tokenprov.egg-info\top_level.txt -> tokenprov-0.2.0\tokenprov.egg-info
+copying tokenprov\assurance\__init__.py -> tokenprov-0.2.0\tokenprov\assurance
+copying tokenprov\assurance\deferred.py -> tokenprov-0.2.0\tokenprov\assurance
+copying tokenprov\assurance\hardware.py -> tokenprov-0.2.0\tokenprov\assurance
+copying tokenprov\assurance\tee.py -> tokenprov-0.2.0\tokenprov\assurance
+copying tokenprov\assurance\tee_runtime.py -> tokenprov-0.2.0\tokenprov\assurance
+copying tokenprov\attacks\__init__.py -> tokenprov-0.2.0\tokenprov\attacks
+copying tokenprov\audit\__init__.py -> tokenprov-0.2.0\tokenprov\audit
+copying tokenprov\audit\auditor.py -> tokenprov-0.2.0\tokenprov\audit
+copying tokenprov\audit\signedlog.py -> tokenprov-0.2.0\tokenprov\audit
+copying tokenprov\broker\__init__.py -> tokenprov-0.2.0\tokenprov\broker
+copying tokenprov\broker\base.py -> tokenprov-0.2.0\tokenprov\broker
+copying tokenprov\broker\litellm_adapter.py -> tokenprov-0.2.0\tokenprov\broker
+copying tokenprov\common\__init__.py -> tokenprov-0.2.0\tokenprov\common
+copying tokenprov\common\merkle.py -> tokenprov-0.2.0\tokenprov\common
+copying tokenprov\common\models.py -> tokenprov-0.2.0\tokenprov\common
+copying tokenprov\common\serialization.py -> tokenprov-0.2.0\tokenprov\common
+copying tokenprov\crypto\__init__.py -> tokenprov-0.2.0\tokenprov\crypto
+copying tokenprov\crypto\signing.py -> tokenprov-0.2.0\tokenprov\crypto
+copying tokenprov\evidence\__init__.py -> tokenprov-0.2.0\tokenprov\evidence
+copying tokenprov\evidence\repository.py -> tokenprov-0.2.0\tokenprov\evidence
+copying tokenprov\handoff\__init__.py -> tokenprov-0.2.0\tokenprov\handoff
+copying tokenprov\handoff\bilateral.py -> tokenprov-0.2.0\tokenprov\handoff
+copying tokenprov\harness\__init__.py -> tokenprov-0.2.0\tokenprov\harness
+copying tokenprov\harness\evaluation.py -> tokenprov-0.2.0\tokenprov\harness
+copying tokenprov\harness\service.py -> tokenprov-0.2.0\tokenprov\harness
+copying tokenprov\ledger\__init__.py -> tokenprov-0.2.0\tokenprov\ledger
+copying tokenprov\ledger\local.py -> tokenprov-0.2.0\tokenprov\ledger
+copying tokenprov\lifecycle\__init__.py -> tokenprov-0.2.0\tokenprov\lifecycle
+copying tokenprov\lifecycle\dag.py -> tokenprov-0.2.0\tokenprov\lifecycle
+copying tokenprov\provider\__init__.py -> tokenprov-0.2.0\tokenprov\provider
+copying tokenprov\provider\base.py -> tokenprov-0.2.0\tokenprov\provider
+copying tokenprov\provider\deterministic.py -> tokenprov-0.2.0\tokenprov\provider
+copying tokenprov\provider\receipts.py -> tokenprov-0.2.0\tokenprov\provider
+copying tokenprov\provider\vllm_adapter.py -> tokenprov-0.2.0\tokenprov\provider
+copying tokenprov\server_eval\__init__.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\__main__.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\artifacts.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\audit_jobs.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\config.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\metrics.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\model_artifacts.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\preflight.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\protocol.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\runner.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\security.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\server_eval\transport.py -> tokenprov-0.2.0\tokenprov\server_eval
+copying tokenprov\settlement\__init__.py -> tokenprov-0.2.0\tokenprov\settlement
+copying tokenprov\settlement\core.py -> tokenprov-0.2.0\tokenprov\settlement
+copying tokenprov\user\__init__.py -> tokenprov-0.2.0\tokenprov\user
+copying tokenprov\user\authorization.py -> tokenprov-0.2.0\tokenprov\user
+copying tokenprov\workloads\__init__.py -> tokenprov-0.2.0\tokenprov\workloads
+copying tokenprov\workloads\protocol_fixture.py -> tokenprov-0.2.0\tokenprov\workloads
+copying tools\zk\README.md -> tokenprov-0.2.0\tools\zk
+copying tools\zk\c_assurance_worker.mjs -> tokenprov-0.2.0\tools\zk
+copying tools\zk\package-lock.json -> tokenprov-0.2.0\tools\zk
+copying tools\zk\package.json -> tokenprov-0.2.0\tools\zk
+copying tools\zk\proof_worker.mjs -> tokenprov-0.2.0\tools\zk
+copying tools\zk\setup.py -> tokenprov-0.2.0\tools\zk
+copying tools\zk\circuits\tokenprov_accounting.circom -> tokenprov-0.2.0\tools\zk\circuits
+Writing tokenprov-0.2.0\setup.cfg
+Creating tar archive
+removing 'tokenprov-0.2.0' (and everything under it)

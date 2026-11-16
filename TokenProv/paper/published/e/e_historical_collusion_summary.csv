@@ -1,0 +1,4 @@
+corrupt_roles,scenario,observable_evidence,trials,accepted,rejected,responsibility_interval,interval_width,evidence_boundary_control,mean_audit_latency_ms,dataset
+B+P,splice provider evidence across calls,signed H->B boundary conflicts with provider-linked evidence,500,0,500,B-P,1,False,9.077129122,historical_protocol_microbenchmark
+H+B,omit an execution before provider-visible evidence exists,internally consistent seven-call transcript; omitted eighth call leaves no receipt,500,500,0,evidence boundary,,True,12.963757858000001,historical_protocol_microbenchmark
+H+B+P,fabricate an internally consistent transcript among all service parties,all service-side records and signatures are internally consistent,500,500,0,evidence boundary,,True,14.617671566,historical_protocol_microbenchmark

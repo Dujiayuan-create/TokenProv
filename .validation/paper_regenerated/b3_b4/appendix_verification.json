@@ -1,0 +1,12 @@
+{
+  "protocol_configurations": 10,
+  "protocol_table_rows": 5,
+  "concurrency_table_rows": 12,
+  "cross_model_table_rows": 20,
+  "cross_model_observations": 60,
+  "mean_sd_cells_checked": 100,
+  "cross_model_statistical_unit": "three round-level observations",
+  "latency_change_definition": "within-round ratio to Vanilla, then mean and sample SD",
+  "all_model_scheme_groups_retained": true,
+  "no_new_experiments": true
+}

@@ -1,0 +1,115 @@
+{
+  "font": "C:\\Windows\\Fonts\\times.ttf",
+  "figure_size_inches": [
+    3.5,
+    1.78
+  ],
+  "png_dpi": 1200,
+  "native_output_width_inches": 3.5,
+  "frame_width_pt": 0.65,
+  "font_sizes_pt": {
+    "axis_labels": 7.5,
+    "ticks_x": 7.1,
+    "scheme_labels": 7.4,
+    "subtitles": 7.7,
+    "legends": 6.4,
+    "total_values": 7.4
+  },
+  "layout": "single-column width; two side-by-side panels with shared scheme rows",
+  "legend_columns": 1,
+  "legend_display_labels": [
+    [
+      "Authorization",
+      "Lifecycle/logs",
+      "Handoffs",
+      "Receipts/evidence",
+      "Other"
+    ],
+    [
+      "Settlement",
+      "Evidence write",
+      "Ledger",
+      "Audit",
+      "Other"
+    ]
+  ],
+  "panel_gap_pt": 8.819999999999979,
+  "subtitle_clearances_pt": [
+    1.8549549999999988,
+    1.8549549999999988
+  ],
+  "scheme_label_rotation_degrees": 0,
+  "palette_fills": [
+    [
+      "#C8C8CD",
+      "#D8978E",
+      "#EDBE87",
+      "#96BDD4",
+      "#E3E4E8"
+    ],
+    [
+      "#9895BF",
+      "#D8978E",
+      "#96BDD4",
+      "#9299C5",
+      "#E3E4E8"
+    ]
+  ],
+  "palette_outlines": [
+    [
+      "#5D6068",
+      "#8F4F44",
+      "#92602E",
+      "#3F6C85",
+      "#7C8089"
+    ],
+    [
+      "#57517F",
+      "#8F4F44",
+      "#3F6C85",
+      "#424F93",
+      "#7C8089"
+    ]
+  ],
+  "legend_obscures_data": false,
+  "grayscale_channel_error": 0.0,
+  "subplot_titles_position": "below each subplot",
+  "labels_outside_figure": [],
+  "grayscale_artist_property_conversions": 396,
+  "axes_start_at_zero": true,
+  "distinct_component_hatches": [
+    "...",
+    "///",
+    "\\\\",
+    "xxx",
+    "++"
+  ],
+  "reference_mean_ms": {
+    "Vanilla": {
+      "online_non_llm": 1.29940284375,
+      "remaining_processing": 2.250885078125,
+      "pipeline_non_llm": 3.550287921875
+    },
+    "SignedLog": {
+      "online_non_llm": 10.742455075520834,
+      "remaining_processing": 14.51481446875,
+      "pipeline_non_llm": 25.257269544270834
+    },
+    "SignedLogPlus": {
+      "online_non_llm": 58.1691212890625,
+      "remaining_processing": 81.6186824453125,
+      "pipeline_non_llm": 139.787803734375
+    },
+    "TokenProv-Full": {
+      "online_non_llm": 65.98020865364583,
+      "remaining_processing": 85.70120076822917,
+      "pipeline_non_llm": 151.681409421875
+    }
+  },
+  "formal_request_count": 7680,
+  "round_mean_rows": 60,
+  "model_scheme_groups": 20,
+  "max_closure_error_ms": 1.4210854715202004e-14,
+  "statistical_unit": "three round means, each using 128 measured requests",
+  "no_inference_or_proof_execution": true
+}

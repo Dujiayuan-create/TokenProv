@@ -1,0 +1,51 @@
+{
+  "b1": {
+    "png_pixels_equal": true,
+    "dimensions": [
+      5206,
+      1218
+    ]
+  },
+  "b2": {
+    "png_pixels_equal": true,
+    "dimensions": [
+      4200,
+      2136
+    ]
+  },
+  "b3_b4": {
+    "png_pixels_equal": true,
+    "dimensions": [
+      4200,
+      2735
+    ]
+  },
+  "c": {
+    "png_pixels_equal": true,
+    "dimensions": [
+      4200,
+      2856
+    ]
+  },
+  "cases": {
+    "png_pixels_equal": true,
+    "dimensions": [
+      4200,
+      6286
+    ]
+  },
+  "d": {
+    "png_pixels_equal": true,
+    "dimensions": [
+      4174,
+      4514
+    ]
+  },
+  "f": {
+    "png_pixels_equal": true,
+    "dimensions": [
+      985,
+      1166
+    ]
+  }
+}

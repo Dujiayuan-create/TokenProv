@@ -1,0 +1,19 @@
+% Requires graphicx, booktabs, and xcolor with the table option (or colortbl).
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{c_deferred_proving_audit_rate.pdf}
+  \caption{Scoped proving on retained real-serving witnesses using persistent
+  CPU workers. (a) Online protocol cost (upper, paired bars) and subsequent audit
+  cost (lower, dumbbells), in ms/request; the linear-scale inset enlarges
+  deferred online cost. The mode legend applies to both plots.
+  (b) Audit cost sums the scoped witness, proving, and verification operation
+  wall times and divides by all 100 batch requests (upper); audit time is
+  actual elapsed completion time versus proof count with two workers
+  (lower). Each request has eight calls. Error bars show the sample SD across
+  three rounds; gray dots show individual round-level audit times, horizontally
+  offset for visibility without changing their measured times.
+  Summed proving work and elapsed batch time are reported separately.}
+  \label{fig:c-deferred-audit}
+\end{figure}
+
+\input{c_assurance_components_table.tex}

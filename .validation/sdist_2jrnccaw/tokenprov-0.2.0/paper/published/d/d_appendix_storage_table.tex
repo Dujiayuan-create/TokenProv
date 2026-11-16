@@ -1,0 +1,20 @@
+\begin{table}[!t]
+\centering
+\caption{Historical protocol storage microbenchmark (KiB/request; five measurements per configuration). Sizes are identical across repetitions.}
+\label{tab:d-fulltrace-storage}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabular}{cccc}
+\toprule
+\textbf{Calls} & \textbf{TokenProv} & \textbf{FullTrace} & \textbf{Reduction} \\
+\midrule
+1 & 7.00 & 9.05 & 22.69\% \\
+2 & 11.48 & 15.38 & 25.35\% \\
+4 & 20.45 & 28.04 & 27.07\% \\
+8 & 38.39 & 53.36 & 28.05\% \\
+16 & 74.44 & 104.23 & 28.59\% \\
+32 & 146.44 & 205.86 & 28.87\% \\
+64 & 290.46 & 409.13 & 29.01\% \\
+\bottomrule
+\end{tabular}
+\end{table}

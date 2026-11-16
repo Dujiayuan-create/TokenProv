@@ -1,0 +1,449 @@
+[
+  {
+    "kind": "fact_qa",
+    "title": "Fact QA",
+    "prompt_translated_excerpt": "What is the capital of France?\nReturn only the city name.",
+    "source_path": "qwen14_repeat_evidence\\reports\\semantic_cases\\fact_qa.json",
+    "source_sha256": "51ac2b47fb325b5a335c74f5046f04a3294f3efe56661926ca4a567dbcfff5b1",
+    "request_id": "example-fact_qa-4c81532a5b3f",
+    "call_id": "c-0",
+    "original_messages": [
+      {
+        "role": "user",
+        "content": "法国的首都是哪里？只回答城市名称。"
+      }
+    ],
+    "response": "巴黎",
+    "input_tokens": 23,
+    "output_tokens": 2,
+    "prompt_token_ids": [
+      151644,
+      872,
+      198,
+      104328,
+      9370,
+      59975,
+      100132,
+      101314,
+      11319,
+      91680,
+      102104,
+      99490,
+      29991,
+      1773,
+      151645,
+      198,
+      151644,
+      77091,
+      198,
+      151667,
+      271,
+      151668,
+      271
+    ],
+    "selected_output_tokens": [
+      {
+        "position": 0,
+        "token_id": 106004,
+        "token_piece": "å·´é»İ",
+        "decoded_piece": "巴黎"
+      },
+      {
+        "position": 1,
+        "token_id": 151645,
+        "token_piece": "<|im_end|>",
+        "decoded_piece": "<|im_end|>"
+      }
+    ],
+    "receipt": {
+      "assurance_anchor": "2827df3e47857be45ba30acc4be35aaffd1641cf8723b5d05ae4a445b84ea20c",
+      "assurance_mode": "signature",
+      "authorization_digest": "644aa2ca32652dafbc0d37ebe1b817915d324564ef7aee5bcc5e03dfef3fe53c",
+      "billable": true,
+      "bp_handoff_hash": "af38819ac4d6dee87238c494a6c49c448f496b30179d18cdc2594561a405cd0e",
+      "cache_post_hash": "4c1e72676c9701d18fdb527e2217f82b92bbc6227458729ef4cde4cf22fe982b",
+      "cache_pre_hash": "df451ae8b597fe7477e400d3eb74b2170ad9b9434ccef2c4bd23e10b04bf3e36",
+      "call_id": "c-0",
+      "call_nullifier": "bb8926fc5e67cf7328572fa361b580cd8cf5bf8e5eccd5f1cc1b65dfcfa1f74c",
+      "charge_microunits": 27,
+      "deployment_id": "dep-qwen14b-r23-3f4c40c76186414d",
+      "hb_handoff_hash": "bd0dfe54543cf9e1e5096d9b1cff51a640b09df6cb14c12678ee6a0567bd0c23",
+      "input_hash": "07836655626fef819d0253a3ce5800f05587b36a2b0400c7ab1c79a65293d888",
+      "output_hash": "26148d7c13b0c1a78c87022eba51f11ea28d22187fd5516b2e3b2ca6de64bb65",
+      "price_version": "local-research-v1",
+      "provider_id": "qwen14b-r23",
+      "request_id": "example-fact_qa-4c81532a5b3f",
+      "service_config_hash": "cd6efd920b2a427e435845964b346426ee0cc5af6dce26dc8d0e033309dd02aa",
+      "signature": "PE64wkD3aednifzVONtdaeFITckIsyLcabQlXCiHvImOW/ENwslRP1TkeHmLO0ovvAnntAkdHa6eKAQnULqHDQ==",
+      "transformation_hash": "6f11c5051a82e4b66960f180070bf2aca15b78a923c3122ba82bbfc8a455a9ca",
+      "usage": {
+        "n_cr": 0,
+        "n_cw": 0,
+        "n_out": 2,
+        "n_pf": 23,
+        "n_rea": 0
+      },
+      "witness_commitment": "2827df3e47857be45ba30acc4be35aaffd1641cf8723b5d05ae4a445b84ea20c"
+    },
+    "settlement": {
+      "auxiliary_fees": [],
+      "bill_microunits": 27,
+      "broker_id": "B",
+      "broker_signature": "ujkIJp8MknXx5UpGO7V0/UJ1ld6EaWuaVldaUaunx3ORSSeHNVNe8YwGUWHfRJc+jvCciuqbqVyKjhwNTWq9AQ==",
+      "closure_hash": "eb51866a8255219a69326f4eceb017c4406b63b92349ef9d3fb3838fbadd8a34",
+      "evidence_root": "66071c732ccaa0d55d49ed860986b0ed6ba93b725c0a32027152e58adea9fb37",
+      "handoff_hashes": [
+        "bd0dfe54543cf9e1e5096d9b1cff51a640b09df6cb14c12678ee6a0567bd0c23",
+        "af38819ac4d6dee87238c494a6c49c448f496b30179d18cdc2594561a405cd0e"
+      ],
+      "harness_signature": "h+shIuWL3XjgTzcVHakDH2U+DX0l6qMf97++l1u/CGvA/TcftXOLBdFe6AE1/rJ9d10jViuRtQ3G9vq0mJXaCQ==",
+      "receipt_hashes": [
+        "200f2bf10666fb06f2ad5fd91cfe6ced75baa1baa9fc1f1cafcf595a91e07cda"
+      ],
+      "request_id": "example-fact_qa-4c81532a5b3f",
+      "settlement_nullifier": "aaf616152791fb6d9d17ac3d48f58456"
+    },
+    "registration": {
+      "deployment_id": "dep-qwen14b-r23-3f4c40c76186414d",
+      "provider_id": "qwen14b-r23",
+      "descriptor": {
+        "model_id": "qwen3-14b",
+        "model_version": "local-content-fe7b64ff7b02020a",
+        "model_hash": "fe7b64ff7b02020a01f52776a59e251021a737269535a0dd45a8881d4d6217c9",
+        "tokenizer_hash": "c57150d0be72e8cd902d46820e9c6af0543e6030bf9c177ca456fd24093dac53",
+        "canonicalization_hash": "661002e31859930fcaafeb2a69cfb6f191def106cbbc4f4dab6ab78dd8af47d9",
+        "serving_semantics_hash": "26c992e32c775623b047daec4b3836457d4f926a53d37627b27d187459c54500"
+      },
+      "deployment_commitment": "7a8feb93f46b77afd387b2e862648e00d2e9e87d5bf5b3ee95bf4eae9a2d3a0f",
+      "signature": "SnG0dWm7DpzHMWUAI+/QzlvdrK8KH61GHAS3eOZifPDopRJy//qUdYiUjLzyiSVMf9VXLMWgzpEg1lE2gVkmDQ=="
+    },
+    "recorded_offline_audit_accepted": true
+  },
+  {
+    "kind": "translation",
+    "title": "Translation",
+    "prompt_translated_excerpt": "Translate into English:\nEach model call generates a\nverifiable token billing receipt.",
+    "source_path": "qwen14_repeat_evidence\\reports\\semantic_cases\\translation.json",
+    "source_sha256": "55ba39293c5665b02fb7e09dca7ec832eee36871b66bff11e8a88aa4b2586f02",
+    "request_id": "example-translation-824011749886",
+    "call_id": "c-0",
+    "original_messages": [
+      {
+        "role": "user",
+        "content": "将下面一句翻译成英文，只输出译文：每次模型调用都会生成一份可核验的token计费回执。"
+      }
+    ],
+    "response": "Each model call generates a verifiable token billing receipt.",
+    "input_tokens": 41,
+    "output_tokens": 12,
+    "prompt_token_ids": [
+      151644,
+      872,
+      198,
+      44063,
+      100431,
+      104670,
+      105395,
+      12857,
+      105205,
+      3837,
+      91680,
+      66017,
+      102610,
+      16744,
+      5122,
+      102173,
+      104949,
+      47872,
+      11622,
+      101938,
+      43959,
+      104191,
+      30440,
+      71137,
+      41362,
+      9370,
+      5839,
+      37643,
+      80268,
+      18397,
+      99645,
+      1773,
+      151645,
+      198,
+      151644,
+      77091,
+      198,
+      151667,
+      271,
+      151668,
+      271
+    ],
+    "selected_output_tokens": [
+      {
+        "position": 5,
+        "token_id": 2739,
+        "token_piece": "Ġver",
+        "decoded_piece": " ver"
+      },
+      {
+        "position": 6,
+        "token_id": 22619,
+        "token_piece": "ifiable",
+        "decoded_piece": "ifiable"
+      },
+      {
+        "position": 11,
+        "token_id": 151645,
+        "token_piece": "<|im_end|>",
+        "decoded_piece": "<|im_end|>"
+      }
+    ],
+    "receipt": {
+      "assurance_anchor": "33a2c45d9ca29d5e050d706d40fae9f31fa8a409a57fb8f230cf1e9322c364eb",
+      "assurance_mode": "signature",
+      "authorization_digest": "bfc76ff55585ea6083e1470c4f94d6711d590d43a3a74f0bd685c01d559f23a0",
+      "billable": true,
+      "bp_handoff_hash": "e9edfdc9f928dcf2b9791f3a72626e1f2e64beeb243a0c9672346dbb52ff5f7a",
+      "cache_post_hash": "4c1e72676c9701d18fdb527e2217f82b92bbc6227458729ef4cde4cf22fe982b",
+      "cache_pre_hash": "df451ae8b597fe7477e400d3eb74b2170ad9b9434ccef2c4bd23e10b04bf3e36",
+      "call_id": "c-0",
+      "call_nullifier": "b3fadc86a585f5fda73deb3aa05678cfae59df5d79640338532009bd555931df",
+      "charge_microunits": 65,
+      "deployment_id": "dep-qwen14b-r23-3f4c40c76186414d",
+      "hb_handoff_hash": "76ece2e040a324c1e0a8505dd393b0fa56ab3646846d3a3bc43d52910e205e16",
+      "input_hash": "5c4c018cabe15fb9c139dde1a53ed40a6c84f9589275fa96697739c3e41ac9a5",
+      "output_hash": "555aec9b7b801c830dd663a18e0ee1bf68a33b6e8f1563638ee57dfd2a3f45aa",
+      "price_version": "local-research-v1",
+      "provider_id": "qwen14b-r23",
+      "request_id": "example-translation-824011749886",
+      "service_config_hash": "cd6efd920b2a427e435845964b346426ee0cc5af6dce26dc8d0e033309dd02aa",
+      "signature": "OwB5wncQaPn5+9hh7MXXje+7IYeTKXyVp6lpbDynyHlMrOmBiskEkuzaVI5v36w9mwTw0Fxwa3tnKp4aFeNTCQ==",
+      "transformation_hash": "6f11c5051a82e4b66960f180070bf2aca15b78a923c3122ba82bbfc8a455a9ca",
+      "usage": {
+        "n_cr": 0,
+        "n_cw": 0,
+        "n_out": 12,
+        "n_pf": 41,
+        "n_rea": 0
+      },
+      "witness_commitment": "33a2c45d9ca29d5e050d706d40fae9f31fa8a409a57fb8f230cf1e9322c364eb"
+    },
+    "settlement": {
+      "auxiliary_fees": [],
+      "bill_microunits": 65,
+      "broker_id": "B",
+      "broker_signature": "CdSjvUnBAaHfZP5/t/QOvBM1N+UYoVRqxRQc8U92NX1RVMLvvknvMboO4xg8WWCW4hQHLLp5QxJYgcgvNlP+CA==",
+      "closure_hash": "26713fff0dce8921a6f336e23caac877f1ed2e77428498974752d0b7e73dd443",
+      "evidence_root": "e1ad1832e432dbbabc73a0e02c34c581c87f9820b789b6ee39a2bd6a6897836c",
+      "handoff_hashes": [
+        "76ece2e040a324c1e0a8505dd393b0fa56ab3646846d3a3bc43d52910e205e16",
+        "e9edfdc9f928dcf2b9791f3a72626e1f2e64beeb243a0c9672346dbb52ff5f7a"
+      ],
+      "harness_signature": "w7Uj2CIHWlvlg3wwrFUuZnbgcgH+0v60TfxOoAn0djUvM6ZRWIT62BhpUaVWdM0PUTtPTqzz8hDWqfyrH88CDQ==",
+      "receipt_hashes": [
+        "7276e753af71598ed604e9989ddf1dcf4ae539cbb7d4f4125fae8e1b65870481"
+      ],
+      "request_id": "example-translation-824011749886",
+      "settlement_nullifier": "d6af30052d4bde928fcf4d621cdcaa74"
+    },
+    "registration": {
+      "deployment_id": "dep-qwen14b-r23-3f4c40c76186414d",
+      "provider_id": "qwen14b-r23",
+      "descriptor": {
+        "model_id": "qwen3-14b",
+        "model_version": "local-content-fe7b64ff7b02020a",
+        "model_hash": "fe7b64ff7b02020a01f52776a59e251021a737269535a0dd45a8881d4d6217c9",
+        "tokenizer_hash": "c57150d0be72e8cd902d46820e9c6af0543e6030bf9c177ca456fd24093dac53",
+        "canonicalization_hash": "661002e31859930fcaafeb2a69cfb6f191def106cbbc4f4dab6ab78dd8af47d9",
+        "serving_semantics_hash": "26c992e32c775623b047daec4b3836457d4f926a53d37627b27d187459c54500"
+      },
+      "deployment_commitment": "7a8feb93f46b77afd387b2e862648e00d2e9e87d5bf5b3ee95bf4eae9a2d3a0f",
+      "signature": "SnG0dWm7DpzHMWUAI+/QzlvdrK8KH61GHAS3eOZifPDopRJy//qUdYiUjLzyiSVMf9VXLMWgzpEg1lE2gVkmDQ=="
+    },
+    "recorded_offline_audit_accepted": true
+  },
+  {
+    "kind": "conversation_history",
+    "title": "With conversation history",
+    "prompt_translated_excerpt": "History: three models, A/B/C.\nEach model: 3 rounds, 128 requests.\nReturn the calculation and result.",
+    "source_path": "qwen14_repeat_evidence\\reports\\semantic_cases\\conversation_history.json",
+    "source_sha256": "bc90f6ce616a89c54e11d7ed77084fcc73011f0d4c78e982b2992854e3e57860",
+    "request_id": "example-conversation_history-6972065503ef",
+    "call_id": "c-0",
+    "original_messages": [
+      {
+        "role": "user",
+        "content": "我们要对比三个模型，名字是甲、乙、丙。"
+      },
+      {
+        "role": "assistant",
+        "content": "已记录三个模型：甲、乙、丙。"
+      },
+      {
+        "role": "user",
+        "content": "每个模型做三轮，每轮128个请求，总共多少个请求？只输出计算式和结果。"
+      }
+    ],
+    "response": "3×128×3=1152",
+    "input_tokens": 72,
+    "output_tokens": 13,
+    "prompt_token_ids": [
+      151644,
+      872,
+      198,
+      105332,
+      104877,
+      101124,
+      104949,
+      3837,
+      101419,
+      20412,
+      100043,
+      5373,
+      100916,
+      5373,
+      106980,
+      1773,
+      151645,
+      198,
+      151644,
+      77091,
+      198,
+      36667,
+      65577,
+      101124,
+      104949,
+      5122,
+      100043,
+      5373,
+      100916,
+      5373,
+      106980,
+      1773,
+      151645,
+      198,
+      151644,
+      872,
+      198,
+      103991,
+      104949,
+      99190,
+      44991,
+      99620,
+      3837,
+      73157,
+      99620,
+      16,
+      17,
+      23,
+      18947,
+      34859,
+      3837,
+      111531,
+      100430,
+      18947,
+      34859,
+      11319,
+      91680,
+      66017,
+      100768,
+      28330,
+      33108,
+      59151,
+      1773,
+      151645,
+      198,
+      151644,
+      77091,
+      198,
+      151667,
+      271,
+      151668,
+      271
+    ],
+    "selected_output_tokens": [
+      {
+        "position": 1,
+        "token_id": 17568,
+        "token_piece": "ÃĹ",
+        "decoded_piece": "×"
+      },
+      {
+        "position": 8,
+        "token_id": 16,
+        "token_piece": "1",
+        "decoded_piece": "1"
+      },
+      {
+        "position": 12,
+        "token_id": 151645,
+        "token_piece": "<|im_end|>",
+        "decoded_piece": "<|im_end|>"
+      }
+    ],
+    "receipt": {
+      "assurance_anchor": "7eea026f9aaba6cb3e846f878b9a4bf83c8cd3b7b82b00e3092d0023df037af0",
+      "assurance_mode": "signature",
+      "authorization_digest": "e5c6e3eedc8dd72a0cdab1145849450d703a4ba781dbcc18a4c3f0aae77c9667",
+      "billable": true,
+      "bp_handoff_hash": "1a9aed52f9468f76e6b70f00a34e706cb5ff5af9cea8fa4ca3d43c257726bb33",
+      "cache_post_hash": "4c1e72676c9701d18fdb527e2217f82b92bbc6227458729ef4cde4cf22fe982b",
+      "cache_pre_hash": "df451ae8b597fe7477e400d3eb74b2170ad9b9434ccef2c4bd23e10b04bf3e36",
+      "call_id": "c-0",
+      "call_nullifier": "209e63433434fdc73463378680acbd1bf731d2165fcbba2a375467b679076cdc",
+      "charge_microunits": 98,
+      "deployment_id": "dep-qwen14b-r23-3f4c40c76186414d",
+      "hb_handoff_hash": "e5e93bbe3c23f1e318512eb8fd5f5f497c4511d3972ffbe8baa963b2f1a3ed23",
+      "input_hash": "e0568d5c34ff4e462eb2ba64df69b4b526eb4a8bcd4065832f17f0762752251f",
+      "output_hash": "f80ccc0d717c77e0d024438e8d4ed8843d17c44cdbd99e0a388b40ea63ee1c0d",
+      "price_version": "local-research-v1",
+      "provider_id": "qwen14b-r23",
+      "request_id": "example-conversation_history-6972065503ef",
+      "service_config_hash": "cd6efd920b2a427e435845964b346426ee0cc5af6dce26dc8d0e033309dd02aa",
+      "signature": "At5jis4T2Sa2jZOwLZHAYUkh2R7glFnoeHKYl/wH5U7Qj+gEsbeB3y1jdu1SOE+3frStQsUbHvNduVQNCakOBg==",
+      "transformation_hash": "6f11c5051a82e4b66960f180070bf2aca15b78a923c3122ba82bbfc8a455a9ca",
+      "usage": {
+        "n_cr": 0,
+        "n_cw": 0,
+        "n_out": 13,
+        "n_pf": 72,
+        "n_rea": 0
+      },
+      "witness_commitment": "7eea026f9aaba6cb3e846f878b9a4bf83c8cd3b7b82b00e3092d0023df037af0"
+    },
+    "settlement": {
+      "auxiliary_fees": [],
+      "bill_microunits": 98,
+      "broker_id": "B",
+      "broker_signature": "f6kDOH0bVgqIpqDYNZzwfXRXM/vioO2FcR6Y6Qw5VF6eWlD71VO0onfrTp7IIbH6CSKBKQKHlB5XBSWk04lRDw==",
+      "closure_hash": "cba7312d35d4c477404b28146863b47fc720f78c49dbf86d4dd22a98c09cf172",
+      "evidence_root": "187991778c5c4d435e0c823909913c312b25fc296654a94dc1033c09d33166b2",
+      "handoff_hashes": [
+        "e5e93bbe3c23f1e318512eb8fd5f5f497c4511d3972ffbe8baa963b2f1a3ed23",
+        "1a9aed52f9468f76e6b70f00a34e706cb5ff5af9cea8fa4ca3d43c257726bb33"
+      ],
+      "harness_signature": "dWirEcVWW/lzYgkThXOkGdOqb5ZPTZqlX8HDgF/zjrrltI/gag0RG9AQevdymIw4bai+uAlhMCbYAJ/UDIKaAQ==",
+      "receipt_hashes": [
+        "dee6326e6dd9040e941cc97a750d07cc363547b1907f43c8f3f582a454b28167"
+      ],
+      "request_id": "example-conversation_history-6972065503ef",
+      "settlement_nullifier": "81dcce76fd95f62c0809cc5854ec936d"
+    },
+    "registration": {
+      "deployment_id": "dep-qwen14b-r23-3f4c40c76186414d",
+      "provider_id": "qwen14b-r23",
+      "descriptor": {
+        "model_id": "qwen3-14b",
+        "model_version": "local-content-fe7b64ff7b02020a",
+        "model_hash": "fe7b64ff7b02020a01f52776a59e251021a737269535a0dd45a8881d4d6217c9",
+        "tokenizer_hash": "c57150d0be72e8cd902d46820e9c6af0543e6030bf9c177ca456fd24093dac53",
+        "canonicalization_hash": "661002e31859930fcaafeb2a69cfb6f191def106cbbc4f4dab6ab78dd8af47d9",
+        "serving_semantics_hash": "26c992e32c775623b047daec4b3836457d4f926a53d37627b27d187459c54500"
+      },
+      "deployment_commitment": "7a8feb93f46b77afd387b2e862648e00d2e9e87d5bf5b3ee95bf4eae9a2d3a0f",
+      "signature": "SnG0dWm7DpzHMWUAI+/QzlvdrK8KH61GHAS3eOZifPDopRJy//qUdYiUjLzyiSVMf9VXLMWgzpEg1lE2gVkmDQ=="
+    },
+    "recorded_offline_audit_accepted": true
+  }
+]

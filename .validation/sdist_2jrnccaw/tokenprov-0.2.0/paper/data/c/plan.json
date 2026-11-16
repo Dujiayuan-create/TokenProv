@@ -1,0 +1,79 @@
+{
+  "rounds": 3,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "source_requests": 128,
+  "calls_per_source_request": 8,
+  "c1_warm_calls_per_round": 32,
+  "c1_legacy_commands_per_round": 8,
+  "c2_calls": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "c2_request_groups_per_configuration": 4,
+  "c3_requests": 100,
+  "c3_rates_percent": [
+    1,
+    5,
+    10,
+    25,
+    50,
+    100
+  ],
+  "proof_workers": 2,
+  "curve_workers_per_process": 2,
+  "warmup_proofs_per_worker": 3,
+  "fixed_before_measurement": true,
+  "retain_all_observations": true,
+  "scope": "Archived real-serving witness replay; scoped commitment/token-accounting circuit; shared-field checks on host",
+  "c2_interpretation": "Phase timing of subsets of the original eight-call requests; no new inference and no live GPU interference measurement",
+  "c3_sampling": "Exactly selected request counts out of 100; all eight calls of each selected request; deterministic nested random rankings per round",
+  "c3_repetition": "Each rate generates and verifies its own actual proofs; no cost extrapolation",
+  "timing": "Monotonic wall clocks; summed job wall durations are work, not CPU time; audit makespan separately measured",
+  "persistence": "Separate private witness copies written and fsynced before challenge selection; originals unchanged",
+  "software": {
+    "node": "v22.14.0",
+    "snarkjs": "0.7.5"
+  },
+  "hardware": {
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+    "logical_cpus": 192,
+    "available_cpus": 192,
+    "cpu_model": "Intel(R) Xeon(R) 6747P",
+    "load_at_start": [
+      28.56640625,
+      27.99267578125,
+      26.20849609375
+    ],
+    "proof_execution": "CPU on B300 server; no GPU allocated"
+  },
+  "assets": [
+    {
+      "path": "optional/scoped-proof/build/tokenprov_accounting_js/tokenprov_accounting.wasm",
+      "sha256": "c8bda3f6f604a54e92be032890dcf480b4b53ab03714e828faa6061bae1a431b"
+    },
+    {
+      "path": "optional/scoped-proof/build/tokenprov_accounting_final.zkey",
+      "sha256": "f292ba1099f22a3c37e0ab6b3c2e2a1fd183effdb0c25a4dcce38cf52dc2c0d8"
+    },
+    {
+      "path": "optional/scoped-proof/build/verification_key.json",
+      "sha256": "42762e2be86ffa66e27e1b809a98e60a22ede9faf399f8037f2f48f335f31667"
+    },
+    {
+      "path": "optional/scoped-proof/proof_worker.mjs",
+      "sha256": "350ea351354adc24081aedf5d7d29fff0eb0555842ad38f9182ab4ec5cfd2721"
+    },
+    {
+      "path": "optional/scoped-proof/limited_worker.mjs",
+      "sha256": "b114a3b6bf9d590462459d36a67c0eda1805ad9571d7fef52502f37ab110f6c7"
+    }
+  ],
+  "started_utc": "2026-11-16T00:49:32.226163+00:00",
+  "formal": true
+}

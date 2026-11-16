@@ -1,0 +1,65 @@
+\begin{table}[!t]
+\centering
+\caption{Security and accountability results: current valid-signature attacks
+(a) and historical protocol microbenchmarks (b)--(c).}
+\label{tab:e-security-accountability}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{3pt}
+
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}ccc@{\hspace{3pt}}}
+\toprule
+\rowcolor{gray!12}
+\multicolumn{4}{l}{\textbf{(a) Valid-signature adaptive attacks}} \\
+\textbf{Scheme}
+& \shortstack{\textbf{Successful}\\\textbf{episodes}}
+& \shortstack{\textbf{Attack}\\\textbf{queries}}
+& \shortstack{\textbf{Benign false}\\\textbf{rejections}} \\
+\midrule
+SignedLog & 100/100 & 100 & 0/100 \\
+SignedLog+ & 0/100 & 1,600 & 0/100 \\
+\textbf{\textsc{TokenProv}} & 0/100 & 1,600 & 0/100 \\
+\bottomrule
+\end{tabular*}
+
+\vspace{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cc@{\hspace{3pt}}}
+\toprule
+\rowcolor{gray!12}
+\multicolumn{3}{l}{\textbf{(b) Cross-request splicing: accepted / tested}} \\
+\textbf{Source--target pair}
+& \shortstack{\textbf{Source-local}\\\textbf{checks}}
+& \textbf{\textsc{TokenProv}} \\
+\midrule
+Same model and deployment & 500/500 & 0/500 \\
+Same model, different deployment & 500/500 & 0/500 \\
+Different model and deployment & 500/500 & 0/500 \\
+\bottomrule
+\end{tabular*}
+
+\vspace{3pt}
+\begin{tabular*}{\columnwidth}{@{\hspace{3pt}}l@{\extracolsep{\fill}}cccc@{\hspace{3pt}}}
+\toprule
+\rowcolor{gray!12}
+\multicolumn{5}{l}{\textbf{(c) First-failure localization and responsibility}} \\
+\textbf{Injected stage}
+& \shortstack{\textbf{First}\\\textbf{failure}}
+& \shortstack{\textbf{Relation}\\\textbf{matches}}
+& \shortstack{\textbf{Interval}\\\textbf{(hops)}}
+& \shortstack{\textbf{Mean audit}\\\textbf{(ms)}} \\
+\midrule
+Authorization & $R_{\mathrm{auth}}$ & 500/500 & $U$--$H$ (1) & 0.168 \\
+Lifecycle & $R_{\mathrm{life}}$ & 500/500 & $H$--$H$ (0) & 3.476 \\
+Handoff & $R_{\mathrm{hand}}$ & 500/500 & $H$--$P$ (2) & 3.430 \\
+Provider & $R_{\mathrm{prov}}$ & 500/500 & $B$--$P$ (1) & 9.165 \\
+Settlement & $R_{\mathrm{set}}$ & 500/500 & $H$--$B$ (1) & 14.350 \\
+\bottomrule
+\end{tabular*}
+
+\vspace{2pt}
+\parbox{\columnwidth}{\scriptsize
+In (a), each episode permits at most 16 queries and stops at the first success.
+Source-local checks in (b) use the original source context.
+Each configuration in (b)--(c) uses five fixtures with 100 repetitions each.
+Interval widths count hops along $U\!\rightarrow\!H\!\rightarrow\!B\!\rightarrow\!P$.}
+\end{table}
